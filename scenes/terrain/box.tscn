@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dt6dt00ixqu47"]
+
+[ext_resource type="Script" uid="uid://g002jjqeboqs" path="res://scripts/box.gd" id="1_3inec"]
+[ext_resource type="Texture2D" uid="uid://hvvq6qastx6v" path="res://sprites/Terrain/Sprite44_0.png" id="2_ks2v0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c2ln5"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_telwu"]
+size = Vector2(66, 66)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=489179494]
+script = ExtResource("1_3inec")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1658870629]
+texture = ExtResource("2_ks2v0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=440769170]
+shape = SubResource("RectangleShape2D_c2ln5")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1072639031]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1731934996]
+shape = SubResource("RectangleShape2D_telwu")

@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://mcinvy3iq3td"]
+
+[ext_resource type="Texture2D" uid="uid://bu26oh1n0g0bt" path="res://sprites/Mushrooms/RedMushroom/Sprite3_2.png" id="1_0gm2p"]
+[ext_resource type="Texture2D" uid="uid://bubny4apwaodj" path="res://sprites/Mushrooms/RedMushroom/Sprite9_0.png" id="2_wme1j"]
+[ext_resource type="Texture2D" uid="uid://bjafyelhf4j80" path="res://sprites/Mushrooms/RedMushroom/Sprite3_0.png" id="3_3byxl"]
+[ext_resource type="Texture2D" uid="uid://5ntadarstynk" path="res://sprites/Mushrooms/RedMushroom/Sprite3_1.png" id="4_s8eu0"]
+[ext_resource type="Texture2D" uid="uid://e1c5e2sy0y7v" path="res://sprites/Mushrooms/RedMushroom/Sprite3_3.png" id="5_akyrx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rukwy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0gm2p")
+}],
+"loop": true,
+"name": &"bad",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wme1j")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_3byxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_s8eu0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_akyrx")
+}],
+"loop": true,
+"name": &"wery_bad",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t7ay0"]
+radius = 29.0
+height = 60.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3g6ut"]
+radius = 37.01351
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=1898086667]
+
+[node name="Sprite30" type="AnimatedSprite2D" parent="." unique_id=874619202]
+sprite_frames = SubResource("SpriteFrames_rukwy")
+speed_scale = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1525491631]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_t7ay0")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2013647398]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=269669040]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_3g6ut")

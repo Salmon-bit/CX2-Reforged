@@ -2,18 +2,9 @@
 
 [ext_resource type="Script" uid="uid://c0bragmx1iag5" path="res://scripts/autoload.gd" id="1_jjwjd"]
 [ext_resource type="AudioStream" uid="uid://xsbd25j6ogti" path="res://sounds/ClickSoud.wav" id="2_w43bn"]
-[ext_resource type="Texture2D" uid="uid://c2hvf1jdspxi4" path="res://sprites/Mushrooms/MainMenuFloatingMushrooms/Sprite180_0.png" id="3_t3bqs"]
-[ext_resource type="Texture2D" uid="uid://b01s61pjoygv7" path="res://sprites/UI/Sprite114_1.png" id="4_nfvj1"]
 
 [node name="Autoload" type="Node" unique_id=2114497714]
 script = ExtResource("1_jjwjd")
 
 [node name="ClickSound" type="AudioStreamPlayer" parent="." unique_id=368302036]
 stream = ExtResource("2_w43bn")
-
-[node name="Sprite1800" type="Sprite2D" parent="." unique_id=1167777052]
-texture = ExtResource("3_t3bqs")
-
-[node name="Sprite1141" type="Sprite2D" parent="." unique_id=1587724731]
-position = Vector2(56, 9)
-texture = ExtResource("4_nfvj1")
