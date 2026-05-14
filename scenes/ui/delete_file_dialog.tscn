@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://do0xaxngfu8nb"]
+
+[ext_resource type="Script" uid="uid://b50ipkwo5kqwn" path="res://scripts/ui/delete_file_dialog.gd" id="1_s47gn"]
+[ext_resource type="Texture2D" uid="uid://beacxconeo232" path="res://sprites/UI/Sprite123_0.png" id="2_27dm6"]
+[ext_resource type="Texture2D" uid="uid://b3wvhca84sovv" path="res://sprites/UI/Sprite123_1.png" id="3_br3v0"]
+[ext_resource type="Texture2D" uid="uid://dq0ncd7f64ssp" path="res://sprites/UI/Sprite125_0.png" id="4_fb4f1"]
+[ext_resource type="Texture2D" uid="uid://cv5dyosbuv8uu" path="res://sprites/UI/Sprite125_1.png" id="5_nw7og"]
+[ext_resource type="Texture2D" uid="uid://c2t7s3qj4kb24" path="res://sprites/UI/Sprite124_0.png" id="6_jq3pa"]
+[ext_resource type="Texture2D" uid="uid://ddqdq8rb2cgcj" path="res://sprites/UI/Sprite124_1.png" id="7_wbfx3"]
+[ext_resource type="Texture2D" uid="uid://boroly04bxwwo" path="res://sprites/UI/Sprite128_0.png" id="8_8gksr"]
+[ext_resource type="Texture2D" uid="uid://dabvwimwej8jw" path="res://sprites/UI/Sprite125_3.png" id="9_fb4f1"]
+[ext_resource type="Texture2D" uid="uid://dcemmvbupw7ym" path="res://sprites/UI/Sprite125_2.png" id="10_nw7og"]
+[ext_resource type="Texture2D" uid="uid://b1w8vnirfty26" path="res://sprites/UI/Sprite128_1.png" id="11_jq3pa"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_3u7pf"]
+device = -1
+keycode = 4194309
+
+[sub_resource type="Shortcut" id="Shortcut_3hywg"]
+events = [SubResource("InputEventKey_3u7pf")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_22fvg"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_4et43"]
+events = [SubResource("InputEventKey_22fvg")]
+
+[node name="DeleteFileDialog" type="Control" unique_id=520098511]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s47gn")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=929214762]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=818374530]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=577406292]
+layout_mode = 2
+theme_override_constants/margin_top = 420
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 160
+
+[node name="Yes" type="TextureButton" parent="HBoxContainer/MarginContainer" unique_id=88347492]
+texture_filter = 3
+layout_mode = 2
+shortcut = SubResource("Shortcut_3hywg")
+texture_normal = ExtResource("2_27dm6")
+texture_pressed = ExtResource("3_br3v0")
+texture_hover = ExtResource("3_br3v0")
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer" unique_id=836161308]
+layout_mode = 2
+theme_override_constants/margin_top = 135
+theme_override_constants/margin_bottom = 447
+
+[node name="DeleteFile" type="TextureButton" parent="HBoxContainer/MarginContainer2" unique_id=2042600156]
+texture_filter = 3
+layout_mode = 2
+texture_normal = ExtResource("4_fb4f1")
+texture_pressed = ExtResource("5_nw7og")
+texture_hover = ExtResource("5_nw7og")
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer" unique_id=895426121]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 420
+theme_override_constants/margin_bottom = 159
+
+[node name="No" type="TextureButton" parent="HBoxContainer/MarginContainer3" unique_id=4125561]
+texture_filter = 3
+layout_mode = 2
+shortcut = SubResource("Shortcut_4et43")
+texture_normal = ExtResource("6_jq3pa")
+texture_pressed = ExtResource("7_wbfx3")
+texture_hover = ExtResource("7_wbfx3")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1133432513]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -128.0
+offset_right = 256.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 58
+
+[node name="Pashalka" type="TextureRect" parent="MarginContainer" unique_id=328429354]
+visible = false
+texture_filter = 3
+layout_mode = 2
+texture = ExtResource("8_8gksr")
+
+[node name="Sprite1253" type="Sprite2D" parent="." unique_id=46704654]
+position = Vector2(148, -46)
+texture = ExtResource("9_fb4f1")
+
+[node name="Sprite1252" type="Sprite2D" parent="." unique_id=311937735]
+position = Vector2(436, -46)
+texture = ExtResource("10_nw7og")
+
+[node name="Sprite1281" type="Sprite2D" parent="." unique_id=43895965]
+position = Vector2(872, -22)
+texture = ExtResource("11_jq3pa")
+
+[node name="Sprite1251" type="Sprite2D" parent="." unique_id=2112187093]
+position = Vector2(159, -116)
+texture = ExtResource("5_nw7og")
+
+[node name="Sprite1250" type="Sprite2D" parent="." unique_id=739136299]
+position = Vector2(450, -131)
+texture = ExtResource("4_fb4f1")
+
+[node name="Sprite1280" type="Sprite2D" parent="." unique_id=430790234]
+position = Vector2(861, -199)
+texture = ExtResource("8_8gksr")
+
+[connection signal="pressed" from="HBoxContainer/MarginContainer/Yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="HBoxContainer/MarginContainer2/DeleteFile" to="." method="_on_delete_file_pressed"]
+[connection signal="pressed" from="HBoxContainer/MarginContainer3/No" to="." method="_on_no_pressed"]

@@ -1,0 +1,109 @@
+extends Node
+
+var data = {
+	"level": 0,
+	"skin": 0,
+	"ability": 0,
+	"skins": [
+		true,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false
+	],
+	"abilities": [
+		true,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false
+	],
+	"money": 0,
+	"difficulty": "easy",
+	"lang": "en"
+}
+
+const null_data = {
+	"level": 0,
+	"skin": 0,
+	"skins": [
+		true,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+	],
+	"money": 0,
+	"difficulty": "easy",
+	"lang": "en"
+}
+
+var save_file = "user://save.json"
+
+func save_data(dat = data):
+	var file = FileAccess.open(save_file, FileAccess.WRITE)
+	file.store_string(JSON.stringify(dat, "  "))
+	file.close()
+
+func load_data():
+	var file = FileAccess.open(save_file, FileAccess.READ)
+	if file != null:
+		var json_string = file.get_as_text()
+		file.close()
+		
+		var json = JSON.new()
+		var error = json.parse(json_string)
+		if error == OK:
+			data = json.data
+	else:
+		save_data(null_data)
+
+func clear_data():
+	save_data(null_data)
+	load_data()
+
+func click():
+	$ClickSound.play()
