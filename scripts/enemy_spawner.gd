@@ -1,10 +1,10 @@
 extends Node2D
 
-@export var enemy: PackedScene
-@export var parent: Node
+@export var object: PackedScene
 
 func spawn():
-	var spawnling = enemy.instantiate().duplicate()
-	spawnling.position = position
-	parent.add_child(spawnling)
-	print("Spawned " + spawnling.name)
+	var spawnling = object.instantiate()
+	spawnling.position.x = position.x
+	spawnling.position.y = position.y
+	
+	return spawnling

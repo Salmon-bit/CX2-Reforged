@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cydhwdtrcoq08"]
 
 [ext_resource type="Texture2D" uid="uid://dvtmbdlkkbemr" path="res://sprites/Mushrooms/BlueMushroom/Sprite17_2.png" id="1_7e7vv"]
+[ext_resource type="Script" uid="uid://cr130egqpiu74" path="res://scripts/mushrooms/blue_mushroom.gd" id="1_qu8pn"]
 [ext_resource type="Texture2D" uid="uid://ci880f3ehycml" path="res://sprites/Mushrooms/BlueMushroom/Sprite18_0.png" id="2_qu8pn"]
 [ext_resource type="Texture2D" uid="uid://bydis5jajh7yg" path="res://sprites/Mushrooms/BlueMushroom/Sprite17_0.png" id="3_w6o5x"]
 [ext_resource type="Texture2D" uid="uid://ippnreymks2w" path="res://sprites/Mushrooms/BlueMushroom/Sprite17_1.png" id="4_4abqx"]
@@ -48,9 +49,10 @@ animations = [{
 radius = 27.0
 height = 56.0
 
-[node name="RigidBody2D" type="RigidBody2D" unique_id=2121882107]
+[node name="BlueMushroom" type="RigidBody2D" unique_id=2121882107]
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("1_qu8pn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1676934905]
 sprite_frames = SubResource("SpriteFrames_27twd")

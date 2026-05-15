@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://mcinvy3iq3td"]
 
 [ext_resource type="Texture2D" uid="uid://bu26oh1n0g0bt" path="res://sprites/Mushrooms/RedMushroom/Sprite3_2.png" id="1_0gm2p"]
+[ext_resource type="Script" uid="uid://dfyxf8qmn30fr" path="res://scripts/mushrooms/red_mushroom.gd" id="1_wme1j"]
 [ext_resource type="Texture2D" uid="uid://bubny4apwaodj" path="res://sprites/Mushrooms/RedMushroom/Sprite9_0.png" id="2_wme1j"]
 [ext_resource type="Texture2D" uid="uid://bjafyelhf4j80" path="res://sprites/Mushrooms/RedMushroom/Sprite3_0.png" id="3_3byxl"]
 [ext_resource type="Texture2D" uid="uid://5ntadarstynk" path="res://sprites/Mushrooms/RedMushroom/Sprite3_1.png" id="4_s8eu0"]
@@ -51,9 +52,10 @@ height = 60.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_3g6ut"]
 radius = 37.01351
 
-[node name="RigidBody2D" type="RigidBody2D" unique_id=1898086667]
+[node name="RedMushroom" type="RigidBody2D" unique_id=1898086667]
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("1_wme1j")
 
 [node name="Sprite30" type="AnimatedSprite2D" parent="." unique_id=874619202]
 sprite_frames = SubResource("SpriteFrames_rukwy")
@@ -68,3 +70,5 @@ shape = SubResource("CapsuleShape2D_t7ay0")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=269669040]
 position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_3g6ut")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

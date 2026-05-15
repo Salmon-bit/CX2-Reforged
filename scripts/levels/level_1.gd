@@ -1,8 +1,9 @@
 extends Node2D
 
 var spawner: Node2D
+var enemies: Node
 
 func _ready() -> void:
-	spawner = $EnemySpawner
-	spawner.spawn()
-	print(len($Enemies.get_children()))
+	enemies = $Enemies
+	#spawner = $Spawners/EnemySpawner
+	#enemies.add_child(spawner.spawn())

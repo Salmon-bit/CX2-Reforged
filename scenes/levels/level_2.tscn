@@ -20,3 +20,11 @@ position = Vector2(161, 371)
 [node name="Camera2D2" parent="CharacterBody2D" unique_id=463586028 instance=ExtResource("3_ra442")]
 limit_right = 1344
 limit_bottom = 576
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=764682829]
+z_index = -10
+offset_left = -57.0
+offset_top = -94.0
+offset_right = 1351.0
+offset_bottom = 706.0
+color = Color(0, 0, 0, 1)
