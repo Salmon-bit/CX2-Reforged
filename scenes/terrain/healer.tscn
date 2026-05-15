@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bv488oaf52p1l"]
+
+[ext_resource type="Texture2D" uid="uid://l4v8aenojcy0" path="res://sprites/Terrain/Sprite23_0.png" id="1_hi5yi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_shvah"]
+size = Vector2(64, 64)
+
+[node name="Healer" type="StaticBody2D" unique_id=68478698]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1843642713]
+texture = ExtResource("1_hi5yi")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1177189534]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1788480800]
+shape = SubResource("RectangleShape2D_shvah")
