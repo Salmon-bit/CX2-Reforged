@@ -15,12 +15,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhqgy"]
-radius = 15.0
+radius = 16.0
 height = 44.0
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dqkch"]
-radius = 9.0
-height = 52.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1542968218]
 collision_layer = 3
@@ -33,8 +29,3 @@ sprite_frames = SubResource("SpriteFrames_g2els")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2041408530]
 position = Vector2(1, 3)
 shape = SubResource("CapsuleShape2D_qhqgy")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1878696525]
-position = Vector2(0, -11)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_dqkch")

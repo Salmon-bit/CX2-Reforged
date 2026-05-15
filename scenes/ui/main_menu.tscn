@@ -200,6 +200,7 @@ texture_pressed = ExtResource("13_e6a60")
 texture_hover = ExtResource("13_e6a60")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1027719130]
+z_index = 2
 position = Vector2(576, -124)
 emitting = false
 amount = 1
