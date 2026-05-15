@@ -2,12 +2,20 @@ extends Node
 
 var win = false
 var mp = 0.5
+var counter = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if len(get_children()) == 0 and not win:
+	counter = 0
+	for e in get_children():
+		if e.get_node("Sprite").animation == "dead":
+			counter += 1
+	
+	if counter == len(get_children()):
 		win = true
-		$"../WinScreen".position = $"../Player".position
+	
+	if win:
+		$"../WinScreen".position = get_parent().get_node("Player").position
 		$"../WinScreen".show()
 	
 	$"../WinScreen".rotation += mp * delta

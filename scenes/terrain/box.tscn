@@ -9,7 +9,7 @@ size = Vector2(64, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_telwu"]
 size = Vector2(66, 66)
 
-[node name="RedMushroom" type="StaticBody2D" unique_id=489179494]
+[node name="Box" type="StaticBody2D" unique_id=489179494]
 script = ExtResource("1_3inec")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1658870629]
@@ -22,6 +22,9 @@ shape = SubResource("RectangleShape2D_c2ln5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1731934996]
 shape = SubResource("RectangleShape2D_telwu")
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="." unique_id=2081044045]
+vertices = PackedVector2Array(-32, -32, -32, 33, 32, 33, 33, -32)
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

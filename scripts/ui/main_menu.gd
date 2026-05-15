@@ -40,3 +40,8 @@ func _on_exit_button_pressed() -> void:
 func _on_settings_button_pressed() -> void:
 	Autoload.click()
 	get_tree().change_scene_to_file("res://scenes/ui/settings_scene.tscn")
+
+
+func _on_play_button_pressed() -> void:
+	Autoload.click()
+	get_tree().change_scene_to_file("res://scenes/levels/level_1.tscn")

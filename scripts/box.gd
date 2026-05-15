@@ -6,27 +6,29 @@ var is_mushroom = false
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	var object = area.get_parent()
-	print("Entered object " + object.name)
+	print("[BOX] Entered object " + object.name)
 	
 	if "mushroom" in object.name.to_lower():
 		is_mushroom = true
 	else:
 		is_mushroom = false
 	
-	if "projectile" in object.name or is_mushroom:
+	if "arrow" in object.name.to_lower() or is_mushroom:
 		is_attacking = true
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	var object = area.get_parent()
-	print("Exited object " + object.name)
+	print("[BOX] Exited object " + object.name)
 	
 	if "mushroom" in object.name.to_lower():
 		is_mushroom = true
 	else:
 		is_mushroom = false
 	
-	if "projectile" in object.name or is_mushroom:
+	if "arrow" in object.name.to_lower() or is_mushroom:
 		is_attacking = false
+	
+	timer = 0
 
 var timer = 0.5
 
@@ -35,9 +37,9 @@ func _process(delta: float) -> void:
 		timer -= delta
 		if timer <= 0:
 			if is_mushroom:
-				hp -= 10
+				hp -= 7
 			else:
-				hp -= 5
+				hp -= 20
 			timer = 0.5
 	
 	if hp <= 0:
