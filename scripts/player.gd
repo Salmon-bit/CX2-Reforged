@@ -5,9 +5,16 @@ const SPEED = 20000.0
 var bow: Node2D
 var shoot_delay = 0.0
 var arrow_speed = 600
+var hp = 100
 
 func _ready() -> void:
 	bow = $Bow
+
+func _process(_delta: float) -> void:
+	$Label.text = "HP: " + str(hp)
+	
+	if hp <= 0:
+		get_tree().reload_current_scene()
 
 func _physics_process(delta: float) -> void:
 	var direction_x := Input.get_axis("go_left", "go_right")
@@ -47,3 +54,6 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_released("shoot"):
 		shoot_delay = 0
+
+func heal(heal_points: int):
+	hp += heal_points

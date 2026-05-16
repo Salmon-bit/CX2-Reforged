@@ -23,8 +23,10 @@ shape = SubResource("RectangleShape2D_c2ln5")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1731934996]
 shape = SubResource("RectangleShape2D_telwu")
 
-[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="." unique_id=2081044045]
-vertices = PackedVector2Array(-32, -32, -32, 33, 32, 33, 33, -32)
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="." unique_id=1662569077]
+radius = 45.79
+vertices = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
+avoidance_layers = 3
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

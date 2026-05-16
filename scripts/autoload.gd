@@ -50,6 +50,7 @@ var data = {
 const null_data = {
 	"level": 0,
 	"skin": 0,
+	"ability": 0,
 	"skins": [
 		true,
 		false,
@@ -74,14 +75,26 @@ const null_data = {
 		false,
 		false,
 		false,
+		false
+	],
+	"abilities": [
+		true,
 		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false
 	],
 	"money": 0,
 	"difficulty": "easy",
 	"lang": "en"
 }
 
-var save_file = "user://save.json"
+const save_file = "user://save.json"
 
 func save_data(dat = data):
 	var file = FileAccess.open(save_file, FileAccess.WRITE)
@@ -107,3 +120,14 @@ func clear_data():
 
 func click():
 	$ClickSound.play()
+	
+func get_level_num(node_name: String) -> String:
+	# Вытаскивает все цифры из конца строки
+	# "Level10" -> "10", "Btn3" -> "3"
+	var result = ""
+	for i in range(node_name.length() - 1, -1, -1):
+		if node_name[i].is_valid_int():
+			result = node_name[i] + result
+		else:
+			break
+	return result

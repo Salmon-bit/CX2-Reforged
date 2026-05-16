@@ -39,7 +39,7 @@ func _process(delta: float) -> void:
 			if is_mushroom:
 				hp -= 7
 			else:
-				hp -= 20
+				hp -= 10
 			timer = 0.5
 	
 	if hp <= 0:

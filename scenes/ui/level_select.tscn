@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://tomd1ql0mq2q"]
+
+[ext_resource type="Script" uid="uid://u606dvyjr63p" path="res://scripts/ui/level_select.gd" id="1_8ehll"]
+[ext_resource type="Texture2D" uid="uid://cjmpkqpyoye1u" path="res://sprites/UI/Sprite13_0.png" id="1_8yp2s"]
+[ext_resource type="Texture2D" uid="uid://buiehs8mf7cjn" path="res://sprites/UI/Sprite13_1.png" id="2_8ehll"]
+[ext_resource type="Texture2D" uid="uid://bsahdxflwasqk" path="res://sprites/UI/Sprite19_0.png" id="3_i7y2i"]
+[ext_resource type="Texture2D" uid="uid://1obmuoxktm3k" path="res://sprites/UI/Sprite19_1.png" id="4_t2qwf"]
+[ext_resource type="Texture2D" uid="uid://bymf2mbh58l5r" path="res://sprites/UI/Sprite22_0.png" id="5_wh1jf"]
+[ext_resource type="Texture2D" uid="uid://cl0pp50jq4n21" path="res://sprites/UI/Sprite22_1.png" id="6_0rr43"]
+[ext_resource type="Texture2D" uid="uid://bvhofpl33x5l2" path="res://sprites/UI/Sprite21_0.png" id="8_i7y2i"]
+
+[node name="LevelSelect" type="Control" unique_id=1199517008]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8ehll")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=58570993]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=845809387]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2058013834]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Level1" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=978594706]
+layout_mode = 2
+texture_normal = ExtResource("1_8yp2s")
+texture_pressed = ExtResource("2_8ehll")
+texture_hover = ExtResource("2_8ehll")
+
+[node name="Level2" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=1433075306]
+layout_mode = 2
+texture_normal = ExtResource("3_i7y2i")
+texture_pressed = ExtResource("4_t2qwf")
+texture_hover = ExtResource("4_t2qwf")
+
+[node name="Level3" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=1764294975]
+layout_mode = 2
+texture_normal = ExtResource("5_wh1jf")
+texture_pressed = ExtResource("6_0rr43")
+texture_hover = ExtResource("6_0rr43")
+
+[node name="Sprite210" type="Sprite2D" parent="." unique_id=189461305]
+position = Vector2(49, -38)
+texture = ExtResource("8_i7y2i")

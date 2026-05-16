@@ -17,6 +17,8 @@ func _process(delta: float) -> void:
 	if win:
 		$"../WinScreen".position = get_parent().get_node("Player").position
 		$"../WinScreen".show()
+		Autoload.data.level = int(Autoload.get_level_num(get_parent().name))
+		Autoload.save_data()
 	
 	$"../WinScreen".rotation += mp * delta
 	
