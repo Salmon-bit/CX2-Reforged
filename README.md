@@ -1,7 +1,7 @@
 # Critical Xlebushek 2 Reforged
 
-Hello everyone! This is a fork [Critical Xlebushek 2](https://gamejolt.com/games/CX2/1032331) game.
-Original game was created by [Bre-4dik (xlebushek983)](https://gamejolt.com/@xlebushek983) with GameMaker Studio 2
+Hello everyone! This is a fork of [Critical Xlebushek 2](https://gamejolt.com/games/CX2/1032331) game.
+Original game was created by [Bre-4dik (xlebushek983)](https://gamejolt.com/@xlebushek983) in GameMaker Studio 2
 _(Yes, yes, Undertale also was created on this game engiene)_
 
 Our goal is to remake this game on a new game engiene (Godot 4) and bring it to life again. We want to fully re-create original game and add some new features.
