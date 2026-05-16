@@ -15,6 +15,12 @@ func _process(_delta: float) -> void:
 	
 	if hp <= 0:
 		get_tree().reload_current_scene()
+	elif hp <= 20 and len(Input.get_connected_joypads()):
+		Input.set_joy_light(0, Color(255, 0, 0))
+	elif hp <= 50 and len(Input.get_connected_joypads()):
+		Input.set_joy_light(0, Color(255, 203, 0))
+	elif hp <= 100 and len(Input.get_connected_joypads()):
+		Input.set_joy_light(0, Color(0, 255, 0))
 
 func _physics_process(delta: float) -> void:
 	var direction_x := Input.get_axis("go_left", "go_right")
@@ -31,25 +37,35 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-	# look_at() сразу выставляет нужный угол, без накопления
-	bow.look_at(get_global_mouse_position())
+	# Правый стик контроллера
+	var stick := Vector2(
+		Input.get_axis("bow_left", "bow_right"),
+		Input.get_axis("bow_up", "bow_down")
+	)
+
+	var using_controller := stick.length() > 0.2  # deadzone
+	
+	if using_controller:
+		bow.look_at(bow.global_position + stick)
+	else:
+		bow.look_at(get_global_mouse_position())
 
 	if Input.is_action_pressed("shoot"):
 		shoot_delay -= delta
 		if shoot_delay <= 0:
 			var arrow: CharacterBody2D = $Spawner.spawn()
-			arrow.add_collision_exception_with(self)
 
-			# Направление — вектор от игрока к мыши
-			var dir: Vector2 = (get_global_mouse_position() - global_position).normalized()
+			var dir: Vector2
+			if using_controller:
+				dir = stick.normalized()
+			else:
+				dir = (get_global_mouse_position() - global_position).normalized()
 
+			arrow.global_position = global_position + dir * 50.0
 			arrow.rotation = dir.angle()
 			arrow.velocity = dir * arrow_speed
-			arrow.global_position = global_position + dir * 50.0
-
-			# Добавляем в корень сцены, а не в игрока
-			get_tree().root.add_child(arrow)
-
+			arrow.add_collision_exception_with(self)
+			get_tree().current_scene.add_child(arrow)
 			shoot_delay = 0.15
 
 	if Input.is_action_just_released("shoot"):

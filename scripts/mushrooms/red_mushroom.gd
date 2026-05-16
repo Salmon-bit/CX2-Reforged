@@ -46,6 +46,8 @@ func _process(_delta: float) -> void:
 	if $DamageTimer.time_left == 0.0 and can_damage_player:
 		player.hp -= damage
 		$DamageTimer.start()
+		if len(Input.get_connected_joypads()) != 0:
+			Input.start_joy_vibration(0, 0.5, 0.1, 0.2)
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	if area.get_parent().name.to_lower() == "player" and not dead:
