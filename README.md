@@ -22,5 +22,5 @@ Creators:
 
 You can download our game [here](https://gamejolt.com/games/cx_2_reforged/1070687).
 
-With love, Glasses 11 Inc. <br/>
+With love, Glasses 11 Games <br/>
 All right reserved ©.
