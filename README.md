@@ -2,9 +2,9 @@
 
 Hello everyone! This is a fork of [Critical Xlebushek 2](https://gamejolt.com/games/CX2/1032331) game.
 Original game was created by [Bre-4dik (xlebushek983)](https://gamejolt.com/@xlebushek983) in GameMaker Studio 2
-_(Yes, yes, Undertale also was created on this game engiene)_
+_(Yes, yes, Undertale also was created on this game engine)_
 
-Our goal is to remake this game on a new game engiene (Godot 4) and bring it to life again. We want to fully re-create original game and add some new features.
+Our goal is to remake this game on a new game engine (Godot 4) and bring it to life again. We want to fully re-create original game and add some new features.
 
 We hope you`ll love our game.
 
@@ -14,6 +14,7 @@ Some features we want to add:
  - Add local wi-fi multiplayer
  - Optimize game
  - Continue lore
+ - Add advancaments
 
 Creators:
  - Salmon228 [VK](https://vk.com/homyakus228) [YouTube](https://www.youtube.com/@Kormanmc) [Twitch](https://www.twitch.tv/kormanmc11) [Itch.io](https://salmon-bit.itch.io/) [GameJolt](https://gamejolt.com/@Salmon228)
