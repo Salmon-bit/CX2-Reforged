@@ -18,9 +18,9 @@ Some features we want to add:
 
 Creators:
  - Salmon228 [VK](https://vk.com/homyakus228) [YouTube](https://www.youtube.com/@Kormanmc) [Twitch](https://www.twitch.tv/kormanmc11) [Itch.io](https://salmon-bit.itch.io/) [GameJolt](https://gamejolt.com/@Salmon228)
- - Glasses_11 [VK](https://vk.com/id719949460) [GameJolt](https://gamejolt.com/@Glases_11)
+ - Glases_11 [VK](https://vk.com/id719949460) [GameJolt](https://gamejolt.com/@Glases_11)
 
 You can download our game [here](https://gamejolt.com/games/cx_2_reforged/1070687).
 
-With love, Glasses 11 Games <br/>
+With love, Glases_11 Games <br/>
 All right reserved ©.
