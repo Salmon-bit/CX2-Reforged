@@ -1,17 +1,22 @@
 [gd_scene format=3 uid="uid://cydhwdtrcoq08"]
 
-[ext_resource type="Texture2D" uid="uid://dvtmbdlkkbemr" path="res://sprites/Mushrooms/BlueMushroom/Sprite17_2.png" id="1_7e7vv"]
 [ext_resource type="Script" uid="uid://cr130egqpiu74" path="res://scripts/mushrooms/blue_mushroom.gd" id="1_qu8pn"]
-[ext_resource type="Texture2D" uid="uid://ci880f3ehycml" path="res://sprites/Mushrooms/BlueMushroom/Sprite18_0.png" id="2_qu8pn"]
-[ext_resource type="Texture2D" uid="uid://bydis5jajh7yg" path="res://sprites/Mushrooms/BlueMushroom/Sprite17_0.png" id="3_w6o5x"]
-[ext_resource type="Texture2D" uid="uid://ippnreymks2w" path="res://sprites/Mushrooms/BlueMushroom/Sprite17_1.png" id="4_4abqx"]
-[ext_resource type="Texture2D" uid="uid://u600c43j8qam" path="res://sprites/Mushrooms/BlueMushroom/Sprite17_3.png" id="5_brunj"]
+[ext_resource type="Texture2D" uid="uid://dvtmbdlkkbemr" path="res://sprites/Mushrooms/BlueMushroom/Sprite17_2.png" id="2_w6o5x"]
+[ext_resource type="Texture2D" uid="uid://u600c43j8qam" path="res://sprites/Mushrooms/BlueMushroom/Sprite17_3.png" id="3_4abqx"]
+[ext_resource type="Texture2D" uid="uid://ci880f3ehycml" path="res://sprites/Mushrooms/BlueMushroom/Sprite18_0.png" id="4_brunj"]
+[ext_resource type="Texture2D" uid="uid://bydis5jajh7yg" path="res://sprites/Mushrooms/BlueMushroom/Sprite17_0.png" id="5_27twd"]
+[ext_resource type="Texture2D" uid="uid://ippnreymks2w" path="res://sprites/Mushrooms/BlueMushroom/Sprite17_1.png" id="6_bvf54"]
+[ext_resource type="Script" uid="uid://dnfc44lsn374t" path="res://scripts/spawner.gd" id="7_w6o5x"]
+[ext_resource type="PackedScene" uid="uid://bwdlqyxblrm3p" path="res://scenes/projectiles/blue_mushroom_arrow.tscn" id="8_4abqx"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_27twd"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_jnn3l"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_7e7vv")
+"texture": ExtResource("2_w6o5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4abqx")
 }],
 "loop": true,
 "name": &"bad",
@@ -19,7 +24,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_qu8pn")
+"texture": ExtResource("4_brunj")
 }],
 "loop": true,
 "name": &"dead",
@@ -27,37 +32,76 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_w6o5x")
+"texture": ExtResource("5_27twd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_4abqx")
+"texture": ExtResource("6_bvf54")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_brunj")
-}],
-"loop": true,
-"name": &"worst",
-"speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bvf54"]
-radius = 27.0
-height = 56.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_w6o5x"]
+radius = 27.166155
 
-[node name="BlueMushroom" type="RigidBody2D" unique_id=2121882107]
+[sub_resource type="CircleShape2D" id="CircleShape2D_qu8pn"]
+radius = 33.06055
+
+[node name="BlueMushroom" type="CharacterBody2D" unique_id=2067160369 node_paths=PackedStringArray("spawner", "animated_sprite", "navigator", "attack_timer", "path_update_timer", "HP_label", "hitbox", "collision")]
 collision_layer = 2
-collision_mask = 2
+collision_mask = 7
 script = ExtResource("1_qu8pn")
+spawner = NodePath("ProjectileSpawner")
+can_ranged_attack = true
+animated_sprite = NodePath("AnimatedSprite2D")
+navigator = NodePath("NavigationAgent2D")
+attack_timer = NodePath("Attack")
+path_update_timer = NodePath("Timer")
+HP_label = NodePath("Label")
+hitbox = NodePath("Area2D")
+collision = NodePath("CollisionShape2D")
+metadata/_custom_type_script = "uid://ddxb8gper6awp"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1676934905]
-sprite_frames = SubResource("SpriteFrames_27twd")
-speed_scale = 0.5
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=350954024]
+sprite_frames = SubResource("SpriteFrames_jnn3l")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2133700021]
-position = Vector2(1, 3)
-shape = SubResource("CapsuleShape2D_bvf54")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2048477295]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_w6o5x")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1986231377]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=260852413]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_qu8pn")
+metadata/_edit_lock_ = true
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=26890960]
+path_desired_distance = 3.0
+target_desired_distance = 3.0
+path_postprocessing = 1
+debug_enabled = true
+debug_use_custom = true
+debug_path_custom_color = Color(1, 0, 0, 1)
+
+[node name="Timer" type="Timer" parent="." unique_id=1905379061]
+wait_time = 0.1
+one_shot = true
+autostart = true
+
+[node name="Label" type="Label" parent="." unique_id=1968052558]
+offset_left = -29.0
+offset_top = -57.0
+offset_right = 29.0
+offset_bottom = -34.0
+text = "HP: 100"
+horizontal_alignment = 1
+
+[node name="Attack" type="Timer" parent="." unique_id=1127827770]
+wait_time = 0.5
+one_shot = true
+
+[node name="ProjectileSpawner" type="Node2D" parent="." unique_id=1275340488]
+script = ExtResource("7_w6o5x")
+object = ExtResource("8_4abqx")

@@ -95,6 +95,7 @@ const null_data = {
 }
 
 const save_file = "user://save.json"
+enum SPEEDS {STOPPED = 0, VERY_SLOW = 2500, SLOW = 5000, FAST = 10000, QUICK = 15000}
 
 func save_data(dat = data):
 	var file = FileAccess.open(save_file, FileAccess.WRITE)

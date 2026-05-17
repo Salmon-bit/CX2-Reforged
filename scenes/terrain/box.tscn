@@ -7,7 +7,7 @@
 size = Vector2(64, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_telwu"]
-size = Vector2(66, 66)
+size = Vector2(69, 70)
 
 [node name="Box" type="StaticBody2D" unique_id=489179494]
 script = ExtResource("1_3inec")
@@ -21,12 +21,15 @@ shape = SubResource("RectangleShape2D_c2ln5")
 [node name="Area2D" type="Area2D" parent="." unique_id=1072639031]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1731934996]
+position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_telwu")
 
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="." unique_id=1662569077]
 radius = 45.79
 vertices = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
 avoidance_layers = 3
+
+[node name="I_AM_BOX" type="Node" parent="." unique_id=1260504097]
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

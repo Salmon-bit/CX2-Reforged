@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bwdlqyxblrm3p"]
+
+[ext_resource type="Texture2D" uid="uid://cxkhoyl0cg1fo" path="res://sprites/Projectiles/Sprite6_0.png" id="1_j4vor"]
+[ext_resource type="Script" uid="uid://dnal7eons8ju4" path="res://scripts/projectiles/blue_mushroom_arrow.gd" id="1_milc1"]
+[ext_resource type="Texture2D" uid="uid://brsvjpbjkwrc1" path="res://sprites/Projectiles/Sprite6_1.png" id="2_milc1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lap1w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_j4vor")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_milc1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j4vor"]
+radius = 6.0
+
+[node name="BlueMushroomArrow" type="CharacterBody2D" unique_id=100916146]
+script = ExtResource("1_milc1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=421356595]
+sprite_frames = SubResource("SpriteFrames_lap1w")
+frame_progress = 0.18212764
+
+[node name="Area2D" type="Area2D" parent="." unique_id=833334018]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1099126470]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_j4vor")
+
+[node name="DeathTimer" type="Timer" parent="." unique_id=480253002]
+wait_time = 10.0
+
+[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]

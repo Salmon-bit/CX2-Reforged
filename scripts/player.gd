@@ -13,14 +13,19 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	$Label.text = "HP: " + str(hp)
 	
-	if hp <= 0:
+	if hp > 100 and len(Input.get_connected_joypads()):
+		Input.set_joy_light(0, Color(0, 255, 255))
+	elif hp <= 0:
 		get_tree().reload_current_scene()
 	elif hp <= 20 and len(Input.get_connected_joypads()):
 		Input.set_joy_light(0, Color(255, 0, 0))
 	elif hp <= 50 and len(Input.get_connected_joypads()):
-		Input.set_joy_light(0, Color(255, 203, 0))
+		Input.set_joy_light(0, Color(255, 255, 0))
 	elif hp <= 100 and len(Input.get_connected_joypads()):
 		Input.set_joy_light(0, Color(0, 255, 0))
+	
+	if Input.is_action_just_pressed("go_back_to_level_select"):
+		get_tree().change_scene_to_file("res://scenes/ui/level_select.tscn")
 
 func _physics_process(delta: float) -> void:
 	var direction_x := Input.get_axis("go_left", "go_right")
@@ -73,3 +78,9 @@ func _physics_process(delta: float) -> void:
 
 func heal(heal_points: int):
 	hp += heal_points
+
+func attack(damage_points: int):
+	hp -= damage_points
+
+func _on_back_btn_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/ui/level_select.tscn")

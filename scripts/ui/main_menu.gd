@@ -15,6 +15,29 @@ func _ready() -> void:
 	logo.rotation = 0.01
 	
 	Autoload.load_data()
+	update_textures()
+
+func update_textures():
+	if Autoload.data.lang == "ru":
+		$Version.texture = $Sprite1061.texture
+		$MarginContainer/VBoxContainer/MarginContainer/PlayButton.texture_normal = $Sprite122.texture
+		$MarginContainer/VBoxContainer/MarginContainer/PlayButton.texture_hover = $Sprite123.texture
+		$MarginContainer/VBoxContainer/MarginContainer/PlayButton.texture_pressed = $Sprite123.texture
+		$MarginContainer/VBoxContainer/MarginContainer3/AbilitiesButton.texture_normal = $Sprite362.texture
+		$MarginContainer/VBoxContainer/MarginContainer3/AbilitiesButton.texture_hover = $Sprite363.texture
+		$MarginContainer/VBoxContainer/MarginContainer3/AbilitiesButton.texture_pressed = $Sprite363.texture
+		$MarginContainer/VBoxContainer/MarginContainer4/ChallengesButton.texture_normal = $Sprite892.texture
+		$MarginContainer/VBoxContainer/MarginContainer4/ChallengesButton.texture_hover = $Sprite893.texture
+		$MarginContainer/VBoxContainer/MarginContainer4/ChallengesButton.texture_pressed = $Sprite893.texture
+		$MarginContainer/VBoxContainer/MarginContainer5/SettingsButton.texture_normal = $Sprite882.texture
+		$MarginContainer/VBoxContainer/MarginContainer5/SettingsButton.texture_hover = $Sprite883.texture
+		$MarginContainer/VBoxContainer/MarginContainer5/SettingsButton.texture_pressed = $Sprite883.texture
+		$MarginContainer/VBoxContainer/MarginContainer6/SkinsButton.texture_normal = $Sprite2222.texture
+		$MarginContainer/VBoxContainer/MarginContainer6/SkinsButton.texture_hover = $Sprite2223.texture
+		$MarginContainer/VBoxContainer/MarginContainer6/SkinsButton.texture_pressed = $Sprite2223.texture
+		$MarginContainer/VBoxContainer/MarginContainer2/ExitButton.texture_normal = $Sprite152.texture
+		$MarginContainer/VBoxContainer/MarginContainer2/ExitButton.texture_hover = $Sprite153.texture
+		$MarginContainer/VBoxContainer/MarginContainer2/ExitButton.texture_pressed = $Sprite153.texture
 
 
 func _process(delta: float) -> void:

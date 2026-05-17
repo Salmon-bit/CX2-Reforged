@@ -34,8 +34,17 @@
 device = -1
 keycode = 4194305
 
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_ycs42"]
+button_index = 1
+
 [sub_resource type="Shortcut" id="Shortcut_vr2vt"]
-events = [SubResource("InputEventKey_5i12r")]
+events = [SubResource("InputEventKey_5i12r"), SubResource("InputEventJoypadButton_ycs42")]
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_j06xg"]
+button_index = 3
+
+[sub_resource type="Shortcut" id="Shortcut_x1uin"]
+events = [SubResource("InputEventJoypadButton_j06xg")]
 
 [node name="SettingsScene" type="Control" unique_id=1446389452]
 layout_mode = 3
@@ -144,6 +153,7 @@ theme_override_constants/margin_right = -57
 [node name="DeleteFile" type="TextureButton" parent="MarginContainer/HBoxContainer/MarginContainer3" unique_id=1257471654]
 texture_filter = 3
 layout_mode = 2
+shortcut = SubResource("Shortcut_x1uin")
 texture_normal = ExtResource("12_3keoi")
 texture_pressed = ExtResource("13_ycs42")
 texture_hover = ExtResource("13_ycs42")

@@ -12,6 +12,7 @@ func get_level_num(node_name: String) -> String:
 	return result
 
 func go_to_level(btn: TextureButton) -> void:
+	Autoload.click()
 	var level_num = get_level_num(btn.name)
 	get_tree().change_scene_to_file("res://scenes/levels/level_" + level_num + ".tscn")
 
@@ -32,3 +33,7 @@ func update_textures() -> void:
 
 func _ready() -> void:
 	update_textures()
+
+
+func _on_back_btn_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/ui/main_menu.tscn")

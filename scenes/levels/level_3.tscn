@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://chv6jc7h3rp3s" path="res://scripts/game_over_check.gd" id="5_ftfob"]
 [ext_resource type="PackedScene" uid="uid://mcinvy3iq3td" path="res://scenes/mushrooms/red_mushroom.tscn" id="6_fkk1g"]
 [ext_resource type="Texture2D" uid="uid://bqae7q4gv5w3y" path="res://sprites/UI/Sprite20_0.png" id="7_fkk1g"]
+[ext_resource type="PackedScene" uid="uid://cydhwdtrcoq08" path="res://scenes/mushrooms/blue_mushroom.tscn" id="7_ugcn1"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ugcn1"]
 vertices = PackedVector2Array(1527.9531, 821, 11.921875, 821.9922, 6.0703125, 11.9921875, 1524.0391, 11)
@@ -41,6 +42,15 @@ position = Vector2(1387, 242)
 
 [node name="RedMushroom2" parent="Enemies" unique_id=1245203652 instance=ExtResource("6_fkk1g")]
 position = Vector2(1195, 708)
+
+[node name="BlueMushroom" parent="Enemies" unique_id=2067160369 instance=ExtResource("7_ugcn1")]
+position = Vector2(1370, 584)
+
+[node name="BlueMushroom2" parent="Enemies" unique_id=2071096065 instance=ExtResource("7_ugcn1")]
+position = Vector2(1381, 396)
+
+[node name="BlueMushroom3" parent="Enemies" unique_id=591191555 instance=ExtResource("7_ugcn1")]
+position = Vector2(560, 685)
 
 [node name="WinScreen" type="Sprite2D" parent="." unique_id=476568939]
 visible = false

@@ -7,7 +7,21 @@
 [ext_resource type="Texture2D" uid="uid://1obmuoxktm3k" path="res://sprites/UI/Sprite19_1.png" id="4_t2qwf"]
 [ext_resource type="Texture2D" uid="uid://bymf2mbh58l5r" path="res://sprites/UI/Sprite22_0.png" id="5_wh1jf"]
 [ext_resource type="Texture2D" uid="uid://cl0pp50jq4n21" path="res://sprites/UI/Sprite22_1.png" id="6_0rr43"]
+[ext_resource type="Texture2D" uid="uid://c5bpwlw7aeqes" path="res://sprites/UI/Sprite30_0.png" id="8_1t3v0"]
 [ext_resource type="Texture2D" uid="uid://bvhofpl33x5l2" path="res://sprites/UI/Sprite21_0.png" id="8_i7y2i"]
+[ext_resource type="Texture2D" uid="uid://sdy1vin4ij3k" path="res://sprites/UI/Sprite30_1.png" id="9_0grds"]
+[ext_resource type="Texture2D" uid="uid://bqk5nobyr54xw" path="res://sprites/UI/Sprite14_0.png" id="9_wh1jf"]
+[ext_resource type="Texture2D" uid="uid://bk3ika57kp4f7" path="res://sprites/UI/Sprite14_1.png" id="10_0rr43"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_wh1jf"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_wh1jf"]
+button_index = 1
+
+[sub_resource type="Shortcut" id="Shortcut_0rr43"]
+events = [SubResource("InputEventKey_wh1jf"), SubResource("InputEventJoypadButton_wh1jf")]
 
 [node name="LevelSelect" type="Control" unique_id=1199517008]
 layout_mode = 3
@@ -32,8 +46,8 @@ layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 grow_vertical = 2
-theme_override_constants/margin_left = 64
-theme_override_constants/margin_top = 64
+theme_override_constants/margin_left = 69
+theme_override_constants/margin_top = 69
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2058013834]
 layout_mode = 2
@@ -57,6 +71,24 @@ texture_normal = ExtResource("5_wh1jf")
 texture_pressed = ExtResource("6_0rr43")
 texture_hover = ExtResource("6_0rr43")
 
+[node name="Level4" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=1273530788]
+layout_mode = 2
+texture_normal = ExtResource("8_1t3v0")
+texture_pressed = ExtResource("9_0grds")
+texture_hover = ExtResource("9_0grds")
+
 [node name="Sprite210" type="Sprite2D" parent="." unique_id=189461305]
 position = Vector2(49, -38)
 texture = ExtResource("8_i7y2i")
+
+[node name="BackBtn" type="TextureButton" parent="." unique_id=1095225944]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+shortcut = SubResource("Shortcut_0rr43")
+texture_normal = ExtResource("9_wh1jf")
+texture_pressed = ExtResource("10_0rr43")
+texture_hover = ExtResource("10_0rr43")
+flip_h = true
+
+[connection signal="pressed" from="BackBtn" to="." method="_on_back_btn_pressed"]

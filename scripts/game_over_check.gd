@@ -8,7 +8,7 @@ var counter = 0
 func _process(delta: float) -> void:
 	counter = 0
 	for e in get_children():
-		if e.get_node("Sprite").animation == "dead":
+		if e.animated_sprite.animation == "dead":
 			counter += 1
 	
 	if counter == len(get_children()):
@@ -17,7 +17,8 @@ func _process(delta: float) -> void:
 	if win:
 		$"../WinScreen".position = get_parent().get_node("Player").position
 		$"../WinScreen".show()
-		Autoload.data.level = int(Autoload.get_level_num(get_parent().name))
+		if Autoload.data.level < int(Autoload.get_level_num(get_parent().name)):
+			Autoload.data.level = int(Autoload.get_level_num(get_parent().name))
 		Autoload.save_data()
 	
 	$"../WinScreen".rotation += mp * delta

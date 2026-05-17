@@ -30,6 +30,19 @@
 [ext_resource type="Texture2D" uid="uid://kx8cqxp5d2cv" path="res://sprites/Mushrooms/MainMenuFloatingMushrooms/Sprite180_11.png" id="26_r6ok0"]
 [ext_resource type="Texture2D" uid="uid://wunxn0wj1y83" path="res://sprites/Mushrooms/MainMenuFloatingMushrooms/Sprite180_12.png" id="27_oq1mw"]
 [ext_resource type="Texture2D" uid="uid://btt7f574w88gs" path="res://sprites/Mushrooms/MainMenuFloatingMushrooms/Sprite180_13.png" id="28_cc4y2"]
+[ext_resource type="Texture2D" uid="uid://hnacalqsptvq" path="res://sprites/UI/Sprite12_2.png" id="31_r6ok0"]
+[ext_resource type="Texture2D" uid="uid://cr31yw66jxvg3" path="res://sprites/UI/Sprite12_3.png" id="32_oq1mw"]
+[ext_resource type="Texture2D" uid="uid://bp153dckmhpcq" path="res://sprites/UI/Sprite15_2.png" id="33_cc4y2"]
+[ext_resource type="Texture2D" uid="uid://c7bk33tvaimx" path="res://sprites/UI/Sprite15_3.png" id="34_iglv2"]
+[ext_resource type="Texture2D" uid="uid://bjgfn5q0pics8" path="res://sprites/UI/Sprite36_2.png" id="35_c68a3"]
+[ext_resource type="Texture2D" uid="uid://bncnwgwip0yis" path="res://sprites/UI/Sprite36_3.png" id="36_01voq"]
+[ext_resource type="Texture2D" uid="uid://c2gx0v85j7wen" path="res://sprites/UI/Sprite88_2.png" id="37_hr2v7"]
+[ext_resource type="Texture2D" uid="uid://cmmiywi8enmf5" path="res://sprites/UI/Sprite88_3.png" id="38_t4suy"]
+[ext_resource type="Texture2D" uid="uid://c3f0qpov7mi17" path="res://sprites/UI/Sprite89_2.png" id="39_xupgs"]
+[ext_resource type="Texture2D" uid="uid://coerrev6r0gdi" path="res://sprites/UI/Sprite89_3.png" id="40_6gmx2"]
+[ext_resource type="Texture2D" uid="uid://bfk5as76sc15i" path="res://sprites/UI/Sprite106_1.png" id="41_3g7do"]
+[ext_resource type="Texture2D" uid="uid://cjo3ci11fhxjn" path="res://sprites/UI/Sprite222_2.png" id="42_cc4y2"]
+[ext_resource type="Texture2D" uid="uid://ddhwhk07hwads" path="res://sprites/UI/Sprite222_3.png" id="43_iglv2"]
 
 [sub_resource type="Gradient" id="Gradient_wu84c"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -280,15 +293,76 @@ position = Vector2(1371, 199)
 texture = ExtResource("28_cc4y2")
 
 [node name="Logo" type="Sprite2D" parent="." unique_id=1181394871]
+z_index = 2
 texture_filter = 3
-position = Vector2(299, 103)
+position = Vector2(299, 99)
 rotation = -0.2443461
 texture = ExtResource("18_qpknu")
 
+[node name="Logo2" type="Sprite2D" parent="Logo" unique_id=2001548873]
+modulate = Color(0.3328807, 0.33288068, 0.33288068, 1)
+z_index = -1
+texture_filter = 3
+position = Vector2(-1.2096252, 4.8515778)
+texture = ExtResource("18_qpknu")
+
 [node name="Version" type="Sprite2D" parent="." unique_id=96421610]
+modulate = Color(0.19076231, 0.19076234, 0.19076231, 1)
 texture_filter = 3
 position = Vector2(257, 691)
 texture = ExtResource("19_wabu5")
+
+[node name="Sprite122" type="Sprite2D" parent="." unique_id=1521883603]
+position = Vector2(1440, 131)
+texture = ExtResource("31_r6ok0")
+
+[node name="Sprite123" type="Sprite2D" parent="." unique_id=356152698]
+position = Vector2(1440, 131)
+texture = ExtResource("32_oq1mw")
+
+[node name="Sprite152" type="Sprite2D" parent="." unique_id=843513468]
+position = Vector2(1440, 131)
+texture = ExtResource("33_cc4y2")
+
+[node name="Sprite153" type="Sprite2D" parent="." unique_id=236920045]
+position = Vector2(1432, 228)
+texture = ExtResource("34_iglv2")
+
+[node name="Sprite362" type="Sprite2D" parent="." unique_id=297114785]
+position = Vector2(1281, 400)
+texture = ExtResource("35_c68a3")
+
+[node name="Sprite363" type="Sprite2D" parent="." unique_id=100905363]
+position = Vector2(1272, 249)
+texture = ExtResource("36_01voq")
+
+[node name="Sprite882" type="Sprite2D" parent="." unique_id=1049570415]
+position = Vector2(1274, 460)
+texture = ExtResource("37_hr2v7")
+
+[node name="Sprite883" type="Sprite2D" parent="." unique_id=87798507]
+position = Vector2(1281, 319)
+texture = ExtResource("38_t4suy")
+
+[node name="Sprite892" type="Sprite2D" parent="." unique_id=619842808]
+position = Vector2(1271, 178)
+texture = ExtResource("39_xupgs")
+
+[node name="Sprite893" type="Sprite2D" parent="." unique_id=350855044]
+position = Vector2(1267, 117)
+texture = ExtResource("40_6gmx2")
+
+[node name="Sprite1061" type="Sprite2D" parent="." unique_id=392157940]
+position = Vector2(1440, 131)
+texture = ExtResource("41_3g7do")
+
+[node name="Sprite2222" type="Sprite2D" parent="." unique_id=1389513001]
+position = Vector2(1461, 332)
+texture = ExtResource("42_cc4y2")
+
+[node name="Sprite2223" type="Sprite2D" parent="." unique_id=342139756]
+position = Vector2(1461, 381)
+texture = ExtResource("43_iglv2")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer5/SettingsButton" to="." method="_on_settings_button_pressed"]

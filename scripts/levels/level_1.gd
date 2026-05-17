@@ -1,9 +1,11 @@
 extends Node2D
 
-var spawner: Node2D
-var enemies: Node
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("go_back_to_level_select"):
+		get_tree().change_scene_to_file("res://scenes/ui/level_select.tscn")
+	if Input.is_action_just_pressed("restart_room"):
+		get_tree().reload_current_scene()
 
 func _ready() -> void:
-	enemies = $Enemies
-	#spawner = $Spawners/EnemySpawner
-	#enemies.add_child(spawner.spawn())
+	if Autoload.data.lang == "ru":
+		$Sprite2D.texture = $Sprite961.texture

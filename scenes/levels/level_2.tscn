@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://dqw2n8cqlna31"]
 
+[ext_resource type="Script" uid="uid://i4sg2pjj0tgq" path="res://scripts/levels/level_2.gd" id="1_ibugp"]
 [ext_resource type="TileSet" uid="uid://bfv0ks1diwumi" path="res://scenes/levels/tileset.tres" id="1_j2425"]
 [ext_resource type="PackedScene" uid="uid://bee7vho5h12qs" path="res://scenes/player.tscn" id="2_g2h2n"]
 [ext_resource type="PackedScene" uid="uid://r05o748hjhiw" path="res://scenes/camera_2d.tscn" id="3_ra442"]
 [ext_resource type="Script" uid="uid://chv6jc7h3rp3s" path="res://scripts/game_over_check.gd" id="4_fiq81"]
-[ext_resource type="PackedScene" uid="uid://mcinvy3iq3td" path="res://scenes/mushrooms/red_mushroom.tscn" id="5_l37oo"]
+[ext_resource type="PackedScene" uid="uid://cydhwdtrcoq08" path="res://scenes/mushrooms/blue_mushroom.tscn" id="6_ibugp"]
 [ext_resource type="Texture2D" uid="uid://bqae7q4gv5w3y" path="res://sprites/UI/Sprite20_0.png" id="6_qpwj6"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_qpwj6"]
@@ -14,6 +15,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(64, 192, 64, 450, 385, 
 agent_radius = 5.0
 
 [node name="Level2" type="Node2D" unique_id=1908629097]
+script = ExtResource("1_ibugp")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1386850526]
 tile_set = ExtResource("1_j2425")
@@ -40,11 +42,11 @@ metadata/_edit_lock_ = true
 [node name="Enemies" type="Node" parent="." unique_id=1640880394]
 script = ExtResource("4_fiq81")
 
-[node name="RedMushroom" parent="Enemies" unique_id=1021972395 instance=ExtResource("5_l37oo")]
-position = Vector2(894, 421)
+[node name="BlueMushroom" parent="Enemies" unique_id=2067160369 instance=ExtResource("6_ibugp")]
+position = Vector2(915, 386)
 
-[node name="RedMushroom2" parent="Enemies" unique_id=123039914 instance=ExtResource("5_l37oo")]
-position = Vector2(1145, 178)
+[node name="BlueMushroom2" parent="Enemies" unique_id=1818430352 instance=ExtResource("6_ibugp")]
+position = Vector2(1169, 243)
 
 [node name="WinScreen" type="Sprite2D" parent="." unique_id=1711139650]
 visible = false
