@@ -4,7 +4,10 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if "mushroom" in body.name.to_lower() or body.get_node_or_null("I_AM_BOX") != null:
+	if\
+	"mushroom" in body.name.to_lower() or\
+	body.get_node_or_null("I_AM_BOX") != null or\
+	body.get_node_or_null("I_AM_BLACK_MUSHROM") != null:
 		body.attack(10)
 		queue_free()
 	elif body.name != "Player" and "arrow" not in body.name:

@@ -21,6 +21,7 @@ var can_damage_player = false
 var can_damage_box = false
 var dead = false
 var damaging_box: StaticBody2D
+var changed_speed = false
 
 func _ready() -> void:
 	animated_sprite.animation = "default"
@@ -61,11 +62,14 @@ func _process(_delta: float) -> void:
 
 	elif hp <= 30:
 		animated_sprite.animation = "bad"
-		if speed == Autoload.SPEEDS.SLOW:
+		if speed == Autoload.SPEEDS.SLOW and not changed_speed:
+			changed_speed = true
 			speed = Autoload.SPEEDS.VERY_SLOW
-		elif speed == Autoload.SPEEDS.FAST:
+		elif speed == Autoload.SPEEDS.FAST and not changed_speed:
+			changed_speed = true
 			speed = Autoload.SPEEDS.SLOW
-		elif speed == Autoload.SPEEDS.QUICK:
+		elif speed == Autoload.SPEEDS.QUICK and not changed_speed:
+			changed_speed = true
 			speed = Autoload.SPEEDS.FAST
 	
 	if attack_timer.time_left == 0.0 and can_damage_player and can_melle_attack:

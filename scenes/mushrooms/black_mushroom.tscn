@@ -44,7 +44,7 @@ radius = 20.024984
 
 [node name="BlackMushroom" type="CharacterBody2D" unique_id=1447206191 node_paths=PackedStringArray("animated_sprite", "navigator", "attack_timer", "path_update_timer", "HP_label", "hitbox", "collision")]
 collision_layer = 2
-collision_mask = 7
+collision_mask = 5
 script = ExtResource("1_x02iq")
 can_melle_attack = true
 hp = 50
@@ -90,3 +90,5 @@ shape = SubResource("CircleShape2D_ejybe")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=937906698]
 position = Vector2(2, 12)
 shape = SubResource("CircleShape2D_70hpk")
+
+[node name="I_AM_BLACK_MUSHROM" type="Node" parent="." unique_id=1548050745]

@@ -18,3 +18,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func _on_death_timer_timeout() -> void:
 	queue_free()
+
+func heal(x):
+	pass
