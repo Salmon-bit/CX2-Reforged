@@ -24,6 +24,10 @@ Autoload="*uid://cxbi40imuuxwp"
 
 window/stretch/mode="canvas_items"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/Godot-GameJolt-API-8cb769529937c0bf2983206f338ac20551d14b8b/plugin.cfg")
+
 [input]
 
 go_up={

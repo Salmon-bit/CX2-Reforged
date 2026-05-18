@@ -8,6 +8,10 @@ var arrow_speed = 600
 var hp = 100
 
 func _ready() -> void:
+	if Autoload.data.difficulty == "easy":
+		hp = 300
+	elif Autoload.data.difficulty == "hard":
+		hp = 80
 	bow = $Bow
 
 func _process(_delta: float) -> void:
