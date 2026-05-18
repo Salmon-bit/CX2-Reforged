@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://d1bbt7klsa0xw"]
+
+[ext_resource type="Script" uid="uid://ddxb8gper6awp" path="res://scripts/mushrooms/basic_mushroom.gd" id="1_x02iq"]
+[ext_resource type="Texture2D" uid="uid://xyxkok8y1qbt" path="res://sprites/Mushrooms/MiniMushroom/Sprite27_1.png" id="2_71qu5"]
+[ext_resource type="Texture2D" uid="uid://wsqbv5q0wkt6" path="res://sprites/Mushrooms/MiniMushroom/Sprite151_0.png" id="3_nbnsh"]
+[ext_resource type="Texture2D" uid="uid://cy2h58i7rjom8" path="res://sprites/Mushrooms/MiniMushroom/Sprite151_1.png" id="4_ujnuu"]
+[ext_resource type="Texture2D" uid="uid://ciejy50p6grso" path="res://sprites/Mushrooms/MiniMushroom/Sprite27_0.png" id="5_y3jwo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u16ys"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_71qu5")
+}],
+"loop": true,
+"name": &"bad",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_nbnsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ujnuu")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_y3jwo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ejybe"]
+radius = 25.179358
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_70hpk"]
+radius = 20.024984
+
+[node name="BlackMushroom" type="CharacterBody2D" unique_id=1447206191 node_paths=PackedStringArray("animated_sprite", "navigator", "attack_timer", "path_update_timer", "HP_label", "hitbox", "collision")]
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("1_x02iq")
+can_melle_attack = true
+hp = 50
+speed = 15000
+animated_sprite = NodePath("AnimatedSprite2D")
+navigator = NodePath("NavigationAgent2D")
+attack_timer = NodePath("Timer2")
+path_update_timer = NodePath("Timer")
+HP_label = NodePath("Label")
+hitbox = NodePath("Area2D")
+collision = NodePath("CollisionShape2D")
+metadata/_custom_type_script = "uid://ddxb8gper6awp"
+
+[node name="Timer" type="Timer" parent="." unique_id=1295438647]
+wait_time = 0.1
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="." unique_id=1122686488]
+wait_time = 0.3
+one_shot = true
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1334722693]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1873457602]
+sprite_frames = SubResource("SpriteFrames_u16ys")
+
+[node name="Label" type="Label" parent="." unique_id=499047732]
+offset_left = -29.0
+offset_top = -41.0
+offset_right = 29.0
+offset_bottom = -18.0
+text = "HP: 100"
+horizontal_alignment = 1
+
+[node name="Area2D" type="Area2D" parent="." unique_id=565371825]
+collision_layer = 2
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1134450593]
+position = Vector2(2, 12)
+shape = SubResource("CircleShape2D_ejybe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=937906698]
+position = Vector2(2, 12)
+shape = SubResource("CircleShape2D_70hpk")

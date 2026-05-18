@@ -71,6 +71,7 @@ func _physics_process(delta: float) -> void:
 			arrow.velocity = dir * arrow_speed
 			arrow.add_collision_exception_with(self)
 			get_tree().current_scene.add_child(arrow)
+			$ShootSound.play()
 			shoot_delay = 0.15
 
 	if Input.is_action_just_released("shoot"):

@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://dbjptjyfcmdp0"]
+
+[ext_resource type="Script" uid="uid://rgd62gavl7q3" path="res://scripts/mushrooms/green_mushroom.gd" id="1_nvubd"]
+[ext_resource type="Texture2D" uid="uid://swg5stkdvay0" path="res://sprites/Mushrooms/GreenMushroom/Sprite25_2.png" id="2_nvubd"]
+[ext_resource type="Texture2D" uid="uid://byanltqjyq5gg" path="res://sprites/Mushrooms/GreenMushroom/Sprite25_3.png" id="3_ds1on"]
+[ext_resource type="Texture2D" uid="uid://cwg24ua0thyxe" path="res://sprites/Mushrooms/GreenMushroom/Sprite26_0.png" id="4_4ss3x"]
+[ext_resource type="Texture2D" uid="uid://bvcnlodicx7b8" path="res://sprites/Mushrooms/GreenMushroom/Sprite25_0.png" id="5_kxcrh"]
+[ext_resource type="Texture2D" uid="uid://8mo0ivqbtv3q" path="res://sprites/Mushrooms/GreenMushroom/Sprite25_1.png" id="6_g401i"]
+[ext_resource type="Script" uid="uid://dnfc44lsn374t" path="res://scripts/spawner.gd" id="7_ds1on"]
+[ext_resource type="PackedScene" uid="uid://d1bbt7klsa0xw" path="res://scenes/mushrooms/black_mushroom.tscn" id="8_4ss3x"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nfsm0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nvubd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ds1on")
+}],
+"loop": true,
+"name": &"bad",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_4ss3x")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_kxcrh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_g401i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m0weh"]
+radius = 28.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nvubd"]
+radius = 33.01515
+
+[node name="GreenMushroom" type="CharacterBody2D" unique_id=368697827 node_paths=PackedStringArray("spawner", "animated_sprite", "navigator", "attack_timer", "path_update_timer", "HP_label", "hitbox", "collision")]
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("1_nvubd")
+spawner = NodePath("Spawner")
+can_melle_attack = true
+can_ranged_attack = true
+animated_sprite = NodePath("AnimatedSprite2D")
+navigator = NodePath("NavigationAgent2D")
+attack_timer = NodePath("Timer")
+path_update_timer = NodePath("Timer2")
+HP_label = NodePath("Label")
+hitbox = NodePath("Area2D")
+collision = NodePath("CollisionShape2D")
+metadata/_custom_type_script = "uid://ddxb8gper6awp"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1374937306]
+sprite_frames = SubResource("SpriteFrames_nfsm0")
+frame_progress = 0.44091117
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2012432875]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_m0weh")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=99100339]
+path_desired_distance = 3.0
+target_desired_distance = 3.0
+path_postprocessing = 1
+debug_enabled = true
+debug_path_custom_color = Color(1, 0, 0, 1)
+
+[node name="Timer" type="Timer" parent="." unique_id=733213923]
+wait_time = 5.0
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="." unique_id=637143016]
+wait_time = 0.2
+one_shot = true
+
+[node name="Label" type="Label" parent="." unique_id=822138835]
+offset_left = -29.0
+offset_top = -56.0
+offset_right = 29.0
+offset_bottom = -33.0
+text = "HP: 100"
+horizontal_alignment = 1
+
+[node name="Area2D" type="Area2D" parent="." unique_id=241151341]
+collision_layer = 2
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=616405286]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_nvubd")
+metadata/_edit_lock_ = true
+
+[node name="Spawner" type="Node2D" parent="." unique_id=723909017]
+script = ExtResource("7_ds1on")
+object = ExtResource("8_4ss3x")

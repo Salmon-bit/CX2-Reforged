@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bee7vho5h12qs" path="res://scenes/player.tscn" id="4_anwe6"]
 [ext_resource type="PackedScene" uid="uid://r05o748hjhiw" path="res://scenes/camera_2d.tscn" id="5_rej77"]
 [ext_resource type="Texture2D" uid="uid://bqae7q4gv5w3y" path="res://sprites/UI/Sprite20_0.png" id="6_rej77"]
+[ext_resource type="PackedScene" uid="uid://dbjptjyfcmdp0" path="res://scenes/mushrooms/green_mushroom.tscn" id="6_um320"]
 
 [node name="Level4" type="Node2D" unique_id=393177945]
 script = ExtResource("1_ts8eg")
@@ -35,6 +36,12 @@ position = Vector2(897, 173)
 
 [node name="BlueMushroom2" parent="Enemies" unique_id=1131054623 instance=ExtResource("3_ogj6a")]
 position = Vector2(1568, 158)
+
+[node name="GreenMushroom" parent="Enemies" unique_id=368697827 instance=ExtResource("6_um320")]
+position = Vector2(587, 482)
+
+[node name="GreenMushroom2" parent="Enemies" unique_id=918315386 instance=ExtResource("6_um320")]
+position = Vector2(860, 357)
 
 [node name="Player" parent="." unique_id=1542968218 instance=ExtResource("4_anwe6")]
 position = Vector2(206, 285)

@@ -29,6 +29,10 @@ func _ready() -> void:
 	navigator.target_position = player.global_position
 	hitbox.area_entered.connect(_on_area_2d_area_entered)
 	hitbox.area_exited.connect(_on_area_2d_area_exited)
+	navigator.path_postprocessing = NavigationPathQueryParameters2D.PATH_POSTPROCESSING_EDGECENTERED
+	navigator.path_desired_distance = 3.0
+	navigator.target_desired_distance = 3.0
+	navigator.path_max_distance = 100.0
 
 func _physics_process(delta: float) -> void:
 	if !navigator.is_target_reached():
@@ -49,8 +53,8 @@ func _process(_delta: float) -> void:
 
 	if hp <= 0:
 		animated_sprite.animation = "dead"
-		if get_node_or_null("CollisionShape2D") != null:
-			$CollisionShape2D.queue_free()
+		if collision != null:
+			collision.queue_free()
 		dead = true
 		speed = Autoload.SPEEDS.STOPPED
 		HP_label.text = ""
