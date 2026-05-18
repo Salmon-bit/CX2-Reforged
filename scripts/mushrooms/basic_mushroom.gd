@@ -55,6 +55,7 @@ func _process(_delta: float) -> void:
 	if hp <= 0:
 		animated_sprite.animation = "dead"
 		if collision != null:
+			GameJolt.trophies_add_achieved("30171")
 			collision.queue_free()
 		dead = true
 		speed = Autoload.SPEEDS.STOPPED

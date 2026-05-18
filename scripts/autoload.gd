@@ -30,21 +30,14 @@ var data = {
 		false,
 		false
 	],
-	"abilities": [
-		true,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false
-	],
 	"money": 0,
 	"difficulty": "easy",
-	"lang": "en"
+	"lang": "en",
+	"username": "",
+	"usertoken": "",
+	"have_auth": false,
+	"auto_auth": false,
+	"cloud_save": false,
 }
 
 const null_data = {
@@ -77,25 +70,27 @@ const null_data = {
 		false,
 		false
 	],
-	"abilities": [
-		true,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false
-	],
 	"money": 0,
 	"difficulty": "easy",
-	"lang": "en"
+	"lang": "en",
+	"username": "",
+	"usertoken": "",
+	"have_auth": false,
+	"cloud_save": false
 }
 
 const save_file = "user://save.json"
 enum SPEEDS {STOPPED = 0, VERY_SLOW = 2500, SLOW = 5000, FAST = 10000, QUICK = 15000}
+
+func _ready() -> void:
+	GameJolt.set_game_id(GameId.game_id)
+	GameJolt.set_private_key(GameId.secret_key)
+	
+	load_data()
+	
+	if data.auto_auth:
+		GameJolt.set_user_name(data.username)
+		GameJolt.set_user_token(data.usertoken)
 
 func save_data(dat = data):
 	var file = FileAccess.open(save_file, FileAccess.WRITE)

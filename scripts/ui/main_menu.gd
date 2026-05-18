@@ -13,9 +13,12 @@ func _ready() -> void:
 	particle.emitting = true
 	logo = $Logo
 	logo.rotation = 0.01
-	
+
 	Autoload.load_data()
+	GameJolt.set_game_id(GameId.game_id)
+	GameJolt.set_private_key(GameId.secret_key)
 	update_textures()
+	GameJolt.sessions_open()
 
 func update_textures():
 	if Autoload.data.lang == "ru":
@@ -57,6 +60,7 @@ func _process(delta: float) -> void:
 
 # Buttons Callback
 func _on_exit_button_pressed() -> void:
+	GameJolt.sessions_close()
 	get_tree().quit()
 
 

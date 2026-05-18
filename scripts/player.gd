@@ -20,6 +20,7 @@ func _process(_delta: float) -> void:
 	if hp > 100 and len(Input.get_connected_joypads()):
 		Input.set_joy_light(0, Color(0, 255, 255))
 	elif hp <= 0:
+		GameJolt.trophies_add_achieved("300207")
 		get_tree().reload_current_scene()
 	elif hp <= 20 and len(Input.get_connected_joypads()):
 		Input.set_joy_light(0, Color(255, 0, 0))

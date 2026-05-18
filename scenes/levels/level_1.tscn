@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://bqae7q4gv5w3y" path="res://sprites/UI/Sprite20_0.png" id="4_6761a"]
 [ext_resource type="PackedScene" uid="uid://mcinvy3iq3td" path="res://scenes/mushrooms/red_mushroom.tscn" id="5_oc4kc"]
 [ext_resource type="Script" uid="uid://chv6jc7h3rp3s" path="res://scripts/game_over_check.gd" id="5_sk5k4"]
-[ext_resource type="PackedScene" uid="uid://dbjptjyfcmdp0" path="res://scenes/mushrooms/green_mushroom.tscn" id="7_qxy0u"]
 [ext_resource type="Texture2D" uid="uid://c2bqiwwyhcp1o" path="res://sprites/UI/Sprite96_0.png" id="8_s8va5"]
 [ext_resource type="Texture2D" uid="uid://co7opvffiqfl1" path="res://sprites/UI/Sprite96_1.png" id="9_dga24"]
 
@@ -48,15 +47,10 @@ color = Color(0, 0, 0, 1)
 script = ExtResource("5_sk5k4")
 
 [node name="RedMushroom" parent="Enemies" unique_id=1898086667 instance=ExtResource("5_oc4kc")]
-visible = false
 position = Vector2(729, 412)
 
 [node name="RedMushroom2" parent="Enemies" unique_id=654866750 instance=ExtResource("5_oc4kc")]
-visible = false
 position = Vector2(1101, 189)
-
-[node name="GreenMushroom" parent="Enemies" unique_id=368697827 instance=ExtResource("7_qxy0u")]
-position = Vector2(917, 391)
 
 [node name="WinScreen" type="Sprite2D" parent="." unique_id=787690248]
 visible = false

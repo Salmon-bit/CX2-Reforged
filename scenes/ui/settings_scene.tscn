@@ -78,7 +78,7 @@ theme_override_constants/margin_bottom = 15
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=51319457]
 layout_mode = 2
-theme_override_constants/separation = 98
+theme_override_constants/separation = 24
 alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer" unique_id=195767307]
@@ -92,8 +92,8 @@ theme_override_constants/separation = 12
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=1028429595]
 layout_mode = 2
-theme_override_constants/margin_left = -123
-theme_override_constants/margin_right = 299
+theme_override_constants/margin_left = -95
+theme_override_constants/margin_right = 270
 
 [node name="Back" type="TextureButton" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=160960496]
 texture_filter = 3
@@ -146,17 +146,26 @@ stretch_mode = 2
 
 [node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/HBoxContainer" unique_id=1330660965]
 layout_mode = 2
-theme_override_constants/margin_left = 2
-theme_override_constants/margin_top = 550
+theme_override_constants/margin_left = -57
+theme_override_constants/margin_top = 555
 theme_override_constants/margin_right = -57
 
-[node name="DeleteFile" type="TextureButton" parent="MarginContainer/HBoxContainer/MarginContainer3" unique_id=1257471654]
+[node name="VBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer3" unique_id=632025844]
+layout_mode = 2
+alignment = 1
+
+[node name="DeleteFile" type="TextureButton" parent="MarginContainer/HBoxContainer/MarginContainer3/VBoxContainer" unique_id=1257471654]
 texture_filter = 3
 layout_mode = 2
 shortcut = SubResource("Shortcut_x1uin")
 texture_normal = ExtResource("12_3keoi")
 texture_pressed = ExtResource("13_ycs42")
 texture_hover = ExtResource("13_ycs42")
+
+[node name="WebSettings" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer3/VBoxContainer" unique_id=1771704723]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "GameJolt Settings"
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/HBoxContainer" unique_id=1700081361]
 layout_mode = 2
@@ -279,6 +288,7 @@ texture = ExtResource("13_ycs42")
 [connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/Easy" to="." method="_on_easy_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/Normal" to="." method="_on_normal_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/Hard" to="." method="_on_hard_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer3/DeleteFile" to="." method="_on_delete_file_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer3/VBoxContainer/DeleteFile" to="." method="_on_delete_file_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer3/VBoxContainer/WebSettings" to="." method="_on_web_settings_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer2/HBoxContainer/Rus" to="." method="_on_rus_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer2/HBoxContainer/Eng" to="." method="_on_eng_pressed"]
