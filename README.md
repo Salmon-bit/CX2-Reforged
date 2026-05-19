@@ -15,6 +15,8 @@ Some features we want to add:
  - Optimize game
  - Continue lore
  - Add advancaments
+ - Add GameJolt Tropheys
+ - Add Cloud saving
 
 Creators:
  - Salmon228 [VK](https://vk.com/homyakus228) [YouTube](https://www.youtube.com/@Kormanmc) [Twitch](https://www.twitch.tv/kormanmc11) [Itch.io](https://salmon-bit.itch.io/) [GameJolt](https://gamejolt.com/@Salmon228)
