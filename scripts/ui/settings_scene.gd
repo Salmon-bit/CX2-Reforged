@@ -46,9 +46,7 @@ func update_textures() -> void:
 		$MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/SelectedDifficulty.texture = $Sprite1454.texture
 	elif Autoload.data.difficulty == "easyyy":
 		$MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/SelectedDifficulty.texture = $Sprite1453.texture
-		GameJolt.trophies_add_achieved("300190")
-
-
+		Autoload.add_trophey(3)
 
 func _ready() -> void:
 	update_textures()

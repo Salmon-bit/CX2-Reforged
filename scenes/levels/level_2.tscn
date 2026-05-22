@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://chv6jc7h3rp3s" path="res://scripts/game_over_check.gd" id="4_fiq81"]
 [ext_resource type="PackedScene" uid="uid://cydhwdtrcoq08" path="res://scenes/mushrooms/blue_mushroom.tscn" id="6_ibugp"]
 [ext_resource type="Texture2D" uid="uid://bqae7q4gv5w3y" path="res://sprites/UI/Sprite20_0.png" id="6_qpwj6"]
+[ext_resource type="PackedScene" uid="uid://dyls7piyfv8fw" path="res://scenes/trophey_manager.tscn" id="8_8qukl"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_qpwj6"]
 vertices = PackedVector2Array(376.7578, 384.29688, 191, 131.92188, 191, 66.0625, 508.64844, 69.92969, 504.65625, 130, 441.84375, 317.07813, 1212, 199.24219, 1274.9688, 196.24219, 1274.0234, 377.90625, 1212.9219, 376.92188, 1090.9375, 323.07813, 379.7422, 444.0078, 69, 444.97656, 69, 196.67969, 131, 192.6875, 1213.9063, 441.85156, 1143.9219, 439.85156, 1019, 321.92188, 760.9375, 251.75781, 763.9375, 506, 516.9531, 506, 514.9531, 315.92188, 569, 199.07031, 647.0781, 197.92969, 645.0703, 68.96875, 1019, 67.02344, 835.97656, 255.21875, 1144.9219, 508.03125, 836.97656, 509.96094, 569, 130, 1093.9375, 69, 1212, 69, 131, 132.90625, 443.84375, 380.28906)
@@ -56,3 +57,8 @@ texture = ExtResource("6_qpwj6")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=163482520]
 navigation_polygon = SubResource("NavigationPolygon_qpwj6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1929159588]
+
+[node name="TropheyManager" parent="CanvasLayer" unique_id=1590201275 instance=ExtResource("8_8qukl")]
+position = Vector2(130, 648)

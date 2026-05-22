@@ -1,6 +1,9 @@
 extends CharacterBody2D
 class_name BasicMushroom
 
+#Signals
+signal kill_mushroom()
+
 # Configurable vars
 @export var can_melle_attack = false
 @export var can_ranged_attack = false
@@ -55,8 +58,17 @@ func _process(_delta: float) -> void:
 	if hp <= 0:
 		animated_sprite.animation = "dead"
 		if collision != null:
-			GameJolt.trophies_add_achieved("30171")
+			Autoload.data.kills = Autoload.data.kills + 1
+			print(Autoload.data.kills)
+			Autoload.save_data()
+			Autoload.add_trophey(0)
+			if int(Autoload.data.kills) == 15:
+				Autoload.add_trophey(1)
+			elif int(Autoload.data.kills) == 100:
+				Autoload.add_trophey(7)
 			collision.queue_free()
+			can_damage_player = false
+			can_damage_box = false
 		dead = true
 		speed = Autoload.SPEEDS.STOPPED
 		HP_label.text = ""

@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://x3xiarcl0mr7" path="res://sprites/UI/Sprite129_3.png" id="26_06trf"]
 [ext_resource type="Texture2D" uid="uid://dsm5hqmxnvtvk" path="res://sprites/UI/Sprite145_2.png" id="27_ycs42"]
 [ext_resource type="Texture2D" uid="uid://b7ynt3e8rr3eg" path="res://sprites/UI/Sprite145_3.png" id="28_j06xg"]
+[ext_resource type="PackedScene" uid="uid://dyls7piyfv8fw" path="res://scenes/trophey_manager.tscn" id="30_j06xg"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_5i12r"]
 device = -1
@@ -283,6 +284,11 @@ texture = ExtResource("12_3keoi")
 [node name="Sprite1221" type="Sprite2D" parent="." unique_id=668116455]
 position = Vector2(139, -125)
 texture = ExtResource("13_ycs42")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=503880901]
+
+[node name="TropheyManager" parent="CanvasLayer" unique_id=1590201275 instance=ExtResource("30_j06xg")]
+visible = false
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/Easy" to="." method="_on_easy_pressed"]

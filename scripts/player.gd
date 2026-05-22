@@ -6,6 +6,7 @@ var bow: Node2D
 var shoot_delay = 0.0
 var arrow_speed = 600
 var hp = 100
+var dead = false
 
 func _ready() -> void:
 	if Autoload.data.difficulty == "easy":
@@ -20,8 +21,17 @@ func _process(_delta: float) -> void:
 	if hp > 100 and len(Input.get_connected_joypads()):
 		Input.set_joy_light(0, Color(0, 255, 255))
 	elif hp <= 0:
-		GameJolt.trophies_add_achieved("300207")
-		get_tree().reload_current_scene()
+		Autoload.add_trophey(4)
+		Autoload.data.deaths = Autoload.data.deaths + 1
+		Autoload.save_data()
+		if get_node_or_null("AnimatedSprite2D") != null:
+			$AnimatedSprite2D.queue_free()
+		if get_node_or_null("Bow/AnimatedSprite2D") != null:
+			$Bow/AnimatedSprite2D.queue_free()
+		if not get_tree().current_scene.get_node("CanvasLayer").get_node("TropheyManager").showing_trophey:
+			get_tree().reload_current_scene()
+		$Label.text = ""
+		dead = true
 	elif hp <= 20 and len(Input.get_connected_joypads()):
 		Input.set_joy_light(0, Color(255, 0, 0))
 	elif hp <= 50 and len(Input.get_connected_joypads()):
@@ -36,13 +46,13 @@ func _physics_process(delta: float) -> void:
 	var direction_x := Input.get_axis("go_left", "go_right")
 	var direction_y := Input.get_axis("go_up", "go_down")
 
-	if direction_x:
+	if direction_x and not dead:
 		velocity.x = direction_x * SPEED * delta
-	else:
+	elif not direction_x and not dead:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-	if direction_y:
+	if direction_y and not dead:
 		velocity.y = direction_y * SPEED * delta
-	else:
+	elif not direction_y and not dead:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 
 	move_and_slide()

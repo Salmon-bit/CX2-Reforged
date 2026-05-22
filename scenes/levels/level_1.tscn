@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://chv6jc7h3rp3s" path="res://scripts/game_over_check.gd" id="5_sk5k4"]
 [ext_resource type="Texture2D" uid="uid://c2bqiwwyhcp1o" path="res://sprites/UI/Sprite96_0.png" id="8_s8va5"]
 [ext_resource type="Texture2D" uid="uid://co7opvffiqfl1" path="res://sprites/UI/Sprite96_1.png" id="9_dga24"]
+[ext_resource type="PackedScene" uid="uid://dyls7piyfv8fw" path="res://scenes/trophey_manager.tscn" id="10_qxy0u"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_oc4kc"]
 vertices = PackedVector2Array(1276.0078, 572, 3.0234375, 572.9922, 5.96875, 9, 1277.9766, 9)
@@ -72,3 +73,17 @@ texture = ExtResource("8_s8va5")
 [node name="Sprite961" type="Sprite2D" parent="." unique_id=1698237363]
 position = Vector2(-189, 437)
 texture = ExtResource("9_dga24")
+
+[node name="Ui" type="Control" parent="." unique_id=389643338]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=660799415]
+
+[node name="TropheyManager" parent="CanvasLayer" unique_id=1590201275 instance=ExtResource("10_qxy0u")]
+z_index = 200
+position = Vector2(130, 648)

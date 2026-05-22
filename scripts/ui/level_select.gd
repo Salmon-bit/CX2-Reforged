@@ -34,6 +34,6 @@ func update_textures() -> void:
 func _ready() -> void:
 	update_textures()
 
-
 func _on_back_btn_pressed() -> void:
+	Autoload.click()
 	get_tree().change_scene_to_file("res://scenes/ui/main_menu.tscn")

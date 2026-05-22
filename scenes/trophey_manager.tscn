@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dyls7piyfv8fw"]
+
+[ext_resource type="Script" uid="uid://bijxt0yhwg8bn" path="res://scripts/trophey_manager.gd" id="1_6i7gj"]
+[ext_resource type="Texture2D" uid="uid://c26umxqqu04ih" path="res://sprites/tropheys/0.png" id="2_o4q6t"]
+[ext_resource type="Texture2D" uid="uid://djg4h1frdk6h4" path="res://sprites/tropheys/1.png" id="3_ogj6f"]
+[ext_resource type="Texture2D" uid="uid://c386x5i0tlsun" path="res://sprites/tropheys/7.png" id="4_qystm"]
+
+[sub_resource type="Theme" id="Theme_ogj6f"]
+
+[node name="TropheyManager" type="Node2D" unique_id=1590201275]
+script = ExtResource("1_6i7gj")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2143100156]
+offset_right = 488.0
+offset_bottom = 40.0
+scale = Vector2(1.8282361, 1.8282361)
+theme = SubResource("Theme_ogj6f")
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=705636299]
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 486.52612
+offset_bottom = 39.55339
+scale = Vector2(1.8282361, 1.8282361)
+color = Color(0, 0, 0, 1)
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=293279301]
+position = Vector2(35, 36.000004)
+scale = Vector2(1.9425008, 1.9425008)
+texture = ExtResource("2_o4q6t")
+
+[node name="Icons" type="Node2D" parent="." unique_id=1123389006]
+visible = false
+
+[node name="0" type="Sprite2D" parent="Icons" unique_id=1124756337]
+position = Vector2(16, -16)
+texture = ExtResource("2_o4q6t")
+
+[node name="1" type="Sprite2D" parent="Icons" unique_id=83186493]
+position = Vector2(25, -38)
+texture = ExtResource("3_ogj6f")
+
+[node name="7" type="Sprite2D" parent="Icons" unique_id=1338321066]
+position = Vector2(25, -27)
+texture = ExtResource("4_qystm")
+
+[node name="Text" type="Label" parent="." unique_id=1247726924]
+offset_left = 65.0
+offset_top = 4.0
+offset_right = 885.0
+offset_bottom = 46.0
+theme_override_font_sizes/font_size = 30
+text = "The begining of the begining"
+horizontal_alignment = 1
+
+[node name="Description" type="Label" parent="." unique_id=364655070]
+offset_left = 61.0
+offset_top = 42.0
+offset_right = 886.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 16
+text = "Kill first mushroom"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=192662432]
+wait_time = 2.0
+one_shot = true

@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://r05o748hjhiw" path="res://scenes/camera_2d.tscn" id="5_rej77"]
 [ext_resource type="Texture2D" uid="uid://bqae7q4gv5w3y" path="res://sprites/UI/Sprite20_0.png" id="6_rej77"]
 [ext_resource type="PackedScene" uid="uid://dbjptjyfcmdp0" path="res://scenes/mushrooms/green_mushroom.tscn" id="6_um320"]
+[ext_resource type="PackedScene" uid="uid://dyls7piyfv8fw" path="res://scenes/trophey_manager.tscn" id="10_glw47"]
 
 [node name="Level4" type="Node2D" unique_id=393177945]
 script = ExtResource("1_ts8eg")
@@ -65,3 +66,8 @@ visible = false
 z_index = 5
 position = Vector2(144, 152)
 texture = ExtResource("6_rej77")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=590929853]
+
+[node name="TropheyManager" parent="CanvasLayer" unique_id=1590201275 instance=ExtResource("10_glw47")]
+visible = false

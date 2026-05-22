@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://mcinvy3iq3td" path="res://scenes/mushrooms/red_mushroom.tscn" id="6_fkk1g"]
 [ext_resource type="Texture2D" uid="uid://bqae7q4gv5w3y" path="res://sprites/UI/Sprite20_0.png" id="7_fkk1g"]
 [ext_resource type="PackedScene" uid="uid://cydhwdtrcoq08" path="res://scenes/mushrooms/blue_mushroom.tscn" id="7_ugcn1"]
+[ext_resource type="PackedScene" uid="uid://dyls7piyfv8fw" path="res://scenes/trophey_manager.tscn" id="9_pimnq"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ugcn1"]
 vertices = PackedVector2Array(1527.9531, 821, 11.921875, 821.9922, 6.0703125, 11.9921875, 1524.0391, 11)
@@ -57,3 +58,8 @@ visible = false
 z_index = 5
 position = Vector2(144, 152)
 texture = ExtResource("7_fkk1g")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1756580259]
+
+[node name="TropheyManager" parent="CanvasLayer" unique_id=1590201275 instance=ExtResource("9_pimnq")]
+visible = false
