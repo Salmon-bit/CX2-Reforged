@@ -28,6 +28,7 @@ var data = {
 		false,
 		false,
 		false,
+		false,
 		false
 	],
 	"money": 0,
@@ -57,17 +58,18 @@ var data = {
 
 # Name, Description, GameJolt ID, is secret?, id
 const tropheys = [
-	["The begining of the begining", "Kill first mushroom", "300171", false, 0],
-	["Starting killer", "Kill 15 mushrooms", "300174", false, 1],
+	["The begining of the begining", "Kill first mushroom", "300171", false, 0], # Drawn
+	["Starting killer", "Kill 15 mushrooms", "300174", false, 1], # Drawn
 	["Friend!?", "Kill first boss", "300172", false, 2],
-	["BaBy", "Discover new difficulty", true, 3],
-	["Defeat", "Die", "300207", false, 4],
+	["BaBy", "Discover new difficulty", true, 3], # Drawn
+	["Defeat", "Die", "300207", false, 4], # Drawn
 	["Baby Xlebushek", "Complete game on easy difficulty", "300186", false, 5],
-	["Rain & Thunder", "Defeat second boss", "300173", false, 6],
-	["Advanced killer", "Kill 100 mushrooms", "300176", false, 7],
+	["Rain & Thunder", "Kill second boss", "300173", false, 6], # Drawn
+	["Advanced killer", "Kill 100 mushrooms", "300176", false, 7], # Drawn
 	["Xlebushek", "Complete game on easy difficulty", "300183", false, 8],
 	["Real Xlebushek", "Complete game on hard difficulty", "300185", false, 9],
-	["And what now?", "Get all tropheys", "300180", false, 10]
+	["And what now?", "Get all tropheys", "300180", false, 10], # Drawn
+	["Ultimate Killer", "Kill 1000 mushrooms", "300895", false, 11]
 ]
 
 const null_data = {
@@ -76,6 +78,7 @@ const null_data = {
 	"ability": 0,
 	"skins": [
 		true,
+		false,
 		false,
 		false,
 		false,
@@ -131,6 +134,16 @@ enum SPEEDS {STOPPED = 0, VERY_SLOW = 2500, SLOW = 5000, FAST = 10000, QUICK = 1
 func add_trophey(id: int):
 	if not data.tropheys[id]:
 		GameJolt.trophies_add_achieved(tropheys[id][2])
+		get_tree().current_scene.get_node("CanvasLayer").get_node("TropheyManager").show_trophey(tropheys[id])
+		data.tropheys[id] = true
+	
+	var broken = false
+	for i in range(data.tropheys):
+		if not data.tropheys[i] and i != 10:
+			broken = true
+			break
+	if not broken:
+		GameJolt.trophies_add_achieved(tropheys[id][10])
 		get_tree().current_scene.get_node("CanvasLayer").get_node("TropheyManager").show_trophey(tropheys[id])
 		data.tropheys[id] = true
 

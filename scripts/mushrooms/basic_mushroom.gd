@@ -66,6 +66,8 @@ func _process(_delta: float) -> void:
 				Autoload.add_trophey(1)
 			elif int(Autoload.data.kills) == 100:
 				Autoload.add_trophey(7)
+			elif int(Autoload.data.kills) == 1000:
+				Autoload.add_trophey(11)
 			collision.queue_free()
 			can_damage_player = false
 			can_damage_box = false

@@ -4,6 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://c26umxqqu04ih" path="res://sprites/tropheys/0.png" id="2_o4q6t"]
 [ext_resource type="Texture2D" uid="uid://djg4h1frdk6h4" path="res://sprites/tropheys/1.png" id="3_ogj6f"]
 [ext_resource type="Texture2D" uid="uid://c386x5i0tlsun" path="res://sprites/tropheys/7.png" id="4_qystm"]
+[ext_resource type="Texture2D" uid="uid://bj42of0ok7oke" path="res://sprites/tropheys/4.png" id="5_gn6fy"]
+[ext_resource type="Texture2D" uid="uid://e35d2s7ti8ns" path="res://sprites/tropheys/3.png" id="6_om01a"]
+[ext_resource type="Texture2D" uid="uid://tg2bb6lc7f01" path="res://sprites/tropheys/6.png" id="7_fpynv"]
+[ext_resource type="Texture2D" uid="uid://dvllydevf3la2" path="res://sprites/tropheys/10.png" id="8_fpynv"]
 
 [sub_resource type="Theme" id="Theme_ogj6f"]
 
@@ -43,6 +47,22 @@ texture = ExtResource("3_ogj6f")
 [node name="7" type="Sprite2D" parent="Icons" unique_id=1338321066]
 position = Vector2(25, -27)
 texture = ExtResource("4_qystm")
+
+[node name="4" type="Sprite2D" parent="Icons" unique_id=731976162]
+position = Vector2(-20, 157)
+texture = ExtResource("5_gn6fy")
+
+[node name="3" type="Sprite2D" parent="Icons" unique_id=1413648175]
+position = Vector2(26, -36)
+texture = ExtResource("6_om01a")
+
+[node name="6" type="Sprite2D" parent="Icons" unique_id=1867638453]
+position = Vector2(26, -36)
+texture = ExtResource("7_fpynv")
+
+[node name="10" type="Sprite2D" parent="Icons" unique_id=1270111606]
+position = Vector2(74, -39)
+texture = ExtResource("8_fpynv")
 
 [node name="Text" type="Label" parent="." unique_id=1247726924]
 offset_left = 65.0
