@@ -39,4 +39,6 @@ shape = SubResource("CircleShape2D_j4vor")
 [node name="DeathTimer" type="Timer" parent="." unique_id=480253002]
 wait_time = 10.0
 
+[node name="I_AM_MUSHROOM_ARROW" type="Node" parent="." unique_id=637255410]
+
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]

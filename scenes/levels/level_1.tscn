@@ -74,14 +74,6 @@ texture = ExtResource("8_s8va5")
 position = Vector2(-189, 437)
 texture = ExtResource("9_dga24")
 
-[node name="Ui" type="Control" parent="." unique_id=389643338]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=660799415]
 
 [node name="TropheyManager" parent="CanvasLayer" unique_id=1590201275 instance=ExtResource("10_qxy0u")]

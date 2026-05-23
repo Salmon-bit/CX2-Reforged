@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://sdy1vin4ij3k" path="res://sprites/UI/Sprite30_1.png" id="9_0grds"]
 [ext_resource type="Texture2D" uid="uid://bqk5nobyr54xw" path="res://sprites/UI/Sprite14_0.png" id="9_wh1jf"]
 [ext_resource type="Texture2D" uid="uid://bk3ika57kp4f7" path="res://sprites/UI/Sprite14_1.png" id="10_0rr43"]
+[ext_resource type="Texture2D" uid="uid://dblko0fd4kjpq" path="res://sprites/UI/Sprite35_0.png" id="10_6iing"]
+[ext_resource type="Texture2D" uid="uid://qj0bwe3cq1yc" path="res://sprites/UI/Sprite35_1.png" id="11_ecnhd"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_wh1jf"]
 device = -1
@@ -76,6 +78,12 @@ layout_mode = 2
 texture_normal = ExtResource("8_1t3v0")
 texture_pressed = ExtResource("9_0grds")
 texture_hover = ExtResource("9_0grds")
+
+[node name="Level5" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=1531227944]
+layout_mode = 2
+texture_normal = ExtResource("10_6iing")
+texture_pressed = ExtResource("11_ecnhd")
+texture_hover = ExtResource("11_ecnhd")
 
 [node name="Sprite210" type="Sprite2D" parent="." unique_id=189461305]
 position = Vector2(49, -38)
