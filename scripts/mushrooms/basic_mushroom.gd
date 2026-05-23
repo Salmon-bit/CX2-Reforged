@@ -8,7 +8,7 @@ signal kill_mushroom()
 @export var can_melle_attack = false
 @export var can_ranged_attack = false
 @export var hp = 100
-@export var damage = 10
+@export var damage: float = 10
 @export var speed: Autoload.SPEEDS = Autoload.SPEEDS.FAST
 @export var animated_sprite: AnimatedSprite2D
 @export var navigator: NavigationAgent2D
@@ -17,6 +17,8 @@ signal kill_mushroom()
 @export var HP_label: Label
 @export var hitbox: Area2D
 @export var collision: CollisionShape2D
+@export var change_speed_on_low_hp = true
+@export var low_hp = 30
 
 # Non configurable vars
 var player: CharacterBody2D
@@ -75,7 +77,7 @@ func _process(_delta: float) -> void:
 		speed = Autoload.SPEEDS.STOPPED
 		HP_label.text = ""
 
-	elif hp <= 30:
+	elif hp <= low_hp and change_speed_on_low_hp:
 		animated_sprite.animation = "bad"
 		if speed == Autoload.SPEEDS.SLOW and not changed_speed:
 			changed_speed = true

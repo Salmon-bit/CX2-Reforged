@@ -22,7 +22,7 @@ animations = [{
 
 [node name="BasicMushroom" type="CharacterBody2D" unique_id=525659709 node_paths=PackedStringArray("animated_sprite", "navigator", "attack_timer", "path_update_timer", "HP_label", "hitbox", "collision")]
 collision_layer = 2
-collision_mask = 7
+collision_mask = 6
 script = ExtResource("1_j5qyn")
 animated_sprite = NodePath("Sprite")
 navigator = NodePath("NavigationAgent2D")

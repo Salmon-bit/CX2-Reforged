@@ -44,10 +44,11 @@ radius = 20.024984
 
 [node name="BlackMushroom" type="CharacterBody2D" unique_id=1447206191 node_paths=PackedStringArray("animated_sprite", "navigator", "attack_timer", "path_update_timer", "HP_label", "hitbox", "collision")]
 collision_layer = 2
-collision_mask = 5
+collision_mask = 20
 script = ExtResource("1_x02iq")
 can_melle_attack = true
 hp = 30
+damage = 1.5
 speed = 15000
 animated_sprite = NodePath("AnimatedSprite2D")
 navigator = NodePath("NavigationAgent2D")
@@ -56,6 +57,7 @@ path_update_timer = NodePath("Timer")
 HP_label = NodePath("Label")
 hitbox = NodePath("Area2D")
 collision = NodePath("CollisionShape2D")
+change_speed_on_low_hp = false
 metadata/_custom_type_script = "uid://ddxb8gper6awp"
 
 [node name="Timer" type="Timer" parent="." unique_id=1295438647]

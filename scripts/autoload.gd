@@ -138,7 +138,7 @@ func add_trophey(id: int):
 		data.tropheys[id] = true
 	
 	var broken = false
-	for i in range(data.tropheys):
+	for i in range(len(data.tropheys)):
 		if not data.tropheys[i] and i != 10:
 			broken = true
 			break
