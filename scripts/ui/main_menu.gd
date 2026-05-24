@@ -7,7 +7,6 @@ var logo: Sprite2D = null
 var mp = 1
 var rotate_deg = 0.5
 
-
 func _ready() -> void:
 	particle = $CPUParticles2D
 	particle.emitting = true
@@ -42,7 +41,6 @@ func update_textures():
 		$MarginContainer/VBoxContainer/MarginContainer2/ExitButton.texture_hover = $Sprite153.texture
 		$MarginContainer/VBoxContainer/MarginContainer2/ExitButton.texture_pressed = $Sprite153.texture
 
-
 func _process(delta: float) -> void:
 	# Emit random sprites
 	timer -= delta
@@ -63,12 +61,14 @@ func _on_exit_button_pressed() -> void:
 	GameJolt.sessions_close()
 	get_tree().quit()
 
-
 func _on_settings_button_pressed() -> void:
 	Autoload.click()
 	get_tree().change_scene_to_file("res://scenes/ui/settings_scene.tscn")
 
-
 func _on_play_button_pressed() -> void:
 	Autoload.click()
 	get_tree().change_scene_to_file("res://scenes/ui/level_select.tscn")
+
+func _on_abilities_button_pressed() -> void:
+	Autoload.click()
+	get_tree().change_scene_to_file("res://scenes/ui/abilities.tscn")

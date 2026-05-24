@@ -92,8 +92,6 @@ func _process(_delta: float) -> void:
 	if attack_timer.time_left == 0.0 and can_damage_player and can_melle_attack:
 		player.attack(damage)
 		attack_timer.start()
-		if len(Input.get_connected_joypads()) != 0:
-			Input.start_joy_vibration(0, 0.5, 0.1, 0.2)
 	elif attack_timer.time_left == 0.0 and can_damage_box and can_melle_attack:
 		damaging_box.attack(damage)
 		attack_timer.start()

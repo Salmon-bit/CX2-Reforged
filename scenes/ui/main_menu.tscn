@@ -365,5 +365,6 @@ position = Vector2(1461, 381)
 texture = ExtResource("43_iglv2")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer3/AbilitiesButton" to="." method="_on_abilities_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer5/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer2/ExitButton" to="." method="_on_exit_button_pressed"]

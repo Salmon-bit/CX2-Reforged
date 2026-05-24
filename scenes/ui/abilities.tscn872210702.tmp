@@ -14,18 +14,13 @@
 [ext_resource type="Texture2D" uid="uid://deloamfyinl82" path="res://sprites/Abilities/Sprite37_1.png" id="11_2bjbn"]
 [ext_resource type="Texture2D" uid="uid://dk7wxpj4wxiaw" path="res://sprites/UI/Sprite98_0.png" id="12_k8mc0"]
 [ext_resource type="Texture2D" uid="uid://ubdbe5s13sdi" path="res://sprites/UI/Sprite98_1.png" id="14_cvc7y"]
-[ext_resource type="Texture2D" uid="uid://dhjajw3i3rk0c" path="res://sprites/UI/Sprite71_0.png" id="14_g7lyo"]
-[ext_resource type="Texture2D" uid="uid://dm23fcg4juydm" path="res://sprites/Abilities/Sprite70_0.png" id="15_beuri"]
 [ext_resource type="Texture2D" uid="uid://bvhofpl33x5l2" path="res://sprites/UI/Sprite21_0.png" id="15_cvc7y"]
-[ext_resource type="Texture2D" uid="uid://igusq2ehudai" path="res://sprites/UI/Sprite71_1.png" id="16_beuri"]
 [ext_resource type="Texture2D" uid="uid://bhfm3u0mu45h8" path="res://sprites/Abilities/Sprite37_2.png" id="16_r8hi2"]
 [ext_resource type="Texture2D" uid="uid://xd11b643xqsg" path="res://sprites/Abilities/Sprite37_3.png" id="17_mxbpk"]
 [ext_resource type="Texture2D" uid="uid://bqdn6rgju2k2c" path="res://sprites/Abilities/Sprite39_2.png" id="18_g7lyo"]
 [ext_resource type="Texture2D" uid="uid://ddytkc1iqwm5t" path="res://sprites/Abilities/Sprite39_3.png" id="19_beuri"]
 [ext_resource type="Texture2D" uid="uid://clpgs3iktqnh3" path="res://sprites/Abilities/Sprite52_2.png" id="20_kqbs6"]
 [ext_resource type="Texture2D" uid="uid://bquq4iirgngqu" path="res://sprites/Abilities/Sprite52_3.png" id="21_p74cy"]
-[ext_resource type="Texture2D" uid="uid://l52wbxcx6egm" path="res://sprites/Abilities/Sprite70_1.png" id="25_p74cy"]
-[ext_resource type="Texture2D" uid="uid://dw4gwxeagmxsi" path="res://sprites/Abilities/Sprite70_2.png" id="26_y1cyn"]
 
 [node name="Abilities" type="Control" unique_id=777844008]
 layout_mode = 3
@@ -45,33 +40,37 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=200892183]
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1830210391]
 layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_right = 329.0
-grow_vertical = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=296327773]
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=1830210391]
-layout_mode = 2
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 69.0
+offset_bottom = 69.0
 texture_normal = ExtResource("1_fc4se")
 texture_pressed = ExtResource("2_5dxil")
 texture_hover = ExtResource("2_5dxil")
 flip_h = true
 
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=200892183]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 74
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=296327773]
+layout_mode = 2
+size_flags_horizontal = 0
+
 [node name="HBoxContainer1" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=273161961]
 layout_mode = 2
+alignment = 1
 
 [node name="0" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer1" unique_id=1851282847]
 layout_mode = 2
 texture = ExtResource("3_xflv3")
-stretch_mode = 2
 
 [node name="Btn0" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer1" unique_id=1184779485]
 layout_mode = 2
@@ -82,6 +81,7 @@ stretch_mode = 0
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1833716606]
 layout_mode = 2
+alignment = 1
 
 [node name="3" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1770408486]
 layout_mode = 2
@@ -95,6 +95,7 @@ texture_hover = ExtResource("8_ccf01")
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1640086437]
 layout_mode = 2
+alignment = 1
 
 [node name="5" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1142868977]
 layout_mode = 2
@@ -121,48 +122,15 @@ texture = ExtResource("12_k8mc0")
 expand_mode = 1
 stretch_mode = 2
 
-[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=1882360724]
-layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -128.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_constants/margin_top = 71
-theme_override_constants/margin_right = 195
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2" unique_id=572955341]
-layout_mode = 2
-theme_override_constants/separation = 44
-
-[node name="Selected" type="TextureRect" parent="MarginContainer2/VBoxContainer" unique_id=1980266372]
-layout_mode = 2
-texture = ExtResource("14_g7lyo")
-
-[node name="Icon" type="TextureRect" parent="MarginContainer2/VBoxContainer" unique_id=133713595]
-layout_mode = 2
-size_flags_horizontal = 4
-texture = ExtResource("15_beuri")
-stretch_mode = 2
-
-[node name="Sprite711" type="Sprite2D" parent="." unique_id=1151607849]
-position = Vector2(1016, -48)
-texture = ExtResource("16_beuri")
-
 [node name="Sprite981" type="Sprite2D" parent="." unique_id=1108302353]
-visible = false
 position = Vector2(-262, 608)
 texture = ExtResource("14_cvc7y")
 
 [node name="Sprite210" type="Sprite2D" parent="." unique_id=1723058421]
-visible = false
 position = Vector2(36, -40)
 texture = ExtResource("15_cvc7y")
 
-[node name="RU_SPRITES" type="Node2D" parent="." unique_id=851700692]
-visible = false
+[node name="RU_SPRITES" type="Node" parent="." unique_id=220211656]
 
 [node name="5" type="Sprite2D" parent="RU_SPRITES" unique_id=597247193]
 position = Vector2(219, -41)
@@ -187,19 +155,3 @@ texture = ExtResource("20_kqbs6")
 [node name="3_1" type="Sprite2D" parent="RU_SPRITES" unique_id=1031490715]
 position = Vector2(508, -124)
 texture = ExtResource("21_p74cy")
-
-[node name="AbilityIcons" type="Node2D" parent="." unique_id=926786197]
-
-[node name="0" type="Sprite2D" parent="AbilityIcons" unique_id=2018432955]
-position = Vector2(54, -60)
-texture = ExtResource("15_beuri")
-
-[node name="2" type="Sprite2D" parent="AbilityIcons" unique_id=669770695]
-position = Vector2(201, -58)
-texture = ExtResource("25_p74cy")
-
-[node name="1" type="Sprite2D" parent="AbilityIcons" unique_id=585230040]
-position = Vector2(127, -59)
-texture = ExtResource("26_y1cyn")
-
-[connection signal="pressed" from="MarginContainer/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

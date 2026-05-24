@@ -97,6 +97,5 @@ func heal(heal_points: int):
 
 func attack(damage_points: int):
 	hp -= damage_points
-
-func _on_back_btn_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/ui/level_select.tscn")
+	if len(Input.get_connected_joypads()) != 0:
+			Input.start_joy_vibration(0, 0.5, 0.1, 0.2)
