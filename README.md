@@ -14,8 +14,8 @@ Some features we want to add:
  - Add local wi-fi multiplayer
  - Optimize game
  - Continue lore
- - Add advancaments
- - Add GameJolt Tropheys
+ - Add advancaments (**DONE**)
+ - Add GameJolt Tropheys (**DONE**)
  - Add Cloud saving
 
 Creators:
