@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://fujm2n0sdpbx"]
+
+[ext_resource type="Texture2D" uid="uid://bqk5nobyr54xw" path="res://sprites/UI/Sprite14_0.png" id="1_fc4se"]
+[ext_resource type="Script" uid="uid://qb7xk7ujw7e3" path="res://scripts/ui/abilities.gd" id="1_hcegj"]
+[ext_resource type="Texture2D" uid="uid://bk3ika57kp4f7" path="res://sprites/UI/Sprite14_1.png" id="2_5dxil"]
+[ext_resource type="Texture2D" uid="uid://b7crofxny4qd7" path="res://sprites/UI/Sprite24_7.png" id="3_xflv3"]
+[ext_resource type="Texture2D" uid="uid://c527728b7h0a5" path="res://sprites/Abilities/Sprite39_0.png" id="4_k8mc0"]
+[ext_resource type="Texture2D" uid="uid://7vis514b8urw" path="res://sprites/Abilities/Sprite39_1.png" id="5_vyyb1"]
+[ext_resource type="Texture2D" uid="uid://dvogfqcx686ve" path="res://sprites/UI/Sprite53_0.png" id="6_hcegj"]
+[ext_resource type="Texture2D" uid="uid://bgbne1jstripq" path="res://sprites/Abilities/Sprite52_0.png" id="7_cvc7y"]
+[ext_resource type="Texture2D" uid="uid://bdjuod2ekyp11" path="res://sprites/Abilities/Sprite52_1.png" id="8_ccf01"]
+[ext_resource type="Texture2D" uid="uid://b14ms2ei8ihxl" path="res://sprites/UI/Sprite41_0.png" id="9_sab8r"]
+[ext_resource type="Texture2D" uid="uid://c1h08bawgscxv" path="res://sprites/Abilities/Sprite37_0.png" id="10_qwt21"]
+[ext_resource type="Texture2D" uid="uid://deloamfyinl82" path="res://sprites/Abilities/Sprite37_1.png" id="11_2bjbn"]
+[ext_resource type="Texture2D" uid="uid://dk7wxpj4wxiaw" path="res://sprites/UI/Sprite98_0.png" id="12_k8mc0"]
+[ext_resource type="Texture2D" uid="uid://ubdbe5s13sdi" path="res://sprites/UI/Sprite98_1.png" id="14_cvc7y"]
+
+[node name="Abilities" type="Control" unique_id=777844008]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hcegj")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=980438088]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1830210391]
+layout_mode = 1
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 69.0
+offset_bottom = 69.0
+texture_normal = ExtResource("1_fc4se")
+texture_pressed = ExtResource("2_5dxil")
+texture_hover = ExtResource("2_5dxil")
+flip_h = true
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=200892183]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 74
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=296327773]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=273161961]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1851282847]
+layout_mode = 2
+texture = ExtResource("3_xflv3")
+
+[node name="0" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1184779485]
+layout_mode = 2
+texture_normal = ExtResource("4_k8mc0")
+texture_pressed = ExtResource("5_vyyb1")
+texture_hover = ExtResource("5_vyyb1")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1833716606]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1770408486]
+layout_mode = 2
+texture = ExtResource("6_hcegj")
+
+[node name="1" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1577117575]
+layout_mode = 2
+texture_normal = ExtResource("7_cvc7y")
+texture_pressed = ExtResource("8_ccf01")
+texture_hover = ExtResource("8_ccf01")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1640086437]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1142868977]
+layout_mode = 2
+texture = ExtResource("9_sab8r")
+
+[node name="2" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=663541936]
+layout_mode = 2
+texture_normal = ExtResource("10_qwt21")
+texture_pressed = ExtResource("11_2bjbn")
+texture_hover = ExtResource("11_2bjbn")
+
+[node name="Info" type="TextureRect" parent="." unique_id=1545909040]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -512.0
+offset_top = -140.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("12_k8mc0")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="Sprite981" type="Sprite2D" parent="." unique_id=1108302353]
+position = Vector2(-262, 608)
+texture = ExtResource("14_cvc7y")

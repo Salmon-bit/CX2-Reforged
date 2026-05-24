@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dtuuaah1i5ieq"]
+
+[ext_resource type="Script" uid="uid://chksme45na0ee" path="res://scripts/Terrain/grave.gd" id="1_7mxj3"]
+[ext_resource type="Texture2D" uid="uid://pdrh6r0735f2" path="res://sprites/Terrain/Sprite32_0.png" id="1_n0db8"]
+[ext_resource type="Script" uid="uid://dnfc44lsn374t" path="res://scripts/spawner.gd" id="3_2elm0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7mxj3"]
+radius = 11.0
+height = 46.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2elm0"]
+radius = 13.0
+height = 54.0
+
+[node name="Grave" type="StaticBody2D" unique_id=746529729]
+collision_layer = 2
+collision_mask = 21
+script = ExtResource("1_7mxj3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1289595662]
+texture = ExtResource("1_n0db8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1237357606]
+position = Vector2(1, 20)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_7mxj3")
+
+[node name="Spawner" type="Node2D" parent="." unique_id=1978001927]
+script = ExtResource("3_2elm0")
+
+[node name="Label" type="Label" parent="." unique_id=61858316]
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 25.0
+offset_bottom = 3.0
+text = "HP: 75"
+vertical_alignment = 1
+
+[node name="Area2D" type="Area2D" parent="." unique_id=409180322]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1953711393]
+position = Vector2(1, 20)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_2elm0")
+
+[node name="Timer" type="Timer" parent="." unique_id=2111559626]
+wait_time = 8.0
+autostart = true
+
+[node name="I_AM_MUSHROOM" type="Node" parent="." unique_id=124559832]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

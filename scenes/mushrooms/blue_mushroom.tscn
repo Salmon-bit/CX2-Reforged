@@ -105,3 +105,5 @@ one_shot = true
 [node name="ProjectileSpawner" type="Node2D" parent="." unique_id=1275340488]
 script = ExtResource("7_w6o5x")
 object = ExtResource("8_4abqx")
+
+[node name="I_AM_MUSHROOM" type="Node" parent="." unique_id=1338888924]

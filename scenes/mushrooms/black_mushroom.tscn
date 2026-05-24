@@ -93,4 +93,4 @@ shape = SubResource("CircleShape2D_ejybe")
 position = Vector2(2, 12)
 shape = SubResource("CircleShape2D_70hpk")
 
-[node name="I_AM_BLACK_MUSHROM" type="Node" parent="." unique_id=1548050745]
+[node name="I_AM_MUSHROOM" type="Node" parent="." unique_id=1548050745]

@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://chv6jc7h3rp3s" path="res://scripts/game_over_check.gd" id="2_dswqx"]
 [ext_resource type="PackedScene" uid="uid://cydhwdtrcoq08" path="res://scenes/mushrooms/blue_mushroom.tscn" id="3_laj7o"]
 [ext_resource type="PackedScene" uid="uid://bee7vho5h12qs" path="res://scenes/player.tscn" id="4_fsnos"]
+[ext_resource type="PackedScene" uid="uid://do0nafanu0pih" path="res://scenes/mushrooms/digger_mushroom.tscn" id="4_mxx4w"]
 [ext_resource type="PackedScene" uid="uid://r05o748hjhiw" path="res://scenes/camera_2d.tscn" id="5_mxx4w"]
 [ext_resource type="Texture2D" uid="uid://bqae7q4gv5w3y" path="res://sprites/UI/Sprite20_0.png" id="6_vvoq0"]
 [ext_resource type="PackedScene" uid="uid://dyls7piyfv8fw" path="res://scenes/trophey_manager.tscn" id="7_tqnj0"]
@@ -33,6 +34,9 @@ position = Vector2(894, 834)
 
 [node name="BlueMushroom2" parent="Enemies" unique_id=840484153 instance=ExtResource("3_laj7o")]
 position = Vector2(428, 841)
+
+[node name="DiggerMushroom" parent="Enemies" unique_id=1458129224 instance=ExtResource("4_mxx4w")]
+position = Vector2(666, 800)
 
 [node name="Player" parent="." unique_id=1542968218 instance=ExtResource("4_fsnos")]
 position = Vector2(633, 136)

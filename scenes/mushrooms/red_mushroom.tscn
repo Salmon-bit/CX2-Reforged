@@ -103,5 +103,7 @@ horizontal_alignment = 1
 wait_time = 0.5
 one_shot = true
 
+[node name="I_AM_MUSHROOM" type="Node" parent="." unique_id=488960465]
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

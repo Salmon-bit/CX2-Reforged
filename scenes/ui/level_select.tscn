@@ -14,6 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://bk3ika57kp4f7" path="res://sprites/UI/Sprite14_1.png" id="10_0rr43"]
 [ext_resource type="Texture2D" uid="uid://dblko0fd4kjpq" path="res://sprites/UI/Sprite35_0.png" id="10_6iing"]
 [ext_resource type="Texture2D" uid="uid://qj0bwe3cq1yc" path="res://sprites/UI/Sprite35_1.png" id="11_ecnhd"]
+[ext_resource type="Texture2D" uid="uid://ckr4qebsx6x40" path="res://sprites/UI/Sprite95_0.png" id="15_ecnhd"]
+[ext_resource type="Texture2D" uid="uid://nh1manirklg7" path="res://sprites/UI/Sprite95_1.png" id="16_e375g"]
+[ext_resource type="Texture2D" uid="uid://cq8rp66gew2lk" path="res://sprites/UI/Sprite42_0.png" id="17_xogkw"]
+[ext_resource type="Texture2D" uid="uid://b12ldxvc2rwbx" path="res://sprites/UI/Sprite50_0.png" id="18_d1lmv"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_wh1jf"]
 device = -1
@@ -98,5 +102,21 @@ texture_normal = ExtResource("9_wh1jf")
 texture_pressed = ExtResource("10_0rr43")
 texture_hover = ExtResource("10_0rr43")
 flip_h = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=29145106]
+position = Vector2(995, 485)
+texture = ExtResource("15_ecnhd")
+
+[node name="Sprite951" type="Sprite2D" parent="." unique_id=3094848]
+position = Vector2(-225, 473)
+texture = ExtResource("16_e375g")
+
+[node name="Sprite420" type="Sprite2D" parent="." unique_id=1100595231]
+position = Vector2(40, 378)
+texture = ExtResource("17_xogkw")
+
+[node name="Sprite500" type="Sprite2D" parent="." unique_id=864025248]
+position = Vector2(35, 243)
+texture = ExtResource("18_d1lmv")
 
 [connection signal="pressed" from="BackBtn" to="." method="_on_back_btn_pressed"]

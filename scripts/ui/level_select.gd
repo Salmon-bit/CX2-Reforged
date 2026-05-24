@@ -30,6 +30,9 @@ func update_textures() -> void:
 		
 		if not lb.disabled:
 			lb.pressed.connect(Callable(self, "go_to_level").bind(lb))
+	
+	if Autoload.data.lang == "ru":
+		$Sprite2D.texture = $Sprite951.texture
 
 func _ready() -> void:
 	update_textures()

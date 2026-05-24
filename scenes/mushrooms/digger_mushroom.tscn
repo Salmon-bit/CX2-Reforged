@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://do0nafanu0pih"]
+
+[ext_resource type="Script" uid="uid://4grjplit7ha2" path="res://scripts/mushrooms/digger_mushroom.gd" id="1_xqyhd"]
+[ext_resource type="PackedScene" uid="uid://mcinvy3iq3td" path="res://scenes/mushrooms/red_mushroom.tscn" id="2_deyay"]
+[ext_resource type="Texture2D" uid="uid://dxe258virq6ab" path="res://sprites/Mushrooms/Boss1/Sprite31_2.png" id="2_vkfuj"]
+[ext_resource type="Texture2D" uid="uid://2xefoadd5rmq" path="res://sprites/Mushrooms/Boss1/Sprite34_0.png" id="3_8e0vc"]
+[ext_resource type="PackedScene" uid="uid://cydhwdtrcoq08" path="res://scenes/mushrooms/blue_mushroom.tscn" id="3_ov57f"]
+[ext_resource type="PackedScene" uid="uid://dbjptjyfcmdp0" path="res://scenes/mushrooms/green_mushroom.tscn" id="4_5qda7"]
+[ext_resource type="Texture2D" uid="uid://bbbmx2o8x1iso" path="res://sprites/Mushrooms/Boss1/Sprite31_0.png" id="4_581ww"]
+[ext_resource type="Texture2D" uid="uid://dauwyfxwb6eiy" path="res://sprites/Mushrooms/Boss1/Sprite34_11.png" id="5_fsdw2"]
+[ext_resource type="PackedScene" uid="uid://d1bbt7klsa0xw" path="res://scenes/mushrooms/black_mushroom.tscn" id="5_pl5q2"]
+[ext_resource type="Script" uid="uid://dnfc44lsn374t" path="res://scripts/spawner.gd" id="6_8e0vc"]
+[ext_resource type="PackedScene" uid="uid://bidubd2nxnkd1" path="res://scenes/projectiles/digger_mushroom_arrow.tscn" id="7_581ww"]
+[ext_resource type="PackedScene" uid="uid://dtuuaah1i5ieq" path="res://scenes/terrain/grave.tscn" id="7_fsdw2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hukyb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vkfuj")
+}],
+"loop": true,
+"name": &"bad",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8e0vc")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_581ww")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_fsdw2")
+}],
+"loop": true,
+"name": &"secret",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6ftsc"]
+radius = 24.0
+height = 60.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7w5sq"]
+radius = 30.0
+height = 70.0
+
+[node name="DiggerMushroom" type="CharacterBody2D" unique_id=1458129224]
+collision_layer = 2
+collision_mask = 20
+script = ExtResource("1_xqyhd")
+mushrooms = Array[PackedScene]([ExtResource("2_deyay"), ExtResource("3_ov57f"), ExtResource("4_5qda7"), ExtResource("5_pl5q2")])
+
+[node name="DamageTimer" type="Timer" parent="." unique_id=512668519]
+wait_time = 3.0
+one_shot = true
+
+[node name="GraveTimer" type="Timer" parent="." unique_id=1304060853]
+wait_time = 7.0
+autostart = true
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1008364069]
+debug_enabled = true
+debug_path_custom_color = Color(0, 0.8666668, 1, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=266042801]
+sprite_frames = SubResource("SpriteFrames_hukyb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1030312014]
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_6ftsc")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=59919353]
+collision_layer = 2
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1920295852]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_7w5sq")
+
+[node name="GraveSpawner" type="Node2D" parent="." unique_id=509081336]
+script = ExtResource("6_8e0vc")
+object = ExtResource("7_fsdw2")
+
+[node name="BulletSpawner" type="Node2D" parent="." unique_id=1442130490]
+script = ExtResource("6_8e0vc")
+object = ExtResource("7_581ww")
+
+[node name="SecretTimer" type="Timer" parent="." unique_id=1916903974]
+wait_time = 3.0
+one_shot = true
+
+[node name="PathUpdateTimer" type="Timer" parent="." unique_id=1126585111]
+wait_time = 0.2
+one_shot = true
+
+[node name="Label" type="Label" parent="." unique_id=1978540077]
+offset_left = -29.0
+offset_top = -62.0
+offset_right = 29.0
+offset_bottom = -39.0
+text = "HP: 750"
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=886343134]
+wait_time = 2.0
+one_shot = true
+
+[node name="I_AM_MUSHROOM" type="Node" parent="." unique_id=1872466818]
+
+[connection signal="timeout" from="GraveTimer" to="." method="_on_grave_timer_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

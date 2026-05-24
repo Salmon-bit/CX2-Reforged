@@ -108,3 +108,5 @@ metadata/_edit_lock_ = true
 [node name="Spawner" type="Node2D" parent="." unique_id=723909017]
 script = ExtResource("7_ds1on")
 object = ExtResource("8_4ss3x")
+
+[node name="I_AM_MUSHROOM" type="Node" parent="." unique_id=857836504]

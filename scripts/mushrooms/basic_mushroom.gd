@@ -120,8 +120,8 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 func heal(heal_points: int):
 	hp += heal_points
 
-func attack(damage: int):
-	hp -= damage
+func attack(damage_points: int):
+	hp -= damage_points
 
 func ranged_attack():
 	pass
