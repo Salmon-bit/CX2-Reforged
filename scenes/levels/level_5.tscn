@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://r05o748hjhiw" path="res://scenes/camera_2d.tscn" id="5_mxx4w"]
 [ext_resource type="Texture2D" uid="uid://bqae7q4gv5w3y" path="res://sprites/UI/Sprite20_0.png" id="6_vvoq0"]
 [ext_resource type="PackedScene" uid="uid://dyls7piyfv8fw" path="res://scenes/trophey_manager.tscn" id="7_tqnj0"]
+[ext_resource type="AudioStream" uid="uid://bux7xgk0iv4kc" path="res://sounds/Win.wav" id="8_tqnj0"]
+[ext_resource type="AudioStream" uid="uid://bocbysxtyl4q" path="res://sounds/Boss1.mp3" id="9_vvoq0"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_dwyms"]
 vertices = PackedVector2Array(1277, 1198, 15.9921875, 1198, 15, -54.023438, 1277, -56.96875)
@@ -54,6 +56,9 @@ z_index = 5
 position = Vector2(144, 152)
 texture = ExtResource("6_vvoq0")
 
+[node name="Win" type="AudioStreamPlayer" parent="WinScreen" unique_id=1660274722]
+stream = ExtResource("8_tqnj0")
+
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1445052768]
 position = Vector2(-4, 15)
 navigation_polygon = SubResource("NavigationPolygon_dwyms")
@@ -66,3 +71,8 @@ metadata/_edit_lock_ = true
 visible = false
 z_index = 200
 position = Vector2(130, 648)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=839333069]
+stream = ExtResource("9_vvoq0")
+autoplay = true
+parameters/looping = true

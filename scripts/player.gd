@@ -86,16 +86,19 @@ func _physics_process(delta: float) -> void:
 			arrow.velocity = dir * arrow_speed
 			arrow.add_collision_exception_with(self)
 			get_tree().current_scene.add_child(arrow)
-			$ShootSound.play()
+			$Sounds/ShootSound.play()
 			shoot_delay = 0.15
 
 	if Input.is_action_just_released("shoot"):
 		shoot_delay = 0
 
 func heal(heal_points: int):
+	$Sounds/Heal.play()
 	hp += heal_points
 
 func attack(damage_points: int):
+	if not dead:
+		$Sounds/Damage.play()
 	hp -= damage_points
 	if len(Input.get_connected_joypads()) != 0:
 			Input.start_joy_vibration(0, 0.5, 0.1, 0.2)

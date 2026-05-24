@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://bf5pap5jgeei6"]
 
-[ext_resource type="Texture2D" uid="uid://dsm5hqmxnvtvk" path="res://sprites/UI/Sprite145_2.png" id="1_88w50"]
 [ext_resource type="Script" uid="uid://bv6sr8fxwr3c2" path="res://scripts/ui/game_jolt_settings.gd" id="1_r5ds8"]
-[ext_resource type="Texture2D" uid="uid://mmg4sg6xdvm5" path="res://sprites/UI/Sprite145_0.png" id="2_r5ds8"]
+[ext_resource type="Theme" uid="uid://cari6vcvs5b5u" path="res://themes/main.tres" id="1_ufaco"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_88w50"]
 device = -1
@@ -21,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_ufaco")
 script = ExtResource("1_r5ds8")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=214947181]
@@ -40,18 +40,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 20
+theme_override_constants/margin_top = 25
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1183589039]
 layout_mode = 2
+theme_override_constants/separation = 24
 alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1442793402]
 layout_mode = 2
-theme_override_constants/separation = 350
-alignment = 1
+theme_override_constants/separation = 180
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=237884573]
 layout_mode = 2
@@ -59,14 +59,9 @@ size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 30
 text = "Enter your username:"
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1065847772]
+[node name="Username" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=488905205]
 layout_mode = 2
-theme_override_constants/margin_left = 100
-theme_override_constants/margin_right = 100
-
-[node name="Username" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer" unique_id=488905205]
-layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 30
 placeholder_text = "Salmon228"
 alignment = 1
@@ -77,8 +72,7 @@ middle_mouse_paste_enabled = false
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1366813280]
 layout_mode = 2
-theme_override_constants/separation = 372
-alignment = 1
+theme_override_constants/separation = 180
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1393903061]
 layout_mode = 2
@@ -86,14 +80,9 @@ size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 30
 text = "Enter your game token:"
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1049377339]
+[node name="GameToken" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=45965521]
 layout_mode = 2
-theme_override_constants/margin_left = 100
-theme_override_constants/margin_right = 100
-
-[node name="GameToken" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer" unique_id=45965521]
-layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 30
 alignment = 1
 expand_to_text_length = true
@@ -101,19 +90,14 @@ secret = true
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=28821206]
 layout_mode = 2
-theme_override_constants/separation = 645
-alignment = 1
+theme_override_constants/separation = 180
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=62213076]
+[node name="CheckButton" type="CheckButton" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1810403946]
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 30
 text = "Authenicate on start?"
-
-[node name="Button" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=2042342734]
-layout_mode = 2
-toggle_mode = true
-texture_normal = ExtResource("1_88w50")
-texture_pressed = ExtResource("2_r5ds8")
+icon_alignment = 2
 
 [node name="Login" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1244445028]
 layout_mode = 2
@@ -122,14 +106,15 @@ text = "Login"
 
 [node name="Status" type="Label" parent="MarginContainer/VBoxContainer" unique_id=992254951]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "Login status: Unknown"
+theme_override_font_sizes/font_size = 19
+text = "Login status: Unknown
+"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=1519168678]
 layout_mode = 2
-theme_override_constants/margin_top = 284
+theme_override_constants/margin_top = 171
 
 [node name="Back" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=607614288]
 layout_mode = 2
@@ -137,6 +122,6 @@ theme_override_font_sizes/font_size = 30
 shortcut = SubResource("Shortcut_ufaco")
 text = "Back to settings menu"
 
-[connection signal="toggled" from="MarginContainer/VBoxContainer/HBoxContainer3/Button" to="." method="_on_button_toggled"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer3/CheckButton" to="." method="_on_check_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Login" to="." method="_on_login_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/Back" to="." method="_on_back_pressed"]

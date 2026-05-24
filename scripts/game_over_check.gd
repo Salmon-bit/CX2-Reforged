@@ -19,6 +19,7 @@ func _process(delta: float) -> void:
 		flag = true
 		$"../WinScreen".position = get_parent().get_node("Player").position
 		$"../WinScreen".show()
+		$"../WinScreen/Win".play()
 		if Autoload.data.level < int(Autoload.get_level_num(get_parent().name)):
 			Autoload.data.level = int(Autoload.get_level_num(get_parent().name))
 		Autoload.save_data()

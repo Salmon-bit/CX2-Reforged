@@ -54,47 +54,71 @@ gradient = SubResource("Gradient_wu84c")
 device = -1
 keycode = 4194309
 
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_cc4y2"]
+button_index = 6
+pressed = true
+
 [sub_resource type="Shortcut" id="Shortcut_8egab"]
-events = [SubResource("InputEventKey_hstxw")]
+events = [SubResource("InputEventKey_hstxw"), SubResource("InputEventJoypadButton_cc4y2")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_8egab"]
 device = -1
 keycode = 69
 unicode = 101
 
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_iglv2"]
+button_index = 11
+pressed = true
+
 [sub_resource type="Shortcut" id="Shortcut_gw5y6"]
-events = [SubResource("InputEventKey_8egab")]
+events = [SubResource("InputEventKey_8egab"), SubResource("InputEventJoypadButton_iglv2")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_svtp6"]
 device = -1
 keycode = 90
 unicode = 122
 
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_c68a3"]
+button_index = 12
+pressed = true
+
 [sub_resource type="Shortcut" id="Shortcut_1dfpl"]
-events = [SubResource("InputEventKey_svtp6")]
+events = [SubResource("InputEventKey_svtp6"), SubResource("InputEventJoypadButton_c68a3")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_qywvv"]
 device = -1
 keycode = 67
 unicode = 99
 
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_01voq"]
+button_index = 14
+pressed = true
+
 [sub_resource type="Shortcut" id="Shortcut_3wgol"]
-events = [SubResource("InputEventKey_qywvv")]
+events = [SubResource("InputEventKey_qywvv"), SubResource("InputEventJoypadButton_01voq")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_1acrt"]
 device = -1
 keycode = 83
 unicode = 115
 
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_hr2v7"]
+button_index = 13
+pressed = true
+
 [sub_resource type="Shortcut" id="Shortcut_vr8o3"]
-events = [SubResource("InputEventKey_1acrt")]
+events = [SubResource("InputEventKey_1acrt"), SubResource("InputEventJoypadButton_hr2v7")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_gw5y6"]
 device = -1
 keycode = 4194305
 
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_t4suy"]
+button_index = 4
+pressed = true
+
 [sub_resource type="Shortcut" id="Shortcut_svtp6"]
-events = [SubResource("InputEventKey_gw5y6")]
+events = [SubResource("InputEventKey_gw5y6"), SubResource("InputEventJoypadButton_t4suy")]
 
 [node name="MainMenu" type="Control" unique_id=1829867831]
 layout_mode = 3

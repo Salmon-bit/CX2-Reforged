@@ -29,7 +29,7 @@ func _on_no_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/ui/settings_scene.tscn")
 
 func _on_delete_file_pressed() -> void:
-	Autoload.click()
+	$DeleteFile2.play()
 	counter += 1
 	if counter >= 10:
 		$MarginContainer/Pashalka.show()

@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ddqdq8rb2cgcj" path="res://sprites/UI/Sprite124_1.png" id="7_wbfx3"]
 [ext_resource type="Texture2D" uid="uid://boroly04bxwwo" path="res://sprites/UI/Sprite128_0.png" id="8_8gksr"]
 [ext_resource type="Texture2D" uid="uid://dabvwimwej8jw" path="res://sprites/UI/Sprite125_3.png" id="9_fb4f1"]
+[ext_resource type="AudioStream" uid="uid://bw7seqn21o6tc" path="res://sounds/DeleteFile.wav" id="9_nw7og"]
 [ext_resource type="Texture2D" uid="uid://dcemmvbupw7ym" path="res://sprites/UI/Sprite125_2.png" id="10_nw7og"]
 [ext_resource type="Texture2D" uid="uid://b1w8vnirfty26" path="res://sprites/UI/Sprite128_1.png" id="11_jq3pa"]
 
@@ -125,6 +126,10 @@ visible = false
 texture_filter = 3
 layout_mode = 2
 texture = ExtResource("8_8gksr")
+
+[node name="DeleteFile2" type="AudioStreamPlayer" parent="." unique_id=2086959162]
+stream = ExtResource("9_nw7og")
+max_polyphony = 10
 
 [node name="Sprite1253" type="Sprite2D" parent="." unique_id=46704654]
 position = Vector2(148, -46)

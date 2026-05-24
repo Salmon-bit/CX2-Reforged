@@ -7,8 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://bqae7q4gv5w3y" path="res://sprites/UI/Sprite20_0.png" id="4_6761a"]
 [ext_resource type="PackedScene" uid="uid://mcinvy3iq3td" path="res://scenes/mushrooms/red_mushroom.tscn" id="5_oc4kc"]
 [ext_resource type="Script" uid="uid://chv6jc7h3rp3s" path="res://scripts/game_over_check.gd" id="5_sk5k4"]
+[ext_resource type="AudioStream" uid="uid://bux7xgk0iv4kc" path="res://sounds/Win.wav" id="8_iav0o"]
 [ext_resource type="Texture2D" uid="uid://c2bqiwwyhcp1o" path="res://sprites/UI/Sprite96_0.png" id="8_s8va5"]
 [ext_resource type="Texture2D" uid="uid://co7opvffiqfl1" path="res://sprites/UI/Sprite96_1.png" id="9_dga24"]
+[ext_resource type="AudioStream" uid="uid://cd6kwtvg8lgrs" path="res://sounds/Ambient.mp3" id="10_excbq"]
 [ext_resource type="PackedScene" uid="uid://dyls7piyfv8fw" path="res://scenes/trophey_manager.tscn" id="10_qxy0u"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_oc4kc"]
@@ -59,6 +61,9 @@ z_index = 5
 position = Vector2(144, 152)
 texture = ExtResource("4_6761a")
 
+[node name="Win" type="AudioStreamPlayer" parent="WinScreen" unique_id=1926144443]
+stream = ExtResource("8_iav0o")
+
 [node name="Spawners" type="Node" parent="." unique_id=1595560937]
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1096806688]
@@ -73,6 +78,11 @@ texture = ExtResource("8_s8va5")
 [node name="Sprite961" type="Sprite2D" parent="." unique_id=1698237363]
 position = Vector2(-189, 437)
 texture = ExtResource("9_dga24")
+
+[node name="Ambient" type="AudioStreamPlayer" parent="." unique_id=1716182562]
+stream = ExtResource("10_excbq")
+autoplay = true
+parameters/looping = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=660799415]
 
