@@ -131,6 +131,18 @@ const null_data = {
 const save_file = "user://save.json"
 enum SPEEDS {STOPPED = 0, VERY_SLOW = 2500, SLOW = 5000, FAST = 10000, QUICK = 15000}
 
+func fetched_scores(response):
+	print(response)
+	if response.success == "true":
+		if float(response.scores[0].score) < data.kills:
+			print("Updating scores...")
+			GameJolt.scores_add(str(int(data.kills)), str(int(data.kills)), "1084203")
+			print("Scores Updated")
+
+func scene_changed():
+	print("Scene Changed")
+	GameJolt.scores_fetch(null, "1084203", "", null, null, true)
+
 func add_trophey(id: int):
 	if not data.tropheys[id]:
 		GameJolt.trophies_add_achieved(tropheys[id][2])
@@ -155,6 +167,9 @@ func _ready() -> void:
 	if data.auto_auth:
 		GameJolt.set_user_name(data.username)
 		GameJolt.set_user_token(data.usertoken)
+	
+	get_tree().scene_changed.connect(scene_changed)
+	GameJolt.scores_fetch_completed.connect(fetched_scores)
 
 func save_data(dat = data):
 	var file = FileAccess.open(save_file, FileAccess.WRITE)

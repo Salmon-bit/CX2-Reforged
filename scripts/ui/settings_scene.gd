@@ -55,3 +55,10 @@ func _ready() -> void:
 func _on_back_pressed() -> void:
 	Autoload.click()
 	get_tree().change_scene_to_file("res://scenes/ui/main_menu.tscn")
+
+
+func _on_tab_container_tab_changed(tab: int) -> void:
+	if tab == 1:
+		$Back.hide()
+	else:
+		$Back.show()

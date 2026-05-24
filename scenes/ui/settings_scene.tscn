@@ -35,6 +35,27 @@
 [ext_resource type="Texture2D" uid="uid://b7ynt3e8rr3eg" path="res://sprites/UI/Sprite145_3.png" id="28_j06xg"]
 [ext_resource type="PackedScene" uid="uid://dyls7piyfv8fw" path="res://scenes/trophey_manager.tscn" id="30_j06xg"]
 
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_06trf"]
+button_index = 2
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_kymv0"]
+events = [SubResource("InputEventJoypadButton_06trf")]
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_2c64j"]
+button_index = 3
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_f3dm5"]
+events = [SubResource("InputEventJoypadButton_2c64j")]
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_dhh0j"]
+button_index = 1
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_7epoo"]
+events = [SubResource("InputEventJoypadButton_dhh0j")]
+
 [sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_j06xg"]
 button_index = 3
 
@@ -131,6 +152,7 @@ alignment = 1
 [node name="Easy" type="TextureButton" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1862676183]
 texture_filter = 3
 layout_mode = 2
+shortcut = SubResource("Shortcut_kymv0")
 texture_normal = ExtResource("4_n46hj")
 texture_pressed = ExtResource("5_qx6cm")
 texture_hover = ExtResource("5_qx6cm")
@@ -138,6 +160,7 @@ texture_hover = ExtResource("5_qx6cm")
 [node name="Normal" type="TextureButton" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer" unique_id=639008212]
 texture_filter = 3
 layout_mode = 2
+shortcut = SubResource("Shortcut_f3dm5")
 texture_normal = ExtResource("6_57bi6")
 texture_pressed = ExtResource("7_h2ppu")
 texture_hover = ExtResource("7_h2ppu")
@@ -145,6 +168,7 @@ texture_hover = ExtResource("7_h2ppu")
 [node name="Hard" type="TextureButton" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer" unique_id=441275168]
 texture_filter = 3
 layout_mode = 2
+shortcut = SubResource("Shortcut_7epoo")
 texture_normal = ExtResource("8_xcp0h")
 texture_pressed = ExtResource("9_dxxbo")
 texture_hover = ExtResource("9_dxxbo")
@@ -235,6 +259,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 30
 alignment = 1
+max_length = 6
 expand_to_text_length = true
 secret = true
 
@@ -423,6 +448,7 @@ texture = ExtResource("12_3keoi")
 position = Vector2(139, -125)
 texture = ExtResource("13_ycs42")
 
+[connection signal="tab_changed" from="MarginContainer/TabContainer" to="." method="_on_tab_container_tab_changed"]
 [connection signal="pressed" from="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Easy" to="MarginContainer/TabContainer/Main" method="_on_easy_pressed"]
 [connection signal="pressed" from="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Normal" to="MarginContainer/TabContainer/Main" method="_on_normal_pressed"]
 [connection signal="pressed" from="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Hard" to="MarginContainer/TabContainer/Main" method="_on_hard_pressed"]

@@ -16,7 +16,7 @@ func _on_back_pressed() -> void:
 		Autoload.data.username = GameJolt.get_user_name()
 		Autoload.data.usertoken = GameJolt.get_user_token()
 	Autoload.save_data()
-	get_tree().change_scene_to_file("res://scenes/ui/settings_scene.tscn")
+	get_tree().change_scene_to_file("res://scenes/ui/main_menu.tscn")
 	
 func _on_login_pressed() -> void:
 	Autoload.click()
