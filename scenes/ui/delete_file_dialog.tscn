@@ -12,6 +12,8 @@
 [ext_resource type="AudioStream" uid="uid://bw7seqn21o6tc" path="res://sounds/DeleteFile.wav" id="9_nw7og"]
 [ext_resource type="Texture2D" uid="uid://dcemmvbupw7ym" path="res://sprites/UI/Sprite125_2.png" id="10_nw7og"]
 [ext_resource type="Texture2D" uid="uid://b1w8vnirfty26" path="res://sprites/UI/Sprite128_1.png" id="11_jq3pa"]
+[ext_resource type="Texture2D" uid="uid://dalwejtdibb7k" path="res://sprites/UI/GamePadIcons/Circle.png" id="13_wbfx3"]
+[ext_resource type="Texture2D" uid="uid://dacym0huyllwk" path="res://sprites/UI/GamePadIcons/Cross.png" id="14_8gksr"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_3u7pf"]
 device = -1
@@ -154,6 +156,20 @@ texture = ExtResource("4_fb4f1")
 [node name="Sprite1280" type="Sprite2D" parent="." unique_id=430790234]
 position = Vector2(861, -199)
 texture = ExtResource("8_8gksr")
+
+[node name="Icons" type="Node2D" parent="." unique_id=1414539523]
+
+[node name="PS" type="Node2D" parent="Icons" unique_id=1429435708]
+
+[node name="Circle" type="Sprite2D" parent="Icons/PS" unique_id=935854685]
+position = Vector2(897, 456.00003)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("13_wbfx3")
+
+[node name="Cross" type="Sprite2D" parent="Icons/PS" unique_id=1088469488]
+position = Vector2(259, 454)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("14_8gksr")
 
 [connection signal="pressed" from="HBoxContainer/MarginContainer/Yes" to="." method="_on_yes_pressed"]
 [connection signal="pressed" from="HBoxContainer/MarginContainer2/DeleteFile" to="." method="_on_delete_file_pressed"]

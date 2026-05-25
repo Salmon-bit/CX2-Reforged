@@ -18,16 +18,18 @@
 [ext_resource type="Texture2D" uid="uid://nh1manirklg7" path="res://sprites/UI/Sprite95_1.png" id="16_e375g"]
 [ext_resource type="Texture2D" uid="uid://cq8rp66gew2lk" path="res://sprites/UI/Sprite42_0.png" id="17_xogkw"]
 [ext_resource type="Texture2D" uid="uid://b12ldxvc2rwbx" path="res://sprites/UI/Sprite50_0.png" id="18_d1lmv"]
+[ext_resource type="Texture2D" uid="uid://ctes2wsvndky2" path="res://sprites/UI/GamePadIcons/Share.png" id="19_d1lmv"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_wh1jf"]
 device = -1
 keycode = 4194305
 
-[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_wh1jf"]
-button_index = 1
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_xogkw"]
+button_index = 4
+pressed = true
 
 [sub_resource type="Shortcut" id="Shortcut_0rr43"]
-events = [SubResource("InputEventKey_wh1jf"), SubResource("InputEventJoypadButton_wh1jf")]
+events = [SubResource("InputEventKey_wh1jf"), SubResource("InputEventJoypadButton_xogkw")]
 
 [node name="LevelSelect" type="Control" unique_id=1199517008]
 layout_mode = 3
@@ -118,5 +120,14 @@ texture = ExtResource("17_xogkw")
 [node name="Sprite500" type="Sprite2D" parent="." unique_id=864025248]
 position = Vector2(35, 243)
 texture = ExtResource("18_d1lmv")
+
+[node name="Icons" type="Node2D" parent="." unique_id=165172418]
+
+[node name="PS" type="Node2D" parent="Icons" unique_id=765962564]
+
+[node name="Share" type="Sprite2D" parent="Icons/PS" unique_id=1989561991]
+position = Vector2(94.00001, 34)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("19_d1lmv")
 
 [connection signal="pressed" from="BackBtn" to="." method="_on_back_btn_pressed"]

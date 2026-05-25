@@ -16,12 +16,17 @@
 [ext_resource type="Texture2D" uid="uid://cn7kpkjqo63w0" path="res://sprites/UI/Sprite122_0.png" id="12_3keoi"]
 [ext_resource type="Script" uid="uid://bv6sr8fxwr3c2" path="res://scripts/ui/game_jolt_settings.gd" id="13_25tad"]
 [ext_resource type="Texture2D" uid="uid://do04ugbudvnws" path="res://sprites/UI/Sprite122_1.png" id="13_ycs42"]
+[ext_resource type="Texture2D" uid="uid://djg2ika41pbxp" path="res://sprites/UI/GamePadIcons/Square.png" id="14_7epoo"]
 [ext_resource type="Texture2D" uid="uid://g5vrqwkwrsxx" path="res://sprites/UI/Sprite90_0.png" id="14_j06xg"]
 [ext_resource type="Script" uid="uid://cwf4qe1kx6ruo" path="res://scripts/ui/settings_tab_language.gd" id="15_06trf"]
+[ext_resource type="Texture2D" uid="uid://3pu3mwfwhhso" path="res://sprites/UI/GamePadIcons/Triangle.png" id="15_icjw7"]
 [ext_resource type="Texture2D" uid="uid://i385sudwcjfk" path="res://sprites/UI/Sprite90_1.png" id="15_x1uin"]
+[ext_resource type="Texture2D" uid="uid://dalwejtdibb7k" path="res://sprites/UI/GamePadIcons/Circle.png" id="16_5dex4"]
 [ext_resource type="Texture2D" uid="uid://c1fx0d21kq70f" path="res://sprites/UI/Sprite91_0.png" id="16_25tad"]
 [ext_resource type="Texture2D" uid="uid://mt4wrgqlv8xl" path="res://sprites/UI/Sprite91_1.png" id="17_7njhk"]
+[ext_resource type="Texture2D" uid="uid://ctes2wsvndky2" path="res://sprites/UI/GamePadIcons/Share.png" id="17_e7lka"]
 [ext_resource type="Texture2D" uid="uid://bcfn4yhh885ke" path="res://sprites/UI/Sprite93_2.png" id="18_0w6p2"]
+[ext_resource type="Texture2D" uid="uid://bwdakqbqcqdxe" path="res://sprites/UI/GamePadIcons/D_Pad_Down.png" id="18_xq0ok"]
 [ext_resource type="Texture2D" uid="uid://cq5d7mwnitbda" path="res://sprites/UI/Sprite93_3.png" id="19_u8mpt"]
 [ext_resource type="Texture2D" uid="uid://la4o1louwuk" path="res://sprites/UI/Sprite129_2.png" id="20_3keoi"]
 [ext_resource type="Texture2D" uid="uid://6xguu85tawl4" path="res://sprites/UI/Sprite122_2.png" id="21_ycs42"]
@@ -29,8 +34,11 @@
 [ext_resource type="Texture2D" uid="uid://igusq2ehudai" path="res://sprites/UI/Sprite71_1.png" id="23_x1uin"]
 [ext_resource type="Texture2D" uid="uid://n22akuoh814x" path="res://sprites/UI/Sprite92_2.png" id="24_25tad"]
 [ext_resource type="Texture2D" uid="uid://8qgyg3jdtt33" path="res://sprites/UI/Sprite92_3.png" id="25_7njhk"]
+[ext_resource type="Texture2D" uid="uid://c15rsx1x1uiro" path="res://sprites/UI/GamePadIcons/D_Pad_Left.png" id="25_e7lka"]
+[ext_resource type="Script" uid="uid://dkuq45g7egi02" path="res://scripts/ui/settings_tab_controller.gd" id="25_icjw7"]
 [ext_resource type="Texture2D" uid="uid://b8wfx7l7s3y7r" path="res://sprites/UI/Sprite145_1.png" id="26_3keoi"]
 [ext_resource type="Texture2D" uid="uid://x3xiarcl0mr7" path="res://sprites/UI/Sprite129_3.png" id="26_06trf"]
+[ext_resource type="Texture2D" uid="uid://cbx6p8xp8271b" path="res://sprites/UI/GamePadIcons/D_Pad_Right.png" id="26_xq0ok"]
 [ext_resource type="Texture2D" uid="uid://dsm5hqmxnvtvk" path="res://sprites/UI/Sprite145_2.png" id="27_ycs42"]
 [ext_resource type="Texture2D" uid="uid://b7ynt3e8rr3eg" path="res://sprites/UI/Sprite145_3.png" id="28_j06xg"]
 [ext_resource type="PackedScene" uid="uid://dyls7piyfv8fw" path="res://scenes/trophey_manager.tscn" id="30_j06xg"]
@@ -56,11 +64,12 @@ pressed = true
 [sub_resource type="Shortcut" id="Shortcut_7epoo"]
 events = [SubResource("InputEventJoypadButton_dhh0j")]
 
-[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_j06xg"]
-button_index = 3
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_f3dm5"]
+button_index = 12
+pressed = true
 
 [sub_resource type="Shortcut" id="Shortcut_x1uin"]
-events = [SubResource("InputEventJoypadButton_j06xg")]
+events = [SubResource("InputEventJoypadButton_f3dm5")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_88w50"]
 device = -1
@@ -72,15 +81,44 @@ button_index = 4
 [sub_resource type="Shortcut" id="Shortcut_25tad"]
 events = [SubResource("InputEventKey_88w50"), SubResource("InputEventJoypadButton_r5ds8")]
 
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_7epoo"]
+button_index = 13
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_icjw7"]
+events = [SubResource("InputEventJoypadButton_7epoo")]
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_5dex4"]
+button_index = 14
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_e7lka"]
+events = [SubResource("InputEventJoypadButton_5dex4")]
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_icjw7"]
+button_index = 3
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_5dex4"]
+events = [SubResource("InputEventJoypadButton_icjw7")]
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_e7lka"]
+button_index = 12
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_xq0ok"]
+events = [SubResource("InputEventJoypadButton_e7lka")]
+
 [sub_resource type="InputEventKey" id="InputEventKey_5i12r"]
 device = -1
 keycode = 4194305
 
-[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_ycs42"]
-button_index = 1
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_kymv0"]
+button_index = 4
+pressed = true
 
 [sub_resource type="Shortcut" id="Shortcut_vr2vt"]
-events = [SubResource("InputEventKey_5i12r"), SubResource("InputEventJoypadButton_ycs42")]
+events = [SubResource("InputEventKey_5i12r"), SubResource("InputEventJoypadButton_kymv0")]
 
 [node name="SettingsScene" type="Control" unique_id=1446389452]
 layout_mode = 3
@@ -97,9 +135,12 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=973801818]
 layout_mode = 1
@@ -112,10 +153,11 @@ theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 39
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
+metadata/_edit_lock_ = true
 
 [node name="TabContainer" type="TabContainer" parent="MarginContainer" unique_id=1378976779]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 20
 tab_alignment = 1
 current_tab = 0
 
@@ -201,9 +243,40 @@ texture_normal = ExtResource("12_3keoi")
 texture_pressed = ExtResource("13_ycs42")
 texture_hover = ExtResource("13_ycs42")
 
+[node name="Icons" type="Node2D" parent="MarginContainer/TabContainer/Main" unique_id=910612382]
+position = Vector2(407.50003, 81.49997)
+scale = Vector2(2.9374979, 2.9374979)
+
+[node name="PS" type="Node2D" parent="MarginContainer/TabContainer/Main/Icons" unique_id=1827517852]
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Square" type="Sprite2D" parent="MarginContainer/TabContainer/Main/Icons/PS" unique_id=778743333]
+position = Vector2(3.7447357, 0)
+scale = Vector2(0.8000001, 0.8000001)
+texture = ExtResource("14_7epoo")
+
+[node name="Triangle" type="Sprite2D" parent="MarginContainer/TabContainer/Main/Icons/PS" unique_id=1000727549]
+position = Vector2(53.617065, -18.553196)
+scale = Vector2(0.8000001, 0.8000001)
+texture = ExtResource("15_icjw7")
+
+[node name="Circle" type="Sprite2D" parent="MarginContainer/TabContainer/Main/Icons/PS" unique_id=1073237672]
+position = Vector2(103.65965, 0.5106468)
+scale = Vector2(0.8000001, 0.8000001)
+texture = ExtResource("16_5dex4")
+
+[node name="Share" type="Sprite2D" parent="MarginContainer/TabContainer/Main/Icons/PS" unique_id=1336268246]
+position = Vector2(-112.51074, -38.978745)
+texture = ExtResource("17_e7lka")
+
+[node name="DPadDown" type="Sprite2D" parent="MarginContainer/TabContainer/Main/Icons" unique_id=158153829]
+position = Vector2(8.680862, 148.59586)
+texture = ExtResource("18_xq0ok")
+
 [node name="GameJolt" type="TabBar" parent="MarginContainer/TabContainer" unique_id=1360443219]
 visible = false
 layout_mode = 2
+theme_override_font_sizes/font_size = 20
 script = ExtResource("13_25tad")
 metadata/_tab_index = 1
 
@@ -214,9 +287,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 87
-theme_override_constants/margin_right = 20
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 100
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/GameJolt/MarginContainer" unique_id=597554482]
 layout_mode = 2
@@ -230,19 +303,20 @@ theme_override_constants/separation = 180
 [node name="Label" type="Label" parent="MarginContainer/TabContainer/GameJolt/MarginContainer/VBoxContainer/HBoxContainer" unique_id=245840395]
 layout_mode = 2
 size_flags_horizontal = 0
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 20
 text = "Enter your username:"
 
 [node name="Username" type="LineEdit" parent="MarginContainer/TabContainer/GameJolt/MarginContainer/VBoxContainer/HBoxContainer" unique_id=437873389]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 20
 placeholder_text = "Salmon228"
 alignment = 1
 max_length = 12
 expand_to_text_length = true
 emoji_menu_enabled = false
 middle_mouse_paste_enabled = false
+virtual_keyboard_type = 6
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/TabContainer/GameJolt/MarginContainer/VBoxContainer" unique_id=441283686]
 layout_mode = 2
@@ -251,16 +325,19 @@ theme_override_constants/separation = 180
 [node name="Label" type="Label" parent="MarginContainer/TabContainer/GameJolt/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=910712584]
 layout_mode = 2
 size_flags_horizontal = 0
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 20
 text = "Enter your game token:"
 
 [node name="GameToken" type="LineEdit" parent="MarginContainer/TabContainer/GameJolt/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=918207209]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 20
+placeholder_text = "ABC123"
 alignment = 1
 max_length = 6
 expand_to_text_length = true
+emoji_menu_enabled = false
+virtual_keyboard_type = 6
 secret = true
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/TabContainer/GameJolt/MarginContainer/VBoxContainer" unique_id=88289702]
@@ -270,18 +347,18 @@ theme_override_constants/separation = 180
 [node name="CheckButton" type="CheckButton" parent="MarginContainer/TabContainer/GameJolt/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1089063358]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 20
 text = "Authenicate on start?"
 icon_alignment = 2
 
 [node name="Login" type="Button" parent="MarginContainer/TabContainer/GameJolt/MarginContainer/VBoxContainer" unique_id=1026465825]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 20
 text = "Login"
 
 [node name="Status" type="Label" parent="MarginContainer/TabContainer/GameJolt/MarginContainer/VBoxContainer" unique_id=321738179]
 layout_mode = 2
-theme_override_font_sizes/font_size = 19
+theme_override_font_sizes/font_size = 20
 text = "Login status: Unknown
 "
 horizontal_alignment = 1
@@ -295,9 +372,10 @@ theme_override_constants/margin_bottom = 20
 [node name="Back" type="Button" parent="MarginContainer/TabContainer/GameJolt/MarginContainer/VBoxContainer/MarginContainer" unique_id=418951799]
 layout_mode = 2
 size_flags_vertical = 10
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 20
 shortcut = SubResource("Shortcut_25tad")
 text = "Back to settings menu"
+expand_icon = true
 
 [node name="Language" type="TabBar" parent="MarginContainer/TabContainer" unique_id=151799268]
 visible = false
@@ -325,6 +403,7 @@ alignment = 1
 [node name="Rus" type="TextureButton" parent="MarginContainer/TabContainer/Language/MarginContainer2/HBoxContainer" unique_id=1092946927]
 texture_filter = 3
 layout_mode = 2
+shortcut = SubResource("Shortcut_icjw7")
 texture_normal = ExtResource("14_j06xg")
 texture_pressed = ExtResource("15_x1uin")
 texture_hover = ExtResource("15_x1uin")
@@ -332,9 +411,86 @@ texture_hover = ExtResource("15_x1uin")
 [node name="Eng" type="TextureButton" parent="MarginContainer/TabContainer/Language/MarginContainer2/HBoxContainer" unique_id=1849534044]
 texture_filter = 3
 layout_mode = 2
+shortcut = SubResource("Shortcut_e7lka")
 texture_normal = ExtResource("16_25tad")
 texture_pressed = ExtResource("17_7njhk")
 texture_hover = ExtResource("17_7njhk")
+
+[node name="Icons" type="Node2D" parent="MarginContainer/TabContainer/Language" unique_id=752121068]
+
+[node name="PS" type="Node2D" parent="MarginContainer/TabContainer/Language/Icons" unique_id=192199521]
+
+[node name="DPadLeft" type="Sprite2D" parent="MarginContainer/TabContainer/Language/Icons/PS" unique_id=2050308705]
+position = Vector2(397, 105)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("25_e7lka")
+
+[node name="DPadRight" type="Sprite2D" parent="MarginContainer/TabContainer/Language/Icons/PS" unique_id=1200736293]
+position = Vector2(735.00006, 106)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("26_xq0ok")
+
+[node name="Controller" type="TabBar" parent="MarginContainer/TabContainer" unique_id=160318442]
+visible = false
+layout_mode = 2
+script = ExtResource("25_icjw7")
+metadata/_tab_index = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/Controller" unique_id=1116168424]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/Controller/MarginContainer" unique_id=1082865633]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Hints" type="CheckButton" parent="MarginContainer/TabContainer/Controller/MarginContainer/VBoxContainer" unique_id=1124011002]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+shortcut = SubResource("Shortcut_5dex4")
+text = "Show Controller Hints"
+
+[node name="Label" type="Label" parent="MarginContainer/TabContainer/Controller/MarginContainer/VBoxContainer" unique_id=1865135576]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Icon type:"
+horizontal_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/TabContainer/Controller/MarginContainer/VBoxContainer" unique_id=1517413168]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+shortcut = SubResource("Shortcut_xq0ok")
+alignment = 1
+selected = 0
+item_count = 3
+popup/item_0/text = "XBox"
+popup/item_0/id = 1
+popup/item_1/text = "PlayStation"
+popup/item_1/id = 0
+popup/item_2/text = "Nintendo"
+popup/item_2/id = 2
+
+[node name="Icons" type="Node2D" parent="MarginContainer/TabContainer/Controller" unique_id=1322612457]
+
+[node name="PS" type="Node2D" parent="MarginContainer/TabContainer/Controller/Icons" unique_id=44516186]
+
+[node name="Triangle" type="Sprite2D" parent="MarginContainer/TabContainer/Controller/Icons/PS" unique_id=23215892]
+position = Vector2(1077, 223)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("15_icjw7")
+
+[node name="DPadDown" type="Sprite2D" parent="MarginContainer/TabContainer/Controller/Icons/PS" unique_id=197211352]
+position = Vector2(1078, 368)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("18_xq0ok")
 
 [node name="Back" type="TextureButton" parent="." unique_id=160960496]
 z_index = 5
@@ -458,4 +614,7 @@ texture = ExtResource("13_ycs42")
 [connection signal="pressed" from="MarginContainer/TabContainer/GameJolt/MarginContainer/VBoxContainer/MarginContainer/Back" to="MarginContainer/TabContainer/GameJolt" method="_on_back_pressed"]
 [connection signal="pressed" from="MarginContainer/TabContainer/Language/MarginContainer2/HBoxContainer/Rus" to="MarginContainer/TabContainer/Language" method="_on_rus_pressed"]
 [connection signal="pressed" from="MarginContainer/TabContainer/Language/MarginContainer2/HBoxContainer/Eng" to="MarginContainer/TabContainer/Language" method="_on_eng_pressed"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Controller/MarginContainer/VBoxContainer/Hints" to="MarginContainer/TabContainer/Controller" method="_on_hints_toggled"]
+[connection signal="item_focused" from="MarginContainer/TabContainer/Controller/MarginContainer/VBoxContainer/OptionButton" to="." method="_on_option_button_item_focused"]
+[connection signal="item_selected" from="MarginContainer/TabContainer/Controller/MarginContainer/VBoxContainer/OptionButton" to="MarginContainer/TabContainer/Controller" method="_on_option_button_item_selected"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

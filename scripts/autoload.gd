@@ -32,7 +32,7 @@ var data = {
 		false
 	],
 	"money": 0,
-	"difficulty": "easy",
+	"difficulty": "normal",
 	"lang": "en",
 	"username": "",
 	"usertoken": "",
@@ -53,7 +53,9 @@ var data = {
 		false,
 		false,
 		false
-	]
+	],
+	"show_controller_hints": false,
+	"controller_type": "PS"
 }
 
 # Name, Description, GameJolt ID, is secret?, id

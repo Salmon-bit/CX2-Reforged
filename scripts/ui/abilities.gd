@@ -2,7 +2,7 @@ extends Control
 
 func update_textures():
 	if Autoload.data.lang == "ru":
-		$Info.texture = $Sprite981.texture
+		$Info.texture = $RU_SPRITES/Sprite981.texture
 	
 	var c = $MarginContainer/VBoxContainer
 	var children = c.get_children()
@@ -22,7 +22,7 @@ func update_textures():
 			btn.pressed.connect(Callable(self, "on_btn_pressed").bind(btn))
 	
 	if Autoload.data.lang == "ru":
-		$MarginContainer2/VBoxContainer/Selected.texture = $Sprite711.texture
+		$MarginContainer2/VBoxContainer/Selected.texture = $RU_SPRITES/Sprite711.texture
 	
 	print(str(int(Autoload.data.ability)))
 	$MarginContainer2/VBoxContainer/Icon.texture = $AbilityIcons.get_node(str(int(Autoload.data.ability))).texture

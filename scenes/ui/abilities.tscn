@@ -26,6 +26,18 @@
 [ext_resource type="Texture2D" uid="uid://bquq4iirgngqu" path="res://sprites/Abilities/Sprite52_3.png" id="21_p74cy"]
 [ext_resource type="Texture2D" uid="uid://l52wbxcx6egm" path="res://sprites/Abilities/Sprite70_1.png" id="25_p74cy"]
 [ext_resource type="Texture2D" uid="uid://dw4gwxeagmxsi" path="res://sprites/Abilities/Sprite70_2.png" id="26_y1cyn"]
+[ext_resource type="Texture2D" uid="uid://ctes2wsvndky2" path="res://sprites/UI/GamePadIcons/Share.png" id="27_y1cyn"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_p74cy"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_y1cyn"]
+button_index = 4
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_iqd2t"]
+events = [SubResource("InputEventKey_p74cy"), SubResource("InputEventJoypadButton_y1cyn")]
 
 [node name="Abilities" type="Control" unique_id=777844008]
 layout_mode = 3
@@ -60,6 +72,7 @@ size_flags_horizontal = 0
 
 [node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=1830210391]
 layout_mode = 2
+shortcut = SubResource("Shortcut_iqd2t")
 texture_normal = ExtResource("1_fc4se")
 texture_pressed = ExtResource("2_5dxil")
 texture_hover = ExtResource("2_5dxil")
@@ -147,15 +160,6 @@ size_flags_horizontal = 4
 texture = ExtResource("15_beuri")
 stretch_mode = 2
 
-[node name="Sprite711" type="Sprite2D" parent="." unique_id=1151607849]
-position = Vector2(1016, -48)
-texture = ExtResource("16_beuri")
-
-[node name="Sprite981" type="Sprite2D" parent="." unique_id=1108302353]
-visible = false
-position = Vector2(-262, 608)
-texture = ExtResource("14_cvc7y")
-
 [node name="Sprite210" type="Sprite2D" parent="." unique_id=1723058421]
 visible = false
 position = Vector2(36, -40)
@@ -188,6 +192,16 @@ texture = ExtResource("20_kqbs6")
 position = Vector2(508, -124)
 texture = ExtResource("21_p74cy")
 
+[node name="Sprite981" type="Sprite2D" parent="RU_SPRITES" unique_id=1108302353]
+visible = false
+position = Vector2(-262, 608)
+texture = ExtResource("14_cvc7y")
+
+[node name="Sprite711" type="Sprite2D" parent="RU_SPRITES" unique_id=1151607849]
+visible = false
+position = Vector2(1016, -48)
+texture = ExtResource("16_beuri")
+
 [node name="AbilityIcons" type="Node2D" parent="." unique_id=926786197]
 
 [node name="0" type="Sprite2D" parent="AbilityIcons" unique_id=2018432955]
@@ -201,5 +215,14 @@ texture = ExtResource("25_p74cy")
 [node name="1" type="Sprite2D" parent="AbilityIcons" unique_id=585230040]
 position = Vector2(127, -59)
 texture = ExtResource("26_y1cyn")
+
+[node name="Icons" type="Node2D" parent="." unique_id=1159974731]
+
+[node name="PS" type="Node2D" parent="Icons" unique_id=1193514447]
+
+[node name="Share" type="Sprite2D" parent="Icons" unique_id=1417455843]
+position = Vector2(99, 38)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("27_y1cyn")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

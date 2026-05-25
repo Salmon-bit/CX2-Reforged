@@ -12,6 +12,7 @@
 [ext_resource type="StyleBox" uid="uid://blod33u7lp1uq" path="res://themes/tabcontainer_panel.tres" id="10_riwsl"]
 [ext_resource type="StyleBox" uid="uid://040tc601c363" path="res://themes/tabcontainer_hover.tres" id="11_7wdlx"]
 [ext_resource type="StyleBox" uid="uid://d0tiqqbff5a1x" path="res://themes/tabcontainer_unselected.tres" id="12_8ar6a"]
+[ext_resource type="Texture2D" uid="uid://b7crofxny4qd7" path="res://sprites/UI/Sprite24_7.png" id="13_7wdlx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10so0"]
 bg_color = Color(0, 0, 0, 1)
@@ -29,6 +30,77 @@ content_margin_top = 10.0
 content_margin_right = 5.0
 content_margin_bottom = 10.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ar6a"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 0, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a70tl"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 0, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nmpmk"]
+bg_color = Color(0.07284262, 0.072842635, 0.072842576, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gt862"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_6m817"]
+color = Color(1, 1, 1, 1)
+thickness = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4hlqp"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_arlpf"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bst4o"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_38mel"]
+bg_color = Color(0.8992584, 0.8992584, 0.8992584, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3w5i"]
+bg_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jty1"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hy64e"]
+bg_color = Color(0.83889705, 0.83889705, 0.8388969, 1)
+
 [resource]
 Button/colors/font_hover_color = Color(1, 1, 0, 1)
 Button/colors/font_hover_pressed_color = Color(1, 1, 0, 1)
@@ -39,7 +111,6 @@ Button/styles/focus = ExtResource("2_k5u3e")
 Button/styles/hover = ExtResource("3_kx4sy")
 Button/styles/normal = ExtResource("2_k5u3e")
 Button/styles/pressed = ExtResource("3_kx4sy")
-CheckBox/font_sizes/font_size = 25
 CheckBox/fonts/font = ExtResource("1_7d6gw")
 CheckBox/icons/checked = ExtResource("4_hcg30")
 CheckBox/icons/unchecked = ExtResource("5_nuec8")
@@ -65,6 +136,22 @@ Label/styles/normal = SubResource("StyleBoxEmpty_7d6gw")
 LineEdit/fonts/font = ExtResource("1_7d6gw")
 LineEdit/styles/focus = ExtResource("2_k5u3e")
 LineEdit/styles/normal = ExtResource("2_k5u3e")
+OptionButton/styles/hover = SubResource("StyleBoxFlat_8ar6a")
+OptionButton/styles/hover_pressed = SubResource("StyleBoxFlat_a70tl")
+PopupMenu/colors/font_hover_color = Color(1, 1, 0, 1)
+PopupMenu/font_sizes/font_size = 20
+PopupMenu/font_sizes/title_font_size = 20
+PopupMenu/fonts/font = ExtResource("1_7d6gw")
+PopupMenu/styles/hover = SubResource("StyleBoxFlat_nmpmk")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_gt862")
+PopupMenu/styles/separator = SubResource("StyleBoxLine_6m817")
+ProgressBar/colors/font_color = Color(1, 1, 1, 1)
+ProgressBar/colors/font_outline_color = Color(0, 0, 0, 1)
+ProgressBar/constants/outline_size = 9
+ProgressBar/font_sizes/font_size = 16
+ProgressBar/fonts/font = ExtResource("1_7d6gw")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_4hlqp")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_arlpf")
 TabBar/font_sizes/font_size = 22
 TabBar/fonts/font = ExtResource("1_7d6gw")
 TabContainer/constants/side_margin = 13
@@ -75,3 +162,9 @@ TabContainer/styles/tab_focus = ExtResource("11_7wdlx")
 TabContainer/styles/tab_hovered = ExtResource("11_7wdlx")
 TabContainer/styles/tab_selected = ExtResource("7_10so0")
 TabContainer/styles/tab_unselected = ExtResource("12_8ar6a")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_bst4o")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_38mel")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_s3w5i")
+VSlider/icons/tick = ExtResource("13_7wdlx")
+VSlider/styles/grabber_area = SubResource("StyleBoxFlat_4jty1")
+VSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_hy64e")
