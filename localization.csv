@@ -1,0 +1,19 @@
+,ru,de,fr,en
+S_T_M,Основое,Haupt,Principale,Main
+S_T_GJ,GameJolt,SpieleJolt,Jeu,GameJolt
+S_T_L,Язык,Sprache,Langue,Language
+S_T_C,Контроллер,Controller,Contrôleur,Controller
+SM_E_D,Легко,Leicht,Facile,Easy
+SM_N_D,Нормально,Nicht mal,Autres,Nor-\nmal
+SM_H_D,Сложно,Hart,Dur,Hard
+SM_SEL,Выбрано,Wählen,Sélectionner,Select
+SM_DF,Удалить файл,Löschen der Datei,Supprimer le fichier,Delete file
+SGJ_U,Введите свое имя пользователя:,Geben Sie Ihren Benutzernamen ein:,Saisissez votre nom d'utilisateur :,Enter your username:
+SGJ_T,Введите токен:,Geben Sie ypu user token ein:,Saisissez le jeton utilisateur ypu & #160;:,Enter ypu user token:
+SGJ_AUTH,Входить при запуске?,Einloggen?,S'identifier au début ?,Login on start?
+SGJ_L,Войти,Anmelden,Connexion,Login
+SGJ_B,Вернуться в Главное меню,Zurück zum Hauptmenü,Retour au menu principal,Back to main menu
+SGJ_LOGIN_ST,Статус входа: Успешно\n,Login-Status: Logged in\n,État de la connexion : Logged in\n,Login status: Logged in\n
+SGJ_LOGER_ST,Статус входа: Ошибка\n,Login-Status: Fehler\n,Statut de connexion : Erreur\n,Login status: Error\n
+SC_SCH,Показывать подсказки для контроллера?,,,Show controller hints?
+SC_IT,Вид иконок:,,,Icon type:

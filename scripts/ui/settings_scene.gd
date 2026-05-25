@@ -4,44 +4,6 @@ var wait_btn = false
 var idx = -1
 
 func update_textures() -> void:
-	if Autoload.data.lang == "ru":
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Easy.texture_normal = $Sprites/Sprite1452.texture
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Easy.texture_pressed = $Sprites/Sprite923.texture
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Easy.texture_hover = $Sprites/Sprite923.texture
-		
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Normal.texture_normal = $Sprites/Sprite1292.texture
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Normal.texture_hover = $Sprites/Sprite1293.texture
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Normal.texture_pressed = $Sprites/Sprite1293.texture
-		
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Hard.texture_normal = $Sprites/Sprite932.texture
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Hard.texture_hover = $Sprites/Sprite933.texture
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Hard.texture_pressed = $Sprites/Sprite933.texture
-		
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/TextureRect.texture = $Sprites/Sprite711.texture
-		
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/MarginContainer2/DeleteFile.texture_normal = $Sprites/Sprite1222.texture
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/MarginContainer2/DeleteFile.texture_hover = $Sprites/Sprite1223.texture
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/MarginContainer2/DeleteFile.texture_pressed = $Sprites/Sprite1223.texture
-
-	elif Autoload.data.lang == "en":
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Easy.texture_normal = $Sprites/Sprite920.texture
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Easy.texture_pressed = $Sprites/Sprite921.texture
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Easy.texture_hover = $Sprites/Sprite921.texture
-		
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Normal.texture_normal = $Sprites/Sprite1290.texture
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Normal.texture_hover = $Sprites/Sprite1291.texture
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Normal.texture_pressed = $Sprites/Sprite1291.texture
-		
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Hard.texture_normal = $Sprites/Sprite930.texture
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Hard.texture_hover = $Sprites/Sprite931.texture
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Hard.texture_pressed = $Sprites/Sprite931.texture
-		
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/TextureRect.texture = $Sprites/Sprite710.texture
-		
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/MarginContainer2/DeleteFile.texture_normal = $Sprites/Sprite1220.texture
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/MarginContainer2/DeleteFile.texture_hover = $Sprites/Sprite1221.texture
-		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/MarginContainer2/DeleteFile.texture_pressed = $Sprites/Sprite1221.texture
-
 	if Autoload.data.difficulty == "easy":
 		$MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/SelectedDifficulty.texture = $Sprites/Sprite1450.texture
 	elif Autoload.data.difficulty == "normal":

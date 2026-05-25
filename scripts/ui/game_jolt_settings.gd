@@ -27,9 +27,9 @@ func _on_login_pressed() -> void:
 func check_auth(response) -> void:
 	print("[AUTH RESPONSE]: " + str(response))
 	if response.success == "true":
-		$MarginContainer/VBoxContainer/Status.text = "Login status: Logged In\n"
+		$MarginContainer/VBoxContainer/Status.text = "SGJ_LOGIN_ST"
 	else:
-		$MarginContainer/VBoxContainer/Status.text = "Login status: Error\n" + response.message
+		$MarginContainer/VBoxContainer/Status.text = "SGJ_LOGER_ST" + response.message
 
 func _on_check_button_pressed() -> void:
 	Autoload.click()

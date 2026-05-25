@@ -11,10 +11,12 @@ config_version=5
 [application]
 
 config/name="CX2 Reforged"
-config/version="0.0.1"
+config/version="0.3.0"
 run/main_scene="res://scenes/ui/main_menu.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://dil03tdtueq7k"
+config/macos_native_icon="uid://dil03tdtueq7k"
+config/windows_native_icon="res://sprites/Skins/GameView/Sprite2_0.ico"
 
 [autoload]
 
@@ -138,6 +140,10 @@ select={
 "events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":0,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://localization.de.translation", "res://localization.en.translation", "res://localization.fr.translation", "res://localization.ru.translation")
 
 [physics]
 

@@ -24,7 +24,6 @@
 [ext_resource type="Texture2D" uid="uid://dalwejtdibb7k" path="res://sprites/UI/GamePadIcons/Circle.png" id="16_5dex4"]
 [ext_resource type="Texture2D" uid="uid://c1fx0d21kq70f" path="res://sprites/UI/Sprite91_0.png" id="16_25tad"]
 [ext_resource type="Texture2D" uid="uid://mt4wrgqlv8xl" path="res://sprites/UI/Sprite91_1.png" id="17_7njhk"]
-[ext_resource type="Texture2D" uid="uid://ctes2wsvndky2" path="res://sprites/UI/GamePadIcons/Share.png" id="17_e7lka"]
 [ext_resource type="Texture2D" uid="uid://bcfn4yhh885ke" path="res://sprites/UI/Sprite93_2.png" id="18_0w6p2"]
 [ext_resource type="Texture2D" uid="uid://bwdakqbqcqdxe" path="res://sprites/UI/GamePadIcons/D_Pad_Down.png" id="18_xq0ok"]
 [ext_resource type="Texture2D" uid="uid://cq5d7mwnitbda" path="res://sprites/UI/Sprite93_3.png" id="19_u8mpt"]
@@ -43,6 +42,45 @@
 [ext_resource type="Texture2D" uid="uid://b7ynt3e8rr3eg" path="res://sprites/UI/Sprite145_3.png" id="28_j06xg"]
 [ext_resource type="PackedScene" uid="uid://dyls7piyfv8fw" path="res://scenes/trophey_manager.tscn" id="30_j06xg"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wudp7"]
+content_margin_left = 5.0
+content_margin_top = 15.0
+content_margin_bottom = 15.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e7lka"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.7137255, 0, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xq0ok"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.7155085, 3.85046e-07, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
 [sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_06trf"]
 button_index = 2
 pressed = true
@@ -50,12 +88,60 @@ pressed = true
 [sub_resource type="Shortcut" id="Shortcut_kymv0"]
 events = [SubResource("InputEventJoypadButton_06trf")]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31krh"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.96862745, 0.5568628, 0.3372549, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_26yvj"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.96862745, 0.5568628, 0.3372549, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
 [sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_2c64j"]
 button_index = 3
 pressed = true
 
 [sub_resource type="Shortcut" id="Shortcut_f3dm5"]
 events = [SubResource("InputEventJoypadButton_2c64j")]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8w8pu"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.93333334, 0.10980392, 0.14117648, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2fqwo"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.93333334, 0.10980392, 0.14117648, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
 
 [sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_dhh0j"]
 button_index = 1
@@ -70,6 +156,19 @@ pressed = true
 
 [sub_resource type="Shortcut" id="Shortcut_x1uin"]
 events = [SubResource("InputEventJoypadButton_f3dm5")]
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_xq0ok"]
+button_index = 14
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_31krh"]
+events = [SubResource("InputEventJoypadButton_xq0ok")]
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_26yvj"]
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_8w8pu"]
+events = [SubResource("InputEventJoypadButton_26yvj")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_88w50"]
 device = -1
@@ -160,11 +259,16 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 20
 tab_alignment = 1
 current_tab = 0
+tab_0/title = "S_T_M"
+tab_1/title = "S_T_GJ"
+tab_2/title = "S_T_L"
+tab_3/title = "S_T_C"
 
 [node name="Main" type="TabBar" parent="MarginContainer/TabContainer" unique_id=1084216178]
 layout_mode = 2
 script = ExtResource("3_7njhk")
 metadata/_tab_index = 0
+metadata/_tab_name = "S_T_M"
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/Main" unique_id=195767307]
 layout_mode = 1
@@ -174,7 +278,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
-theme_override_constants/margin_top = 0
+theme_override_constants/margin_top = 21
+theme_override_constants/margin_bottom = 11
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/Main/MarginContainer" unique_id=1898985803]
 layout_mode = 2
@@ -182,45 +287,59 @@ theme_override_constants/separation = 12
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer" unique_id=1028429595]
 layout_mode = 2
-theme_override_constants/margin_left = -95
 theme_override_constants/margin_top = 37
-theme_override_constants/margin_right = 270
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer" unique_id=546122530]
 layout_mode = 2
 theme_override_constants/separation = 24
 alignment = 1
 
-[node name="Easy" type="TextureButton" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1862676183]
+[node name="Easy" type="Button" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1894447494]
 texture_filter = 3
 layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0, 0.7137255, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.7137255, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.7137255, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_wudp7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e7lka")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xq0ok")
 shortcut = SubResource("Shortcut_kymv0")
-texture_normal = ExtResource("4_n46hj")
-texture_pressed = ExtResource("5_qx6cm")
-texture_hover = ExtResource("5_qx6cm")
+text = "SM_E_D"
+icon = ExtResource("14_7epoo")
 
-[node name="Normal" type="TextureButton" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer" unique_id=639008212]
+[node name="Normal" type="Button" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1977891224]
 texture_filter = 3
 layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.96862745, 0.5568628, 0.3372549, 1)
+theme_override_colors/font_hover_color = Color(0.96862745, 0.5568628, 0.3372549, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.96862745, 0.5568628, 0.3372549, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_wudp7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_31krh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_26yvj")
 shortcut = SubResource("Shortcut_f3dm5")
-texture_normal = ExtResource("6_57bi6")
-texture_pressed = ExtResource("7_h2ppu")
-texture_hover = ExtResource("7_h2ppu")
+text = "SM_N_D"
+icon = ExtResource("15_icjw7")
 
-[node name="Hard" type="TextureButton" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer" unique_id=441275168]
+[node name="Hard" type="Button" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer" unique_id=814329296]
 texture_filter = 3
 layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.93333334, 0.10980392, 0.14117648, 1)
+theme_override_colors/font_hover_color = Color(0.93333334, 0.10980392, 0.14117648, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.93333334, 0.10980392, 0.14117648, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_wudp7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8w8pu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2fqwo")
 shortcut = SubResource("Shortcut_7epoo")
-texture_normal = ExtResource("8_xcp0h")
-texture_pressed = ExtResource("9_dxxbo")
-texture_hover = ExtResource("9_dxxbo")
+text = "SM_H_D"
+icon = ExtResource("16_5dex4")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer" unique_id=1132329934]
+[node name="TextureRect" type="Label" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer" unique_id=34169771]
 texture_filter = 3
 layout_mode = 2
 size_flags_horizontal = 4
-texture = ExtResource("10_0w6p2")
-stretch_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "SM_SEL"
 
 [node name="SelectedDifficulty" type="TextureRect" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer" unique_id=1593431806]
 texture_filter = 3
@@ -231,47 +350,16 @@ stretch_mode = 2
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer" unique_id=1243874462]
 layout_mode = 2
-theme_override_constants/margin_left = 57
-theme_override_constants/margin_top = 209
+theme_override_constants/margin_top = 251
 
-[node name="DeleteFile" type="TextureButton" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/MarginContainer2" unique_id=1257471654]
+[node name="DeleteFile" type="Button" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/MarginContainer2" unique_id=668620540]
 texture_filter = 3
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 25
 shortcut = SubResource("Shortcut_x1uin")
-texture_normal = ExtResource("12_3keoi")
-texture_pressed = ExtResource("13_ycs42")
-texture_hover = ExtResource("13_ycs42")
-
-[node name="Icons" type="Node2D" parent="MarginContainer/TabContainer/Main" unique_id=910612382]
-position = Vector2(407.50003, 81.49997)
-scale = Vector2(2.9374979, 2.9374979)
-
-[node name="PS" type="Node2D" parent="MarginContainer/TabContainer/Main/Icons" unique_id=1827517852]
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="Square" type="Sprite2D" parent="MarginContainer/TabContainer/Main/Icons/PS" unique_id=778743333]
-position = Vector2(3.7447357, 0)
-scale = Vector2(0.8000001, 0.8000001)
-texture = ExtResource("14_7epoo")
-
-[node name="Triangle" type="Sprite2D" parent="MarginContainer/TabContainer/Main/Icons/PS" unique_id=1000727549]
-position = Vector2(53.617065, -18.553196)
-scale = Vector2(0.8000001, 0.8000001)
-texture = ExtResource("15_icjw7")
-
-[node name="Circle" type="Sprite2D" parent="MarginContainer/TabContainer/Main/Icons/PS" unique_id=1073237672]
-position = Vector2(103.65965, 0.5106468)
-scale = Vector2(0.8000001, 0.8000001)
-texture = ExtResource("16_5dex4")
-
-[node name="Share" type="Sprite2D" parent="MarginContainer/TabContainer/Main/Icons/PS" unique_id=1336268246]
-position = Vector2(-112.51074, -38.978745)
-texture = ExtResource("17_e7lka")
-
-[node name="DPadDown" type="Sprite2D" parent="MarginContainer/TabContainer/Main/Icons" unique_id=158153829]
-position = Vector2(8.680862, 148.59586)
-texture = ExtResource("18_xq0ok")
+text = "SM_DF"
+icon = ExtResource("18_xq0ok")
 
 [node name="GameJolt" type="TabBar" parent="MarginContainer/TabContainer" unique_id=1360443219]
 visible = false
@@ -279,6 +367,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 20
 script = ExtResource("13_25tad")
 metadata/_tab_index = 1
+metadata/_tab_name = "S_T_GJ"
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/GameJolt" unique_id=622161734]
 layout_mode = 1
@@ -304,7 +393,7 @@ theme_override_constants/separation = 180
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 20
-text = "Enter your username:"
+text = "SGJ_U"
 
 [node name="Username" type="LineEdit" parent="MarginContainer/TabContainer/GameJolt/MarginContainer/VBoxContainer/HBoxContainer" unique_id=437873389]
 layout_mode = 2
@@ -326,7 +415,7 @@ theme_override_constants/separation = 180
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 20
-text = "Enter your game token:"
+text = "SGJ_T"
 
 [node name="GameToken" type="LineEdit" parent="MarginContainer/TabContainer/GameJolt/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=918207209]
 layout_mode = 2
@@ -348,13 +437,16 @@ theme_override_constants/separation = 180
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
-text = "Authenicate on start?"
-icon_alignment = 2
+shortcut = SubResource("Shortcut_31krh")
+text = "SGJ_AUTH"
+icon = ExtResource("26_xq0ok")
+expand_icon = true
 
 [node name="Login" type="Button" parent="MarginContainer/TabContainer/GameJolt/MarginContainer/VBoxContainer" unique_id=1026465825]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "Login"
+shortcut = SubResource("Shortcut_8w8pu")
+text = "SGJ_L"
 
 [node name="Status" type="Label" parent="MarginContainer/TabContainer/GameJolt/MarginContainer/VBoxContainer" unique_id=321738179]
 layout_mode = 2
@@ -374,7 +466,7 @@ layout_mode = 2
 size_flags_vertical = 10
 theme_override_font_sizes/font_size = 20
 shortcut = SubResource("Shortcut_25tad")
-text = "Back to settings menu"
+text = "SGJ_B"
 expand_icon = true
 
 [node name="Language" type="TabBar" parent="MarginContainer/TabContainer" unique_id=151799268]
@@ -382,6 +474,7 @@ visible = false
 layout_mode = 2
 script = ExtResource("15_06trf")
 metadata/_tab_index = 2
+metadata/_tab_name = "S_T_L"
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/TabContainer/Language" unique_id=1700081361]
 layout_mode = 1
@@ -435,6 +528,7 @@ visible = false
 layout_mode = 2
 script = ExtResource("25_icjw7")
 metadata/_tab_index = 3
+metadata/_tab_name = "S_T_C"
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/Controller" unique_id=1116168424]
 layout_mode = 1
@@ -456,12 +550,15 @@ alignment = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 shortcut = SubResource("Shortcut_5dex4")
-text = "Show Controller Hints"
+text = "SC_SCH"
+icon = ExtResource("15_icjw7")
+icon_alignment = 2
+expand_icon = true
 
 [node name="Label" type="Label" parent="MarginContainer/TabContainer/Controller/MarginContainer/VBoxContainer" unique_id=1865135576]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "Icon type:"
+text = "SC_IT"
 horizontal_alignment = 1
 
 [node name="OptionButton" type="OptionButton" parent="MarginContainer/TabContainer/Controller/MarginContainer/VBoxContainer" unique_id=1517413168]
@@ -477,20 +574,6 @@ popup/item_1/text = "PlayStation"
 popup/item_1/id = 0
 popup/item_2/text = "Nintendo"
 popup/item_2/id = 2
-
-[node name="Icons" type="Node2D" parent="MarginContainer/TabContainer/Controller" unique_id=1322612457]
-
-[node name="PS" type="Node2D" parent="MarginContainer/TabContainer/Controller/Icons" unique_id=44516186]
-
-[node name="Triangle" type="Sprite2D" parent="MarginContainer/TabContainer/Controller/Icons/PS" unique_id=23215892]
-position = Vector2(1077, 223)
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("15_icjw7")
-
-[node name="DPadDown" type="Sprite2D" parent="MarginContainer/TabContainer/Controller/Icons/PS" unique_id=197211352]
-position = Vector2(1078, 368)
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("18_xq0ok")
 
 [node name="Back" type="TextureButton" parent="." unique_id=160960496]
 z_index = 5
