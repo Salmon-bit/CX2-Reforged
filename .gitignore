@@ -2,5 +2,3 @@
 .godot/
 /android/
 export
-scripts/game_id.gd
-scripts/game_id.uid

@@ -127,7 +127,9 @@ const null_data = {
 		false,
 		false,
 		false
-	]
+	],
+	"show_controller_hints": false,
+	"controller_type": "PS"
 }
 
 const save_file = "user://save.json"
@@ -164,7 +166,6 @@ func add_trophey(id: int):
 func _ready() -> void:
 	GameJolt.set_game_id(GameId.game_id)
 	GameJolt.set_private_key(GameId.secret_key)
-	load_data()
 	
 	if data.auto_auth:
 		GameJolt.set_user_name(data.username)
@@ -174,7 +175,12 @@ func _ready() -> void:
 	GameJolt.scores_fetch_completed.connect(fetched_scores)
 	
 	TranslationServer.set_locale(data.lang)
-
+	
+	if FileAccess.open(save_file, FileAccess.READ) == null:
+		FileAccess.open(save_file, FileAccess.WRITE).store_string(JSON.stringify(null_data, "  "))
+	else:
+		load_data()
+	
 func save_data(dat = data):
 	var file = FileAccess.open(save_file, FileAccess.WRITE)
 	file.store_string(JSON.stringify(dat, "  "))
@@ -185,13 +191,12 @@ func load_data():
 	if file != null:
 		var json_string = file.get_as_text()
 		file.close()
-		
 		var json = JSON.new()
 		var error = json.parse(json_string)
 		if error == OK:
 			data = json.data
 	else:
-		save_data(null_data)
+		clear_data()
 
 func clear_data():
 	save_data(null_data)
@@ -201,8 +206,6 @@ func click():
 	$ClickSound.play()
 	
 func get_level_num(node_name: String) -> String:
-	# Вытаскивает все цифры из конца строки
-	# "Level10" -> "10", "Btn3" -> "3"
 	var result = ""
 	for i in range(node_name.length() - 1, -1, -1):
 		if node_name[i].is_valid_int():
