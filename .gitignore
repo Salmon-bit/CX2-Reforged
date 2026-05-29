@@ -2,3 +2,4 @@
 .godot/
 /android/
 export
+scripts/game_id.gd
