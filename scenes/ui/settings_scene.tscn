@@ -13,7 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://brt0x2p4fr5ul" path="res://sprites/UI/Sprite93_1.png" id="9_dxxbo"]
 [ext_resource type="Texture2D" uid="uid://dhjajw3i3rk0c" path="res://sprites/UI/Sprite71_0.png" id="10_0w6p2"]
 [ext_resource type="Texture2D" uid="uid://mmg4sg6xdvm5" path="res://sprites/UI/Sprite145_0.png" id="11_u8mpt"]
+[ext_resource type="Texture2D" uid="uid://dacym0huyllwk" path="res://sprites/UI/GamePadIcons/Cross.png" id="11_xq0ok"]
 [ext_resource type="Texture2D" uid="uid://cn7kpkjqo63w0" path="res://sprites/UI/Sprite122_0.png" id="12_3keoi"]
+[ext_resource type="Texture2D" uid="uid://ctes2wsvndky2" path="res://sprites/UI/GamePadIcons/Share.png" id="12_31krh"]
 [ext_resource type="Script" uid="uid://bv6sr8fxwr3c2" path="res://scripts/ui/game_jolt_settings.gd" id="13_25tad"]
 [ext_resource type="Texture2D" uid="uid://do04ugbudvnws" path="res://sprites/UI/Sprite122_1.png" id="13_ycs42"]
 [ext_resource type="Texture2D" uid="uid://djg2ika41pbxp" path="res://sprites/UI/GamePadIcons/Square.png" id="14_7epoo"]
@@ -337,9 +339,9 @@ icon = ExtResource("16_5dex4")
 [node name="TextureRect" type="Label" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer" unique_id=34169771]
 texture_filter = 3
 layout_mode = 2
-size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 25
 text = "SM_SEL"
+horizontal_alignment = 1
 
 [node name="SelectedDifficulty" type="TextureRect" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer" unique_id=1593431806]
 texture_filter = 3
@@ -350,7 +352,7 @@ stretch_mode = 2
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer" unique_id=1243874462]
 layout_mode = 2
-theme_override_constants/margin_top = 251
+theme_override_constants/margin_top = 227
 
 [node name="DeleteFile" type="Button" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/MarginContainer2" unique_id=668620540]
 texture_filter = 3
@@ -440,13 +442,15 @@ theme_override_font_sizes/font_size = 20
 shortcut = SubResource("Shortcut_31krh")
 text = "SGJ_AUTH"
 icon = ExtResource("26_xq0ok")
-expand_icon = true
+icon_alignment = 2
 
 [node name="Login" type="Button" parent="MarginContainer/TabContainer/GameJolt/MarginContainer/VBoxContainer" unique_id=1026465825]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 shortcut = SubResource("Shortcut_8w8pu")
 text = "SGJ_L"
+icon = ExtResource("11_xq0ok")
+icon_alignment = 2
 
 [node name="Status" type="Label" parent="MarginContainer/TabContainer/GameJolt/MarginContainer/VBoxContainer" unique_id=321738179]
 layout_mode = 2
@@ -467,7 +471,8 @@ size_flags_vertical = 10
 theme_override_font_sizes/font_size = 20
 shortcut = SubResource("Shortcut_25tad")
 text = "SGJ_B"
-expand_icon = true
+icon = ExtResource("12_31krh")
+icon_alignment = 2
 
 [node name="Language" type="TabBar" parent="MarginContainer/TabContainer" unique_id=151799268]
 visible = false
@@ -515,12 +520,10 @@ texture_hover = ExtResource("17_7njhk")
 
 [node name="DPadLeft" type="Sprite2D" parent="MarginContainer/TabContainer/Language/Icons/PS" unique_id=2050308705]
 position = Vector2(397, 105)
-scale = Vector2(2.5, 2.5)
 texture = ExtResource("25_e7lka")
 
 [node name="DPadRight" type="Sprite2D" parent="MarginContainer/TabContainer/Language/Icons/PS" unique_id=1200736293]
 position = Vector2(735.00006, 106)
-scale = Vector2(2.5, 2.5)
 texture = ExtResource("26_xq0ok")
 
 [node name="Controller" type="TabBar" parent="MarginContainer/TabContainer" unique_id=160318442]
@@ -553,7 +556,6 @@ shortcut = SubResource("Shortcut_5dex4")
 text = "SC_SCH"
 icon = ExtResource("15_icjw7")
 icon_alignment = 2
-expand_icon = true
 
 [node name="Label" type="Label" parent="MarginContainer/TabContainer/Controller/MarginContainer/VBoxContainer" unique_id=1865135576]
 layout_mode = 2
