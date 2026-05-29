@@ -176,12 +176,12 @@ func _ready() -> void:
 	get_tree().scene_changed.connect(scene_changed)
 	GameJolt.scores_fetch_completed.connect(fetched_scores)
 	
-	TranslationServer.set_locale(data.lang)
-	
 	if FileAccess.open(save_file, FileAccess.READ) == null:
 		FileAccess.open(save_file, FileAccess.WRITE).store_string(JSON.stringify(null_data, "  "))
 	else:
 		load_data()
+	
+	TranslationServer.set_locale(data.lang)
 	
 func save_data(dat = data):
 	var file = FileAccess.open(save_file, FileAccess.WRITE)

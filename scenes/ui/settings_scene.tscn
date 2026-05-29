@@ -260,13 +260,14 @@ metadata/_edit_lock_ = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 tab_alignment = 1
-current_tab = 0
+current_tab = 1
 tab_0/title = "S_T_M"
 tab_1/title = "S_T_GJ"
 tab_2/title = "S_T_L"
 tab_3/title = "S_T_C"
 
 [node name="Main" type="TabBar" parent="MarginContainer/TabContainer" unique_id=1084216178]
+visible = false
 layout_mode = 2
 script = ExtResource("3_7njhk")
 metadata/_tab_index = 0
@@ -364,7 +365,6 @@ text = "SM_DF"
 icon = ExtResource("18_xq0ok")
 
 [node name="GameJolt" type="TabBar" parent="MarginContainer/TabContainer" unique_id=1360443219]
-visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 script = ExtResource("13_25tad")
@@ -459,6 +459,7 @@ text = "Login status: Unknown
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/GameJolt/MarginContainer/VBoxContainer" unique_id=148520796]
 layout_mode = 2

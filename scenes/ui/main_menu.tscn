@@ -401,32 +401,26 @@ texture = ExtResource("43_iglv2")
 
 [node name="Start" type="Sprite2D" parent="Icons/PS" unique_id=1249686510]
 position = Vector2(937, 58)
-scale = Vector2(2.5, 2.5)
 texture = ExtResource("44_xupgs")
 
 [node name="DPadUp" type="Sprite2D" parent="Icons/PS" unique_id=1822968713]
 position = Vector2(936, 152)
-scale = Vector2(2.5, 2.5)
 texture = ExtResource("45_6gmx2")
 
 [node name="DPadDown" type="Sprite2D" parent="Icons/PS" unique_id=1841028781]
 position = Vector2(937.00006, 243)
-scale = Vector2(2.5, 2.5)
 texture = ExtResource("46_3g7do")
 
 [node name="DPadRight" type="Sprite2D" parent="Icons/PS" unique_id=255093473]
 position = Vector2(936, 335)
-scale = Vector2(2.5, 2.5)
 texture = ExtResource("47_ojeks")
 
 [node name="DPadLeft" type="Sprite2D" parent="Icons/PS" unique_id=314032422]
 position = Vector2(938.00006, 421)
-scale = Vector2(2.5, 2.5)
 texture = ExtResource("48_f8svg")
 
 [node name="Share" type="Sprite2D" parent="Icons/PS" unique_id=920079746]
 position = Vector2(941, 505)
-scale = Vector2(2.5, 2.5)
 texture = ExtResource("49_0jeo2")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/PlayButton" to="." method="_on_play_button_pressed"]

@@ -28,6 +28,11 @@ GameId="*uid://puvfuns23qg4"
 
 window/stretch/mode="canvas_items"
 
+[editor]
+
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/gamejolt/plugin.cfg")
