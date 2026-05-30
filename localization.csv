@@ -1,19 +1,24 @@
-,ru,de,fr,en
-S_T_M,Основое,Haupt,Principale,Main
-S_T_GJ,GameJolt,SpieleJolt,Jeu,GameJolt
-S_T_L,Язык,Sprache,Langue,Language
-S_T_C,Контроллер,Controller,Contrôleur,Controller
-SM_E_D,Легко,Leicht,Facile,Easy
-SM_N_D,Нормально,Nicht mal,Autres,Nor-\nmal
-SM_H_D,Сложно,Hart,Dur,Hard
-SM_SEL,Выбрано,Wählen,Sélectionner,Select
-SM_DF,Удалить файл,Löschen der Datei,Supprimer le fichier,Delete file
-SGJ_U,Введите свое имя пользователя:,Geben Sie Ihren Benutzernamen ein:,Saisissez votre nom d'utilisateur :,Enter your username:
-SGJ_T,Введите токен:,Geben Sie ypu user token ein:,Saisissez le jeton utilisateur ypu & #160;:,Enter ypu user token:
-SGJ_AUTH,Входить при запуске?,Einloggen?,S'identifier au début ?,Login on start?
-SGJ_L,Войти,Anmelden,Connexion,Login
-SGJ_B,Вернуться в Главное меню,Zurück zum Hauptmenü,Retour au menu principal,Back to main menu
-SGJ_LOGIN_ST,Статус входа: Успешно\n,Login-Status: Logged in\n,État de la connexion : Logged in\n,Login status: Logged in\n
-SGJ_LOGER_ST,Статус входа: Ошибка\n,Login-Status: Fehler\n,Statut de connexion : Erreur\n,Login status: Error\n
-SC_SCH,Показывать подсказки для контроллера?,,,Show controller hints?
-SC_IT,Вид иконок:,,,Icon type:
+﻿,ru,en,de,fr,zh,ja
+S_T_M,Основое,Main,Hauptmenü,Principal,主菜单,メイン
+S_T_GJ,GameJolt,GameJolt,GameJolt,GameJolt,GameJolt,GameJolt
+S_T_L,Язык,Language,Sprache,Langue,语言,言語
+S_T_C,Контроллер,Controller,Controller,Manette,控制器,コントローラー
+SM_E_D,Легко,Easy,Leicht,Facile,简单,かんたん
+SM_N_D,Нормально,Normal,"Normal","Normal",普通,ふつう
+SM_H_D,Сложно,Hard,Schwer,Difficile,困难,むずかしい
+SM_SEL,Выбрано,Select,Auswählen,Sélectionner,选择,選択
+SM_DF,Удалить файл,Delete file,Datei löschen,Supprimer le fichier,删除文件,ファイルを削除
+SGJ_U,Введите свое имя пользователя:,Enter your username:,Benutzernamen eingeben:,Entrez votre nom d'utilisateur :,请输入用户名：,ユーザー名を入力：
+SGJ_T,Введите токен:,Enter ypu user token:,Token eingeben:,Entrez votre jeton :,请输入令牌：,トークンを入力：
+SGJ_AUTH,Входить при запуске?,Login on start?,Beim Start anmelden?,Se connecter au démarrage ?,启动时登录？,起動時にログイン？
+SGJ_L,Войти,Login,Anmelden,Connexion,登录,ログイン
+SGJ_B,Вернуться в Главное меню,Back to main menu,Zurück zum Hauptmenü,Retour au menu principal,返回主菜单,メインメニューに戻る
+SGJ_LOGIN_ST,Статус входа: Успешно\n,Login status: Logged in\n,"Login-Status: Erfolgreich","État de connexion : Connecté","登录状态：成功","ログイン状態：成功"
+SGJ_LOGER_ST,Статус входа: Ошибка\n,Login status: Error\n,"Login-Status: Fehler","État de connexion : Erreur","登录状态：错误","ログイン状態：エラー"
+SC_SCH,Показывать подсказки для контроллера?,Show controller hints?,Controller-Hinweise anzeigen?,Afficher les conseils du contrôleur ?,显示控制器提示？,コントローラーのヒントを表示？
+SC_IT,Вид иконок:,Icon type:,Symboltyp:,Type d'icône :,图标类型：,アイコンの種類：
+LS_NEW_AB,Новая Способность,New Ability,Fähigkeit,Capacité,技能,アビリティ
+LS_BOSS,Босс,Boss,Boss,Boss,首领,ボス
+LS_COLL,Сборище грибов,Collection,Pilzversammlung,Rassemblement de champignons,蘑菇聚集,キノコの集まり
+LS_BOXES,Коробки,Boxes,Kisten,Boîtes,箱子,ボックス
+LS_DEF,Оборона,Defense,Verteidigung,Défense,防御,防衛

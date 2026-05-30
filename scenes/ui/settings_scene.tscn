@@ -27,9 +27,12 @@
 [ext_resource type="Texture2D" uid="uid://c1fx0d21kq70f" path="res://sprites/UI/Sprite91_0.png" id="16_25tad"]
 [ext_resource type="Texture2D" uid="uid://mt4wrgqlv8xl" path="res://sprites/UI/Sprite91_1.png" id="17_7njhk"]
 [ext_resource type="Texture2D" uid="uid://bcfn4yhh885ke" path="res://sprites/UI/Sprite93_2.png" id="18_0w6p2"]
+[ext_resource type="Texture2D" uid="uid://5f8weghuk7af" path="res://sprites/UI/de_lang.png" id="18_8w8pu"]
 [ext_resource type="Texture2D" uid="uid://bwdakqbqcqdxe" path="res://sprites/UI/GamePadIcons/D_Pad_Down.png" id="18_xq0ok"]
+[ext_resource type="Texture2D" uid="uid://c4rtpl0xyspt5" path="res://sprites/UI/fr_lang.png" id="19_2fqwo"]
 [ext_resource type="Texture2D" uid="uid://cq5d7mwnitbda" path="res://sprites/UI/Sprite93_3.png" id="19_u8mpt"]
 [ext_resource type="Texture2D" uid="uid://la4o1louwuk" path="res://sprites/UI/Sprite129_2.png" id="20_3keoi"]
+[ext_resource type="Texture2D" uid="uid://vgmq7lkd2uag" path="res://sprites/UI/GamePadIcons/D_Pad_Up.png" id="21_wudp7"]
 [ext_resource type="Texture2D" uid="uid://6xguu85tawl4" path="res://sprites/UI/Sprite122_2.png" id="21_ycs42"]
 [ext_resource type="Texture2D" uid="uid://uh7wx7mubs6a" path="res://sprites/UI/Sprite122_3.png" id="22_j06xg"]
 [ext_resource type="Texture2D" uid="uid://igusq2ehudai" path="res://sprites/UI/Sprite71_1.png" id="23_x1uin"]
@@ -196,6 +199,18 @@ pressed = true
 [sub_resource type="Shortcut" id="Shortcut_e7lka"]
 events = [SubResource("InputEventJoypadButton_5dex4")]
 
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_2k6g3"]
+button_index = 11
+
+[sub_resource type="Shortcut" id="Shortcut_4mqy4"]
+events = [SubResource("InputEventJoypadButton_2k6g3")]
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_vdcj5"]
+button_index = 12
+
+[sub_resource type="Shortcut" id="Shortcut_c31mr"]
+events = [SubResource("InputEventJoypadButton_vdcj5")]
+
 [sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_icjw7"]
 button_index = 3
 pressed = true
@@ -260,13 +275,14 @@ metadata/_edit_lock_ = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 tab_alignment = 1
-current_tab = 0
+current_tab = 2
 tab_0/title = "S_T_M"
 tab_1/title = "S_T_GJ"
 tab_2/title = "S_T_L"
 tab_3/title = "S_T_C"
 
 [node name="Main" type="TabBar" parent="MarginContainer/TabContainer" unique_id=1084216178]
+visible = false
 layout_mode = 2
 script = ExtResource("3_7njhk")
 metadata/_tab_index = 0
@@ -476,7 +492,6 @@ icon = ExtResource("12_31krh")
 icon_alignment = 2
 
 [node name="Language" type="TabBar" parent="MarginContainer/TabContainer" unique_id=151799268]
-visible = false
 layout_mode = 2
 script = ExtResource("15_06trf")
 metadata/_tab_index = 2
@@ -491,13 +506,15 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
-theme_override_constants/margin_left = 0
+theme_override_constants/margin_left = 428
 theme_override_constants/margin_top = 74
+theme_override_constants/margin_right = 424
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/Language/MarginContainer2" unique_id=1841998613]
+[node name="HBoxContainer" type="GridContainer" parent="MarginContainer/TabContainer/Language/MarginContainer2" unique_id=1737437306]
 layout_mode = 2
-theme_override_constants/separation = 44
-alignment = 1
+theme_override_constants/h_separation = 84
+theme_override_constants/v_separation = 37
+columns = 2
 
 [node name="Rus" type="TextureButton" parent="MarginContainer/TabContainer/Language/MarginContainer2/HBoxContainer" unique_id=1092946927]
 texture_filter = 3
@@ -515,17 +532,37 @@ texture_normal = ExtResource("16_25tad")
 texture_pressed = ExtResource("17_7njhk")
 texture_hover = ExtResource("17_7njhk")
 
+[node name="De" type="TextureButton" parent="MarginContainer/TabContainer/Language/MarginContainer2/HBoxContainer" unique_id=1118780888]
+layout_mode = 2
+shortcut = SubResource("Shortcut_4mqy4")
+texture_normal = ExtResource("18_8w8pu")
+texture_pressed = ExtResource("18_8w8pu")
+texture_hover = ExtResource("18_8w8pu")
+
+[node name="Fr" type="TextureButton" parent="MarginContainer/TabContainer/Language/MarginContainer2/HBoxContainer" unique_id=56710910]
+layout_mode = 2
+shortcut = SubResource("Shortcut_c31mr")
+texture_normal = ExtResource("19_2fqwo")
+texture_pressed = ExtResource("19_2fqwo")
+texture_hover = ExtResource("19_2fqwo")
+
 [node name="Icons" type="Node2D" parent="MarginContainer/TabContainer/Language" unique_id=752121068]
 
-[node name="PS" type="Node2D" parent="MarginContainer/TabContainer/Language/Icons" unique_id=192199521]
-
-[node name="DPadLeft" type="Sprite2D" parent="MarginContainer/TabContainer/Language/Icons/PS" unique_id=2050308705]
+[node name="DPadLeft" type="Sprite2D" parent="MarginContainer/TabContainer/Language/Icons" unique_id=2050308705]
 position = Vector2(397, 105)
 texture = ExtResource("25_e7lka")
 
-[node name="DPadRight" type="Sprite2D" parent="MarginContainer/TabContainer/Language/Icons/PS" unique_id=1200736293]
+[node name="DPadRight" type="Sprite2D" parent="MarginContainer/TabContainer/Language/Icons" unique_id=1200736293]
 position = Vector2(735.00006, 106)
 texture = ExtResource("26_xq0ok")
+
+[node name="DPadUp" type="Sprite2D" parent="MarginContainer/TabContainer/Language/Icons" unique_id=526929380]
+position = Vector2(399, 216)
+texture = ExtResource("21_wudp7")
+
+[node name="DPadDown" type="Sprite2D" parent="MarginContainer/TabContainer/Language/Icons" unique_id=486580656]
+position = Vector2(737, 210)
+texture = ExtResource("18_xq0ok")
 
 [node name="Controller" type="TabBar" parent="MarginContainer/TabContainer" unique_id=160318442]
 visible = false
@@ -701,6 +738,8 @@ texture = ExtResource("13_ycs42")
 [connection signal="pressed" from="MarginContainer/TabContainer/GameJolt/MarginContainer/VBoxContainer/MarginContainer/Back" to="MarginContainer/TabContainer/GameJolt" method="_on_back_pressed"]
 [connection signal="pressed" from="MarginContainer/TabContainer/Language/MarginContainer2/HBoxContainer/Rus" to="MarginContainer/TabContainer/Language" method="_on_rus_pressed"]
 [connection signal="pressed" from="MarginContainer/TabContainer/Language/MarginContainer2/HBoxContainer/Eng" to="MarginContainer/TabContainer/Language" method="_on_eng_pressed"]
+[connection signal="pressed" from="MarginContainer/TabContainer/Language/MarginContainer2/HBoxContainer/De" to="MarginContainer/TabContainer/Language" method="_on_de_pressed"]
+[connection signal="pressed" from="MarginContainer/TabContainer/Language/MarginContainer2/HBoxContainer/Fr" to="MarginContainer/TabContainer/Language" method="_on_fr_pressed"]
 [connection signal="toggled" from="MarginContainer/TabContainer/Controller/MarginContainer/VBoxContainer/Hints" to="MarginContainer/TabContainer/Controller" method="_on_hints_toggled"]
 [connection signal="item_focused" from="MarginContainer/TabContainer/Controller/MarginContainer/VBoxContainer/OptionButton" to="." method="_on_option_button_item_focused"]
 [connection signal="item_selected" from="MarginContainer/TabContainer/Controller/MarginContainer/VBoxContainer/OptionButton" to="MarginContainer/TabContainer/Controller" method="_on_option_button_item_selected"]

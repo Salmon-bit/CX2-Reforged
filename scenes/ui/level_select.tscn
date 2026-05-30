@@ -14,12 +14,14 @@
 [ext_resource type="Texture2D" uid="uid://bk3ika57kp4f7" path="res://sprites/UI/Sprite14_1.png" id="10_0rr43"]
 [ext_resource type="Texture2D" uid="uid://dblko0fd4kjpq" path="res://sprites/UI/Sprite35_0.png" id="10_6iing"]
 [ext_resource type="Texture2D" uid="uid://qj0bwe3cq1yc" path="res://sprites/UI/Sprite35_1.png" id="11_ecnhd"]
-[ext_resource type="Texture2D" uid="uid://ckr4qebsx6x40" path="res://sprites/UI/Sprite95_0.png" id="15_ecnhd"]
-[ext_resource type="Texture2D" uid="uid://nh1manirklg7" path="res://sprites/UI/Sprite95_1.png" id="16_e375g"]
 [ext_resource type="Texture2D" uid="uid://cq8rp66gew2lk" path="res://sprites/UI/Sprite42_0.png" id="17_xogkw"]
+[ext_resource type="Texture2D" uid="uid://dgg2gqod2ndly" path="res://sprites/UI/Sprite74_0.png" id="18_8rxl4"]
 [ext_resource type="Texture2D" uid="uid://b12ldxvc2rwbx" path="res://sprites/UI/Sprite50_0.png" id="18_d1lmv"]
 [ext_resource type="Texture2D" uid="uid://ctes2wsvndky2" path="res://sprites/UI/GamePadIcons/Share.png" id="19_d1lmv"]
+[ext_resource type="Texture2D" uid="uid://chyk53hbyyuwn" path="res://sprites/UI/Sprite262_0.png" id="19_jwqqo"]
 [ext_resource type="Texture2D" uid="uid://q78fh4yeskas" path="res://sprites/UI/pointer.png" id="20_4o8hj"]
+[ext_resource type="Texture2D" uid="uid://74sn0n7dylop" path="res://sprites/UI/shield.png" id="20_s5ke1"]
+[ext_resource type="Theme" uid="uid://cari6vcvs5b5u" path="res://themes/main.tres" id="20_vln0j"]
 [ext_resource type="Script" uid="uid://ct6fhtrjmn1" path="res://scripts/ui/pointer.gd" id="21_3aigx"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_wh1jf"]
@@ -107,14 +109,6 @@ texture_pressed = ExtResource("10_0rr43")
 texture_hover = ExtResource("10_0rr43")
 flip_h = true
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=29145106]
-position = Vector2(995, 485)
-texture = ExtResource("15_ecnhd")
-
-[node name="Sprite951" type="Sprite2D" parent="." unique_id=3094848]
-position = Vector2(-225, 473)
-texture = ExtResource("16_e375g")
-
 [node name="Sprite420" type="Sprite2D" parent="." unique_id=1100595231]
 position = Vector2(40, 378)
 texture = ExtResource("17_xogkw")
@@ -131,10 +125,55 @@ texture = ExtResource("18_d1lmv")
 position = Vector2(94.00001, 34)
 texture = ExtResource("19_d1lmv")
 
+[node name="Sprite421" type="Sprite2D" parent="Icons" unique_id=2084299048]
+position = Vector2(551, 436)
+texture = ExtResource("17_xogkw")
+
+[node name="Sprite501" type="Sprite2D" parent="Icons" unique_id=855414830]
+position = Vector2(551, 372)
+texture = ExtResource("18_d1lmv")
+
+[node name="Sprite740" type="Sprite2D" parent="Icons" unique_id=1838293946]
+position = Vector2(547, 502)
+texture = ExtResource("18_8rxl4")
+
+[node name="Sprite2620" type="Sprite2D" parent="Icons" unique_id=1601957391]
+position = Vector2(549, 557)
+texture = ExtResource("19_jwqqo")
+
+[node name="Shield" type="Sprite2D" parent="Icons" unique_id=2096660056]
+position = Vector2(549.25, 616)
+scale = Vector2(0.7463768, 0.825)
+texture = ExtResource("20_s5ke1")
+
 [node name="Pointer" type="Sprite2D" parent="." unique_id=193080233]
 position = Vector2(170, 101)
 scale = Vector2(3, 3)
 texture = ExtResource("20_4o8hj")
 script = ExtResource("21_3aigx")
+
+[node name="Label" type="Label" parent="." unique_id=1300828331]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -645.0
+offset_top = -296.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("20_vln0j")
+theme_override_font_sizes/font_size = 30
+text = "   – LS_NEW_AB
+
+   – LS_BOSS
+
+   – LS_COLL
+
+   – LS_BOXES
+
+   – LS_DEF"
+vertical_alignment = 1
 
 [connection signal="pressed" from="BackBtn" to="." method="_on_back_btn_pressed"]

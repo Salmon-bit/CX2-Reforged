@@ -162,13 +162,11 @@ texture = ExtResource("8_8gksr")
 [node name="PS" type="Node2D" parent="Icons" unique_id=1429435708]
 
 [node name="Circle" type="Sprite2D" parent="Icons/PS" unique_id=935854685]
-position = Vector2(897, 456.00003)
-scale = Vector2(2.5, 2.5)
+position = Vector2(897, 453.00003)
 texture = ExtResource("13_wbfx3")
 
 [node name="Cross" type="Sprite2D" parent="Icons/PS" unique_id=1088469488]
 position = Vector2(259, 454)
-scale = Vector2(2.5, 2.5)
 texture = ExtResource("14_8gksr")
 
 [connection signal="pressed" from="HBoxContainer/MarginContainer/Yes" to="." method="_on_yes_pressed"]

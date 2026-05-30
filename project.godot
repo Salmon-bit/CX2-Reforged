@@ -173,7 +173,7 @@ pointer_right={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://localization.de.translation", "res://localization.en.translation", "res://localization.fr.translation", "res://localization.ru.translation")
+locale/translations=PackedStringArray("res://localization.de.translation", "res://localization.en.translation", "res://localization.fr.translation", "res://localization.ja.translation", "res://localization.ru.translation", "res://localization.zh.translation")
 
 [physics]
 
