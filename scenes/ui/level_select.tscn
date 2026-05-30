@@ -19,6 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://cq8rp66gew2lk" path="res://sprites/UI/Sprite42_0.png" id="17_xogkw"]
 [ext_resource type="Texture2D" uid="uid://b12ldxvc2rwbx" path="res://sprites/UI/Sprite50_0.png" id="18_d1lmv"]
 [ext_resource type="Texture2D" uid="uid://ctes2wsvndky2" path="res://sprites/UI/GamePadIcons/Share.png" id="19_d1lmv"]
+[ext_resource type="Texture2D" uid="uid://q78fh4yeskas" path="res://sprites/UI/pointer.png" id="20_4o8hj"]
+[ext_resource type="Script" uid="uid://ct6fhtrjmn1" path="res://scripts/ui/pointer.gd" id="21_3aigx"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_wh1jf"]
 device = -1
@@ -127,7 +129,12 @@ texture = ExtResource("18_d1lmv")
 
 [node name="Share" type="Sprite2D" parent="Icons/PS" unique_id=1989561991]
 position = Vector2(94.00001, 34)
-scale = Vector2(2.5, 2.5)
 texture = ExtResource("19_d1lmv")
+
+[node name="Pointer" type="Sprite2D" parent="." unique_id=193080233]
+position = Vector2(170, 101)
+scale = Vector2(3, 3)
+texture = ExtResource("20_4o8hj")
+script = ExtResource("21_3aigx")
 
 [connection signal="pressed" from="BackBtn" to="." method="_on_back_btn_pressed"]

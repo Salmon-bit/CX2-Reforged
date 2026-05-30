@@ -260,14 +260,13 @@ metadata/_edit_lock_ = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 tab_alignment = 1
-current_tab = 1
+current_tab = 0
 tab_0/title = "S_T_M"
 tab_1/title = "S_T_GJ"
 tab_2/title = "S_T_L"
 tab_3/title = "S_T_C"
 
 [node name="Main" type="TabBar" parent="MarginContainer/TabContainer" unique_id=1084216178]
-visible = false
 layout_mode = 2
 script = ExtResource("3_7njhk")
 metadata/_tab_index = 0
@@ -365,6 +364,7 @@ text = "SM_DF"
 icon = ExtResource("18_xq0ok")
 
 [node name="GameJolt" type="TabBar" parent="MarginContainer/TabContainer" unique_id=1360443219]
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 script = ExtResource("13_25tad")
@@ -691,6 +691,7 @@ position = Vector2(139, -125)
 texture = ExtResource("13_ycs42")
 
 [connection signal="tab_changed" from="MarginContainer/TabContainer" to="." method="_on_tab_container_tab_changed"]
+[connection signal="tab_changed" from="MarginContainer/TabContainer" to="MarginContainer/TabContainer/GameJolt" method="_on_tab_container_tab_changed"]
 [connection signal="pressed" from="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Easy" to="MarginContainer/TabContainer/Main" method="_on_easy_pressed"]
 [connection signal="pressed" from="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Normal" to="MarginContainer/TabContainer/Main" method="_on_normal_pressed"]
 [connection signal="pressed" from="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer/Hard" to="MarginContainer/TabContainer/Main" method="_on_hard_pressed"]

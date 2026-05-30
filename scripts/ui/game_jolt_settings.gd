@@ -33,3 +33,10 @@ func check_auth(response) -> void:
 
 func _on_check_button_pressed() -> void:
 	Autoload.click()
+
+
+func _on_tab_container_tab_changed(_tab: int) -> void:
+	if Autoload.data.auto_auth:
+		Autoload.data.username = GameJolt.get_user_name()
+		Autoload.data.usertoken = GameJolt.get_user_token()
+	Autoload.save_data()
