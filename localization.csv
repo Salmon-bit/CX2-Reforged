@@ -17,8 +17,8 @@ SGJ_LOGIN_ST,Статус входа: Успешно\n,Login status: Logged in\n
 SGJ_LOGER_ST,Статус входа: Ошибка\n,Login status: Error\n,"Login-Status: Fehler","État de connexion : Erreur","登录状态：错误","ログイン状態：エラー"
 SC_SCH,Показывать подсказки для контроллера?,Show controller hints?,Controller-Hinweise anzeigen?,Afficher les conseils du contrôleur ?,显示控制器提示？,コントローラーのヒントを表示？
 SC_IT,Вид иконок:,Icon type:,Symboltyp:,Type d'icône :,图标类型：,アイコンの種類：
-LS_NEW_AB,Новая Способность,New Ability,Fähigkeit,Capacité,技能,アビリティ
-LS_BOSS,Босс,Boss,Boss,Boss,首领,ボス
-LS_COLL,Сборище грибов,Collection,Pilzversammlung,Rassemblement de champignons,蘑菇聚集,キノコの集まり
-LS_BOXES,Коробки,Boxes,Kisten,Boîtes,箱子,ボックス
-LS_DEF,Оборона,Defense,Verteidigung,Défense,防御,防衛
+"   – LS_NEW_AB",Новая Способность,New Ability,Fähigkeit,Capacité,技能,アビリティ
+"   – LS_BOSS",Босс,Boss,Boss,Boss,首领,ボス
+"   – LS_COLL",Сборище грибов,Collection,Pilzversammlung,Rassemblement de champignons,蘑菇聚集,キノコの集まり
+"   – LS_BOXES",Коробки,Boxes,Kisten,Boîtes,箱子,ボックス
+"   – LS_DEF",Оборона,Defense,Verteidigung,Défense,防御,防衛

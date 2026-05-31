@@ -29,7 +29,7 @@ func check_auth(response) -> void:
 	if response.success == "true":
 		$MarginContainer/VBoxContainer/Status.text = "SGJ_LOGIN_ST"
 	else:
-		$MarginContainer/VBoxContainer/Status.text = "SGJ_LOGER_ST " + response.message
+		$MarginContainer/VBoxContainer/Status.text = TranslationServer.translate("SGJ_LOGER_ST") + " " + response.message
 
 func _on_check_button_pressed() -> void:
 	Autoload.click()

@@ -23,7 +23,6 @@
 [ext_resource type="Texture2D" uid="uid://74sn0n7dylop" path="res://sprites/UI/shield.png" id="20_s5ke1"]
 [ext_resource type="Theme" uid="uid://cari6vcvs5b5u" path="res://themes/main.tres" id="20_vln0j"]
 [ext_resource type="Script" uid="uid://ct6fhtrjmn1" path="res://scripts/ui/pointer.gd" id="21_3aigx"]
-[ext_resource type="StyleBox" uid="uid://3bkr66surxam" path="res://themes/normal_btn.tres" id="21_jwqqo"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_wh1jf"]
 device = -1
@@ -126,92 +125,56 @@ texture = ExtResource("18_d1lmv")
 position = Vector2(94.00001, 34)
 texture = ExtResource("19_d1lmv")
 
+[node name="Sprite421" type="Sprite2D" parent="Icons" unique_id=2084299048]
+position = Vector2(551, 436)
+texture = ExtResource("17_xogkw")
+
+[node name="Sprite501" type="Sprite2D" parent="Icons" unique_id=855414830]
+position = Vector2(551, 372)
+texture = ExtResource("18_d1lmv")
+
+[node name="Sprite740" type="Sprite2D" parent="Icons" unique_id=1838293946]
+position = Vector2(547, 502)
+texture = ExtResource("18_8rxl4")
+
+[node name="Sprite2620" type="Sprite2D" parent="Icons" unique_id=1601957391]
+position = Vector2(549, 557)
+texture = ExtResource("19_jwqqo")
+
+[node name="Shield" type="Sprite2D" parent="Icons" unique_id=2096660056]
+position = Vector2(549.25, 616)
+scale = Vector2(0.7463768, 0.825)
+texture = ExtResource("20_s5ke1")
+
 [node name="Pointer" type="Sprite2D" parent="." unique_id=193080233]
 position = Vector2(170, 101)
 scale = Vector2(3, 3)
 texture = ExtResource("20_4o8hj")
 script = ExtResource("21_3aigx")
 
-[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=983277006]
+[node name="Label" type="Label" parent="." unique_id=1300828331]
 layout_mode = 1
-anchors_preset = 11
+anchors_preset = 3
 anchor_left = 1.0
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -370.0
+offset_left = -645.0
+offset_top = -234.0
+offset_bottom = 62.0
 grow_horizontal = 0
-grow_vertical = 2
-theme_override_constants/margin_right = 22
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2" unique_id=1324309014]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-theme_override_constants/separation = 15
-
-[node name="Button" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=562203040]
-layout_mode = 2
+grow_vertical = 0
 theme = ExtResource("20_vln0j")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 24
-theme_override_styles/pressed = ExtResource("21_jwqqo")
-theme_override_styles/hover = ExtResource("21_jwqqo")
-text = "   – LS_NEW_AB"
-icon = ExtResource("18_d1lmv")
-alignment = 0
+theme_override_font_sizes/font_size = 30
+text = "   – LS_NEW_AB
 
-[node name="Button5" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=1620443104]
-layout_mode = 2
-theme = ExtResource("20_vln0j")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 24
-theme_override_styles/pressed = ExtResource("21_jwqqo")
-theme_override_styles/hover = ExtResource("21_jwqqo")
-text = "   – LS_BOSS"
-icon = ExtResource("17_xogkw")
-alignment = 0
+   – LS_BOSS
 
-[node name="Button4" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=438418406]
-layout_mode = 2
-theme = ExtResource("20_vln0j")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 24
-theme_override_styles/pressed = ExtResource("21_jwqqo")
-theme_override_styles/hover = ExtResource("21_jwqqo")
-text = "   – LS_COLL"
-icon = ExtResource("18_8rxl4")
-alignment = 0
+   – LS_COLL
 
-[node name="Button2" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=292773907]
-layout_mode = 2
-theme = ExtResource("20_vln0j")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 24
-theme_override_styles/pressed = ExtResource("21_jwqqo")
-theme_override_styles/hover = ExtResource("21_jwqqo")
-text = "   – LS_BOXES"
-icon = ExtResource("19_jwqqo")
-alignment = 0
+   – LS_BOXES
 
-[node name="Button3" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=1504568605]
-layout_mode = 2
-theme = ExtResource("20_vln0j")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 24
-theme_override_styles/pressed = ExtResource("21_jwqqo")
-theme_override_styles/hover = ExtResource("21_jwqqo")
-text = "   – LS_DEF"
-icon = ExtResource("20_s5ke1")
-alignment = 0
+   – LS_DEF"
+vertical_alignment = 1
 
 [connection signal="pressed" from="BackBtn" to="." method="_on_back_btn_pressed"]

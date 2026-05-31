@@ -11,6 +11,10 @@ func get_level_num(node_name: String) -> String:
 			break
 	return result
 
+func _ready() -> void:
+	for t in $MarginContainer2/VBoxContainer.get_children():
+		t.text ="– " + TranslationServer.translate(t.text)
+
 func go_to_level(btn: TextureButton) -> void:
 	Autoload.click()
 	var level_num = get_level_num(btn.name)
@@ -31,11 +35,6 @@ func update_textures() -> void:
 		if not lb.disabled:
 			lb.pressed.connect(Callable(self, "go_to_level").bind(lb))
 	
-	if Autoload.data.lang == "ru":
-		$Sprite2D.texture = $Sprite951.texture
-
-func _ready() -> void:
-	update_textures()
 
 func _on_back_btn_pressed() -> void:
 	Autoload.click()
