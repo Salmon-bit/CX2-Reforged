@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bvlwugnimd6qg"]
 
+[ext_resource type="Script" uid="uid://duyq66xenvluf" path="res://scripts/levels/main_script.gd" id="1_dwyms"]
 [ext_resource type="TileSet" uid="uid://bfv0ks1diwumi" path="res://scenes/levels/tileset.tres" id="1_r1vs7"]
 [ext_resource type="Script" uid="uid://chv6jc7h3rp3s" path="res://scripts/game_over_check.gd" id="2_dswqx"]
 [ext_resource type="PackedScene" uid="uid://cydhwdtrcoq08" path="res://scenes/mushrooms/blue_mushroom.tscn" id="3_laj7o"]
@@ -17,6 +18,7 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(1287, -67, 5, -64, 6, 1208, 1287, 1208)])
 
 [node name="Level5" type="Node2D" unique_id=1510544247]
+script = ExtResource("1_dwyms")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=537188631]
 position = Vector2(0, -54)

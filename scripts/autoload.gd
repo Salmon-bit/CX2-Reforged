@@ -133,20 +133,22 @@ const null_data = {
 }
 
 const save_file = "user://save.json"
+const save_stats = "user://stats.save"
+
 enum SPEEDS {STOPPED = 0, VERY_SLOW = 2500, SLOW = 5000, FAST = 10000, QUICK = 15000}
 
 var pointer_level = 1
 
 func fetched_scores(response):
-	print(response)
+	print("[SCORES FETCHER]: Scores fetched:\n" + JSON.stringify(response, "  "))
 	if response.success == "true":
 		if float(response.scores[0].score) < data.kills:
-			print("Updating scores...")
+			print("[SCORES FETCHER]: Updating scores...")
 			GameJolt.scores_add(str(int(data.kills)), str(int(data.kills)), "1084203")
-			print("Scores Updated")
+			print("[SCORES FETCHER]: Scores Updated")
 
 func scene_changed():
-	print("Scene Changed")
+	print("[INFO]: Scene Changed")
 	GameJolt.scores_fetch(null, "1084203", "", null, null, true)
 
 func add_trophey(id: int):
@@ -183,22 +185,73 @@ func _ready() -> void:
 	
 	TranslationServer.set_locale(data.lang)
 	
+	
 func save_data(dat = data):
-	var file = FileAccess.open(save_file, FileAccess.WRITE)
-	file.store_string(JSON.stringify(dat, "  "))
-	file.close()
+	print("[SAVE]: Started saving data...")
+	var file_stats = FileAccess.open(save_stats, FileAccess.WRITE)
+	var save = FileAccess.open(save_file, FileAccess.WRITE)
+	
+	var stats = {
+			"kills": dat.kills,
+			"deaths": dat.deaths,
+			"level": dat.level,
+			"money": dat.money,
+			"skins": dat.skins,
+			"username": dat.username,
+			"usertoken": dat.usertoken,
+			"tropheys": dat.tropheys
+		}
+	var other_data = {
+			"skin": dat.skin,
+			"ability": dat.ability,
+			"auto_auth": dat.auto_auth,
+			"cloud_save": dat.cloud_save,
+			"controller_type": dat.controller_type,
+			"difficulty": dat.difficulty,
+			"have_auth": dat.have_auth,
+			"lang": dat.lang,
+			"show_controller_hints": dat.show_controller_hints
+		}
+	
+	file_stats.store_var(stats)
+	file_stats.close()
+	
+	save.store_string(JSON.stringify(other_data, "  "))
+	save.close()
+	
+	print("[SAVE]: Data saved!")
 
 func load_data():
-	var file = FileAccess.open(save_file, FileAccess.READ)
-	if file != null:
-		var json_string = file.get_as_text()
-		file.close()
-		var json = JSON.new()
-		var error = json.parse(json_string)
+	print("[LOAD]: Started loading data...")
+	var file_main = FileAccess.open(save_file, FileAccess.READ)
+	var file_stats = FileAccess.open(save_stats, FileAccess.READ)
+	var other_data = {}
+	var stats_data = {}
+	
+	var json = JSON.new()
+	var error = null
+	if file_main != null:
+		var json_string = file_main.get_as_text()
+		file_main.close()
+		error = json.parse(json_string)
 		if error == OK:
-			data = json.data
+			other_data = json.data
 	else:
+		print("[LOAD]: No main save file!")
 		clear_data()
+		
+	if file_stats != null:
+		stats_data = file_stats.get_var()
+	else:
+		print("[LOAD]: No stats save file!")
+		clear_data()
+	
+	var output = {}
+	output.merge(other_data)
+	output.merge(stats_data)
+	
+	data = output
+	print("[LOAD]: Data loaded!")
 
 func clear_data():
 	save_data(null_data)
@@ -206,7 +259,7 @@ func clear_data():
 
 func click():
 	$ClickSound.play()
-	
+
 func get_level_num(node_name: String) -> String:
 	var result = ""
 	for i in range(node_name.length() - 1, -1, -1):

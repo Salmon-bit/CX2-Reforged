@@ -1,30 +1,21 @@
 extends Control
 
-func get_level_num(node_name: String) -> String:
-	# Вытаскивает все цифры из конца строки
-	# "Level10" -> "10", "Btn3" -> "3"
-	var result = ""
-	for i in range(node_name.length() - 1, -1, -1):
-		if node_name[i].is_valid_int():
-			result = node_name[i] + result
-		else:
-			break
-	return result
 
 func _ready() -> void:
+	update_textures()
 	for t in $MarginContainer2/VBoxContainer.get_children():
 		t.text ="– " + TranslationServer.translate(t.text)
 
 func go_to_level(btn: TextureButton) -> void:
 	Autoload.click()
-	var level_num = get_level_num(btn.name)
+	var level_num = Autoload.get_level_num(btn.name)
 	get_tree().change_scene_to_file("res://scenes/levels/level_" + level_num + ".tscn")
 
 func update_textures() -> void:
 	var level_buttons = $MarginContainer/VBoxContainer.get_children()
 	
 	for lb: TextureButton in level_buttons:
-		var level_num = get_level_num(lb.name)
+		var level_num = Autoload.get_level_num(lb.name)
 		
 		if int(level_num) - 1 > Autoload.data.level:
 			lb.texture_normal = $Sprite210.texture

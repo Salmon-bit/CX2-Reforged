@@ -24,7 +24,6 @@ func update_textures():
 	if Autoload.data.lang == "ru":
 		$MarginContainer2/VBoxContainer/Selected.texture = $RU_SPRITES/Sprite711.texture
 	
-	print(str(int(Autoload.data.ability)))
 	$MarginContainer2/VBoxContainer/Icon.texture = $AbilityIcons.get_node(str(int(Autoload.data.ability))).texture
 
 func _ready():

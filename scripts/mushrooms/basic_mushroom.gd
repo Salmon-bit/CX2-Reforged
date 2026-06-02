@@ -1,8 +1,6 @@
 extends CharacterBody2D
 class_name BasicMushroom
 
-#Signals
-signal kill_mushroom()
 
 # Configurable vars
 @export var can_melle_attack = false
@@ -61,7 +59,7 @@ func _process(_delta: float) -> void:
 		animated_sprite.animation = "dead"
 		if collision != null:
 			Autoload.data.kills = Autoload.data.kills + 1
-			print(Autoload.data.kills)
+			print("[INFO]: Kills: " + str(Autoload.data.kills))
 			Autoload.save_data()
 			Autoload.add_trophey(0)
 			if int(Autoload.data.kills) == 15:
