@@ -23,6 +23,7 @@ config/windows_native_icon="res://sprites/Skins/GameView/Sprite2_0.ico"
 Autoload="*uid://cxbi40imuuxwp"
 GameJolt="*uid://dwwwfqrm86umu"
 GameId="*uid://puvfuns23qg4"
+ControllerIcons="*uid://deh7fp76dnuyr"
 
 [display]
 
@@ -35,7 +36,7 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/gamejolt/plugin.cfg")
+enabled=PackedStringArray("res://addons/controller_icons/plugin.cfg", "res://addons/gamejolt/plugin.cfg")
 
 [game_jolt]
 
