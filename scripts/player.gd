@@ -4,18 +4,35 @@ const SPEED = 20000.0
 
 var bow: Node2D
 var shoot_delay = 0.0
+var ability_delay = 0.0
 var arrow_speed = 600
 var hp = 100
 var dead = false
+var ability_spawner: Node2D
+@export var ability_reload_time: float = 5
 
 func _ready() -> void:
 	if Autoload.data.difficulty == "easy":
 		hp = 300
 	elif Autoload.data.difficulty == "hard":
 		hp = 80
+	
+	match Autoload.data.ability - 1:
+		0.0:
+			ability_spawner = $AbilitySpawners/Golden
+		1.0:
+			ability_spawner = $AbilitySpawners/Through
+		-1.0:
+			ability_spawner = null
+	
+	ability_delay = ability_reload_time
+	
 	bow = $Bow
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
+	ability_delay += delta
+	if ability_delay >= ability_reload_time:
+		bow.can_use_ability = true
 	$Label.text = "HP: " + str(hp)
 	
 	if hp > 100 and len(Input.get_connected_joypads()):
@@ -80,14 +97,34 @@ func _physics_process(delta: float) -> void:
 				dir = stick.normalized()
 			else:
 				dir = (get_global_mouse_position() - global_position).normalized()
-
+			
 			arrow.global_position = global_position + dir * 50.0
 			arrow.rotation = dir.angle()
 			arrow.velocity = dir * arrow_speed
 			arrow.add_collision_exception_with(self)
 			get_tree().current_scene.add_child(arrow)
 			$Sounds/ShootSound.play()
+			
 			shoot_delay = 0.15
+	if Input.is_action_just_pressed("use_ability"):
+		if ability_delay >= ability_reload_time:
+			if ability_spawner != null:
+				var ability_arrow = ability_spawner.spawn()
+				
+				var dir: Vector2
+				if using_controller:
+					dir = stick.normalized()
+				else:
+					dir = (get_global_mouse_position() - global_position).normalized()
+				
+				ability_arrow.global_position = global_position + dir * 50.0
+				ability_arrow.rotation = dir.angle()
+				ability_arrow.velocity = dir * arrow_speed
+				ability_arrow.add_collision_exception_with(self)
+				get_tree().current_scene.add_child(ability_arrow)
+				$Sounds/ShootSound.play()
+				ability_delay = 0
+				bow.can_use_ability = false
 
 	if Input.is_action_just_released("shoot"):
 		shoot_delay = 0

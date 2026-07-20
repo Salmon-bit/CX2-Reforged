@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://br1j55s1250xa"]
+
+[ext_resource type="Script" uid="uid://clwnua7xlv6sg" path="res://scripts/projectiles/through_arrow.gd" id="1_rigtp"]
+[ext_resource type="Texture2D" uid="uid://cqf6kxnj3lbjq" path="res://sprites/Projectiles/Sprite10_0.png" id="2_rrink"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jej6c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rrink")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q8ifc"]
+size = Vector2(44, 3)
+
+[node name="ThroughArrow" type="CharacterBody2D" unique_id=1245407281]
+z_index = 2
+collision_mask = 15
+script = ExtResource("1_rigtp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1439550365]
+sprite_frames = SubResource("SpriteFrames_jej6c")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=995382515]
+collision_layer = 3
+collision_mask = 27
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1254516962]
+position = Vector2(2, 0.5)
+shape = SubResource("RectangleShape2D_q8ifc")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

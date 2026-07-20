@@ -2,12 +2,18 @@
 
 [ext_resource type="Texture2D" uid="uid://dil03tdtueq7k" path="res://sprites/Skins/GameView/Sprite2_0.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://2dlpd15nbe7b" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://dng6dieob6p4x" path="res://scripts/bow.gd" id="3_d2wvv"]
 [ext_resource type="Texture2D" uid="uid://b5dd6jwf7m4ou" path="res://sprites/Bows/Sprite5_0.png" id="3_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://dwj7g5r3uyi6d" path="res://sprites/Bows/Sprite5_7.png" id="5_3v2ag"]
 [ext_resource type="PackedScene" uid="uid://b0r1qh1jfogdn" path="res://scenes/spawner.tscn" id="5_qlg0r"]
 [ext_resource type="AudioStream" uid="uid://bap6i0em0doer" path="res://sounds/ShootSound.wav" id="6_fjrip"]
+[ext_resource type="Texture2D" uid="uid://bwak5tkjvse1n" path="res://sprites/Bows/Sprite5_5.png" id="6_jej6c"]
 [ext_resource type="AudioStream" uid="uid://v5cceoble8qg" path="res://sounds/Heal.wav" id="6_smehm"]
 [ext_resource type="PackedScene" uid="uid://cajdpua2jyhi5" path="res://scenes/projectiles/arrow.tscn" id="6_tuyoq"]
 [ext_resource type="AudioStream" uid="uid://1jgeo8den3t4" path="res://sounds/Damage.wav" id="8_smehm"]
+[ext_resource type="Script" uid="uid://dnfc44lsn374t" path="res://scripts/spawner.gd" id="12_3v2ag"]
+[ext_resource type="PackedScene" uid="uid://bo2losumakt3j" path="res://scenes/projectiles/golden_arrow.tscn" id="13_jej6c"]
+[ext_resource type="PackedScene" uid="uid://br1j55s1250xa" path="res://scenes/projectiles/through_arrow.tscn" id="14_f1ej7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g2els"]
 animations = [{
@@ -15,7 +21,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("1_3vyb7")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -30,8 +36,24 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_qhqgy")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_3v2ag")
+}],
+"loop": 1,
+"name": &"golden",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_jej6c")
+}],
+"loop": 1,
+"name": &"through",
 "speed": 5.0
 }]
 
@@ -53,6 +75,7 @@ shape = SubResource("CapsuleShape2D_qhqgy")
 
 [node name="Bow" type="Node2D" parent="." unique_id=722892285]
 z_index = 3
+script = ExtResource("3_d2wvv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bow" unique_id=471169516]
 sprite_frames = SubResource("SpriteFrames_dqkch")
@@ -86,3 +109,13 @@ stream = ExtResource("6_fjrip")
 stream = ExtResource("8_smehm")
 volume_db = -10.306
 max_polyphony = 5
+
+[node name="AbilitySpawners" type="Node2D" parent="." unique_id=231307837]
+
+[node name="Golden" type="Node2D" parent="AbilitySpawners" unique_id=1124942779]
+script = ExtResource("12_3v2ag")
+object = ExtResource("13_jej6c")
+
+[node name="Through" type="Node2D" parent="AbilitySpawners" unique_id=1478175138]
+script = ExtResource("12_3v2ag")
+object = ExtResource("14_f1ej7")

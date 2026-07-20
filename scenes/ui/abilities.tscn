@@ -222,7 +222,6 @@ texture = ExtResource("26_y1cyn")
 
 [node name="Share" type="Sprite2D" parent="Icons" unique_id=1417455843]
 position = Vector2(99, 38)
-scale = Vector2(2.5, 2.5)
 texture = ExtResource("27_y1cyn")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

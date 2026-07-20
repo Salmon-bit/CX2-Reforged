@@ -140,12 +140,17 @@ enum SPEEDS {STOPPED = 0, VERY_SLOW = 2500, SLOW = 5000, FAST = 10000, QUICK = 1
 var pointer_level = 1
 
 func fetched_scores(response):
-	print("[SCORES FETCHER]: Scores fetched:\n" + JSON.stringify(response, "  "))
 	if response.success == "true":
 		if float(response.scores[0].score) < data.kills:
-			print("[SCORES FETCHER]: Updating scores...")
+			print("[SCORES FETCHER]: Updating GameJolt scores...")
 			GameJolt.scores_add(str(int(data.kills)), str(int(data.kills)), "1084203")
-			print("[SCORES FETCHER]: Scores Updated")
+			print("[SCORES FETCHER]: GameJolt scores Updated!")
+		elif float(response.scores[0].score) > data.kills:
+			print("[SCORES FETCHER]: Updating local scores...")
+			data.kills = float(response.scores[0].score)
+			print("[SCORES FETCHER]: Local scores updated!")
+	else:
+		print("[SCORES FETCHER]: Error getting GameJolt scores, info: " + response.message)
 
 func scene_changed():
 	print("[INFO]: Scene Changed")
