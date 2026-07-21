@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 var targets = 0
 @export var max_targets = 8
+@export var vel_multiplayer = 2
 
 func _physics_process(_delta: float) -> void:
 	move_and_slide()

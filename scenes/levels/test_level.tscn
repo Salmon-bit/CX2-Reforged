@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://c248kwsk4w46e"]
+
+[ext_resource type="Script" uid="uid://bg1id4hy7oqn0" path="res://scripts/levels/level_1.gd" id="1_jmx14"]
+[ext_resource type="TileSet" uid="uid://bfv0ks1diwumi" path="res://scenes/levels/tileset.tres" id="2_eaa0b"]
+[ext_resource type="PackedScene" uid="uid://bee7vho5h12qs" path="res://scenes/player.tscn" id="3_a5rnb"]
+[ext_resource type="PackedScene" uid="uid://r05o748hjhiw" path="res://scenes/camera_2d.tscn" id="4_fqldq"]
+[ext_resource type="Script" uid="uid://chv6jc7h3rp3s" path="res://scripts/game_over_check.gd" id="5_3ay3b"]
+[ext_resource type="Texture2D" uid="uid://bqae7q4gv5w3y" path="res://sprites/UI/Sprite20_0.png" id="6_hppjq"]
+[ext_resource type="AudioStream" uid="uid://bux7xgk0iv4kc" path="res://sounds/Win.wav" id="7_os2yb"]
+[ext_resource type="Texture2D" uid="uid://c2bqiwwyhcp1o" path="res://sprites/UI/Sprite96_0.png" id="8_v6k17"]
+[ext_resource type="Texture2D" uid="uid://co7opvffiqfl1" path="res://sprites/UI/Sprite96_1.png" id="9_upsmr"]
+[ext_resource type="AudioStream" uid="uid://cd6kwtvg8lgrs" path="res://sounds/Ambient.mp3" id="10_qgrpf"]
+[ext_resource type="PackedScene" uid="uid://dyls7piyfv8fw" path="res://scenes/trophey_manager.tscn" id="11_c7nhy"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_oc4kc"]
+vertices = PackedVector2Array(1276.0078, 572, 3.0234375, 572.9922, 5.96875, 9, 1277.9766, 9)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1, 4, -2, 578, 1281, 577, 1283, 4)])
+agent_radius = 5.0
+
+[node name="Level1" type="Node2D" unique_id=4907739]
+script = ExtResource("1_jmx14")
+
+[node name="TileMap" type="TileMap" parent="." unique_id=112310595]
+tile_set = ExtResource("2_eaa0b")
+format = 2
+layer_0/name = "Layout"
+layer_0/tile_data = PackedInt32Array(0, 65569, 0, 65536, 65569, 0, 131072, 65569, 0, 196608, 65569, 0, 262144, 65569, 0, 327680, 65569, 0, 393216, 65569, 0, 458752, 65569, 0, 524288, 65569, 0, 1, 65569, 0, 2, 65569, 0, 3, 65569, 0, 4, 65569, 0, 5, 65569, 0, 6, 65569, 0, 7, 65569, 0, 8, 65569, 0, 9, 65569, 0, 10, 65569, 0, 11, 65569, 0, 12, 65569, 0, 13, 65569, 0, 14, 65569, 0, 15, 65569, 0, 16, 65569, 0, 17, 65569, 0, 18, 65569, 0, 19, 65569, 0, 65555, 65569, 0, 131091, 65569, 0, 196627, 65569, 0, 262163, 65569, 0, 327699, 65569, 0, 393235, 65569, 0, 458771, 65569, 0, 524307, 65569, 0, 524306, 65569, 0, 524305, 65569, 0, 524304, 65569, 0, 524303, 65569, 0, 524302, 65569, 0, 524301, 65569, 0, 524300, 65569, 0, 524299, 65569, 0, 524298, 65569, 0, 524297, 65569, 0, 524296, 65569, 0, 524295, 65569, 0, 524294, 65569, 0, 524293, 65569, 0, 524292, 65569, 0, 524291, 65569, 0, 524290, 65569, 0, 524289, 65569, 0, 458759, 65569, 0, 393223, 65569, 0, 327687, 65569, 0, 458760, 65569, 0, 393224, 65569, 0, 65546, 65569, 0, 65547, 65569, 0, 65548, 65569, 0, 131084, 65569, 0, 196620, 65569, 0, 196621, 65569, 0, 196622, 65569, 0, 131086, 65569, 0, 65550, 65569, 0, 65549, 65569, 0, 131085, 65569, 0, 65537, 33, 0, 65538, 33, 0, 131073, 33, 0, 131074, 33, 0, 131075, 33, 0, 131076, 33, 0, 131077, 33, 0, 131078, 33, 0, 131080, 33, 0, 131081, 33, 0, 131082, 33, 0, 131083, 33, 0, 65545, 33, 0, 65544, 33, 0, 65542, 33, 0, 65541, 33, 0, 65540, 33, 0, 65539, 33, 0, 196609, 33, 0, 262145, 33, 0, 327681, 33, 0, 393217, 33, 0, 458753, 33, 0, 458754, 33, 0, 393218, 33, 0, 327682, 33, 0, 262146, 33, 0, 196610, 33, 0, 196611, 33, 0, 262147, 33, 0, 327683, 33, 0, 393219, 33, 0, 393220, 33, 0, 458756, 33, 0, 458755, 33, 0, 458757, 33, 0, 458758, 33, 0, 393222, 33, 0, 327686, 33, 0, 262150, 33, 0, 196614, 33, 0, 196613, 33, 0, 262149, 33, 0, 262148, 33, 0, 327684, 33, 0, 393221, 33, 0, 327685, 33, 0, 196612, 33, 0, 196617, 33, 0, 196618, 33, 0, 196616, 33, 0, 327688, 33, 0, 327689, 33, 0, 393225, 33, 0, 458761, 33, 0, 458762, 33, 0, 458763, 33, 0, 458764, 33, 0, 458765, 33, 0, 458766, 33, 0, 458767, 33, 0, 458768, 33, 0, 458769, 33, 0, 458770, 33, 0, 393234, 33, 0, 393233, 33, 0, 393232, 33, 0, 393231, 33, 0, 393230, 33, 0, 393229, 33, 0, 393228, 33, 0, 393227, 33, 0, 327690, 33, 0, 196619, 33, 0, 327691, 33, 0, 327692, 33, 0, 327693, 33, 0, 327694, 33, 0, 327695, 33, 0, 327696, 33, 0, 327697, 33, 0, 327698, 33, 0, 262161, 33, 0, 262160, 33, 0, 262159, 33, 0, 262158, 33, 0, 262157, 33, 0, 262162, 33, 0, 196626, 33, 0, 131090, 33, 0, 65554, 33, 0, 65553, 33, 0, 65552, 33, 0, 65551, 33, 0, 131087, 33, 0, 196623, 33, 0, 196624, 33, 0, 196625, 33, 0, 131089, 33, 0, 131088, 33, 0, 393226, 33, 0, 65543, 33, 0, 131079, 33, 0, 196615, 36, 131072, 262151, 33, 0, 262152, 33, 0, 262153, 33, 0, 262154, 33, 0, 262155, 33, 0, 262156, 33, 0)
+layer_1/name = "Boxes"
+
+[node name="Player" parent="." unique_id=1542968218 instance=ExtResource("3_a5rnb")]
+position = Vector2(144, 152)
+
+[node name="Camera2D2" parent="Player" unique_id=463586028 instance=ExtResource("4_fqldq")]
+ignore_rotation = false
+limit_right = 1280
+limit_bottom = 576
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2054545965]
+z_index = -10
+offset_left = -57.0
+offset_top = -94.0
+offset_right = 1351.0
+offset_bottom = 706.0
+color = Color(0, 0, 0, 1)
+
+[node name="Enemies" type="Node" parent="." unique_id=317619490]
+script = ExtResource("5_3ay3b")
+
+[node name="WinScreen" type="Sprite2D" parent="." unique_id=787690248]
+visible = false
+z_index = 5
+position = Vector2(144, 152)
+texture = ExtResource("6_hppjq")
+
+[node name="Win" type="AudioStreamPlayer" parent="WinScreen" unique_id=1926144443]
+stream = ExtResource("7_os2yb")
+
+[node name="Spawners" type="Node" parent="." unique_id=1595560937]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1096806688]
+position = Vector2(-4, 15)
+navigation_polygon = SubResource("NavigationPolygon_oc4kc")
+navigation_layers = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1024485727]
+position = Vector2(198, 378)
+texture = ExtResource("8_v6k17")
+
+[node name="Sprite961" type="Sprite2D" parent="." unique_id=1698237363]
+position = Vector2(-189, 437)
+texture = ExtResource("9_upsmr")
+
+[node name="Ambient" type="AudioStreamPlayer" parent="." unique_id=1716182562]
+stream = ExtResource("10_qgrpf")
+autoplay = true
+parameters/looping = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=660799415]
+
+[node name="TropheyManager" parent="CanvasLayer" unique_id=1590201275 instance=ExtResource("11_c7nhy")]
+z_index = 200
+position = Vector2(130, 648)

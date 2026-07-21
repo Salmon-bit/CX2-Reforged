@@ -119,7 +119,7 @@ func _physics_process(delta: float) -> void:
 				
 				ability_arrow.global_position = global_position + dir * 50.0
 				ability_arrow.rotation = dir.angle()
-				ability_arrow.velocity = dir * arrow_speed
+				ability_arrow.velocity = dir * arrow_speed * ability_arrow.vel_multiplayer
 				ability_arrow.add_collision_exception_with(self)
 				get_tree().current_scene.add_child(ability_arrow)
 				$Sounds/ShootSound.play()

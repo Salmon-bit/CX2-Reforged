@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://c1apn28rqpmnc"]
+
+[ext_resource type="Script" uid="uid://o4cjuggfbaeu" path="res://scripts/Terrain/tnt.gd" id="1_qwopj"]
+[ext_resource type="Texture2D" uid="uid://hty8uqwtrq5b" path="res://sprites/Terrain/Sprite54_0.png" id="1_xuea5"]
+[ext_resource type="Texture2D" uid="uid://j80cyvvio4av" path="res://sprites/Particles/Sprite55_0.png" id="2_qwopj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jr3ju"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8c1op"]
+size = Vector2(62, 62)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jr3ju"]
+radius = 64.0
+
+[node name="TNT" type="StaticBody2D" unique_id=2043573920]
+script = ExtResource("1_qwopj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1502581511]
+texture = ExtResource("1_xuea5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2024831111]
+shape = SubResource("RectangleShape2D_jr3ju")
+
+[node name="DetonateHitbox" type="Area2D" parent="." unique_id=321640490]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetonateHitbox" unique_id=1271197642]
+shape = SubResource("RectangleShape2D_8c1op")
+debug_color = Color(0.63051826, 0.52990776, 0, 0.41960785)
+
+[node name="ExplodeArea" type="Area2D" parent="." unique_id=1955138115]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExplodeArea" unique_id=1925629768]
+shape = SubResource("CircleShape2D_jr3ju")
+debug_color = Color(0.99827987, 0, 0.15724844, 0.41960785)
+
+[node name="ExpoldeSprite" type="Sprite2D" parent="." unique_id=546374089]
+visible = false
+position = Vector2(2, -3)
+texture = ExtResource("2_qwopj")
+
+[node name="Timer" type="Timer" parent="." unique_id=179786016]
+wait_time = 0.3
+one_shot = true
+
+[connection signal="area_entered" from="DetonateHitbox" to="." method="_on_detonate_hitbox_area_entered"]
+[connection signal="body_entered" from="ExplodeArea" to="." method="_on_explode_area_body_entered"]
+[connection signal="body_exited" from="ExplodeArea" to="." method="_on_explode_area_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
