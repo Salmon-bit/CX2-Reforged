@@ -13,8 +13,8 @@
 [ext_resource type="AudioStream" uid="uid://bocbysxtyl4q" path="res://sounds/Boss1.mp3" id="9_vvoq0"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_dwyms"]
-vertices = PackedVector2Array(1277, 1198, 15.9921875, 1198, 15, -54.023438, 1277, -56.96875)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+vertices = PackedVector2Array(15.9921875, 1198, 526, 646, 762, 645.03906, 1038, 643.96094, 1277, 1198, 1277, -56.96875, 1038, 368, 15, -54.023438, 762, 368, 250, 646, 250, 372.07813, 526, 369.92188)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 4, 3, 6), PackedInt32Array(7, 5, 6, 8), PackedInt32Array(9, 1, 0), PackedInt32Array(9, 0, 7, 10), PackedInt32Array(10, 7, 8, 11), PackedInt32Array(11, 8, 2, 1)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(1287, -67, 5, -64, 6, 1208, 1287, 1208)])
 
 [node name="Level5" type="Node2D" unique_id=1510544247]
@@ -66,6 +66,14 @@ position = Vector2(-4, 15)
 navigation_polygon = SubResource("NavigationPolygon_dwyms")
 navigation_layers = 3
 metadata/_edit_lock_ = true
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1147463090]
+vertices = PackedVector2Array(260, 382, 260, 636, 516, 636, 516, 380)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=630494243]
+vertices = PackedVector2Array(772, 378, 772, 635, 1028, 634, 1028, 378)
+affect_navigation_mesh = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1313943326]
 

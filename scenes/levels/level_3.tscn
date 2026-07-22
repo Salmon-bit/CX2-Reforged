@@ -13,9 +13,10 @@
 [ext_resource type="AudioStream" uid="uid://cd6kwtvg8lgrs" path="res://sounds/Ambient.mp3" id="10_2bnyt"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ugcn1"]
-vertices = PackedVector2Array(1527.9531, 821, 11.921875, 821.9922, 6.0703125, 11.9921875, 1524.0391, 11)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+vertices = PackedVector2Array(1482, 522, 1524.0391, 11, 1527.9531, 821, 1482, 630, 1482, 438, 1206, 438, 950, 438, 1034, 330, 1206, 182, 950, 330, 1034, 54, 138, 522, 374, 311.07813, 374, 650, 11.921875, 821.9922, 138, 374, 374, 138, 522, 138, 522, 54, 630, 118, 630, 266, 1398, 630, 1398, 779.3281, 906, 778, 906, 694, 1226, 586, 1290, 438, 1290, 182, 950, 54, 842, 330, 842, 246, 778, 246, 778, 182, 714, 182, 714, 118, 522, 309.92188, 694, 266, 694, 330, 522, 438, 778, 438, 886, 502, 778, 586, 950, 502, 886, 586, 822, 694, 522, 650, 522, 586, 1226, 522, 1482, 768.8281, 822, 778, 374, 54, 54, 374, 6.0703125, 11.9921875, 54, 522)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(1, 0, 4), PackedInt32Array(5, 6, 7, 8), PackedInt32Array(9, 7, 6), PackedInt32Array(8, 7, 10), PackedInt32Array(11, 12, 13, 14), PackedInt32Array(12, 11, 15, 16), PackedInt32Array(17, 18, 19, 20), PackedInt32Array(21, 22, 23, 24, 25), PackedInt32Array(4, 26, 27, 1), PackedInt32Array(28, 9, 29, 30), PackedInt32Array(30, 31, 32, 28), PackedInt32Array(32, 33, 34, 28), PackedInt32Array(35, 20, 36, 37, 38), PackedInt32Array(39, 29, 9, 6, 40, 41), PackedInt32Array(6, 42, 40), PackedInt32Array(41, 40, 43, 44), PackedInt32Array(37, 29, 39, 38), PackedInt32Array(16, 17, 20, 35, 12), PackedInt32Array(45, 46, 41), PackedInt32Array(25, 47, 0, 3, 21), PackedInt32Array(22, 48, 2), PackedInt32Array(23, 22, 2, 14, 49), PackedInt32Array(41, 44, 49, 14, 45), PackedInt32Array(50, 16, 15, 51, 52), PackedInt32Array(2, 48, 3), PackedInt32Array(43, 25, 24, 44), PackedInt32Array(13, 45, 14), PackedInt32Array(53, 11, 14), PackedInt32Array(53, 14, 52, 51), PackedInt32Array(50, 52, 1, 18), PackedInt32Array(27, 8, 10, 1), PackedInt32Array(34, 19, 18, 28), PackedInt32Array(28, 18, 1), PackedInt32Array(1, 10, 28)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-4, 2, 2, 832, 1538, 831, 1534, 1)])
+parsed_geometry_type = 1
 
 [node name="Level3" type="Node2D" unique_id=293330375]
 script = ExtResource("1_44gv1")
@@ -36,6 +37,43 @@ position = Vector2(266, 244)
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=247960729]
 navigation_polygon = SubResource("NavigationPolygon_ugcn1")
 navigation_layers = 3
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1096762196]
+vertices = PackedVector2Array(384, 321, 384, 640, 384, 640, 512, 640, 512, 576, 768, 576, 768, 448, 512, 448, 512, 320)
+affect_navigation_mesh = true
+avoidance_layers = 3
+
+[node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=82629403]
+vertices = PackedVector2Array(1216, 192, 1280, 192, 1280, 448, 1216, 448)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D3" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=247927347]
+vertices = PackedVector2Array(640, 128, 640, 256, 704, 256, 704, 320, 832, 320, 832, 256, 768, 256, 768, 192, 704, 192, 704, 128)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D4" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1329340104]
+vertices = PackedVector2Array(896, 512, 896, 576, 1216, 576, 1216, 512, 1472, 512, 1472, 448, 960, 448, 960, 512)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D5" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=138737570]
+vertices = PackedVector2Array(960, 64, 960, 320, 1024, 320, 1024, 64, 968, 64)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D6" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=779801280]
+vertices = PackedVector2Array(64, 384, 64, 512, 128, 512, 128, 384)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D7" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=157136753]
+vertices = PackedVector2Array(384, 64, 384, 128, 512, 128, 512, 72, 512, 64)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D8" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=2065535503]
+vertices = PackedVector2Array(832, 704, 832, 768, 896, 768, 896, 704)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D9" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1953204165]
+vertices = PackedVector2Array(1408, 640, 1408, 768, 1472, 760, 1472, 640)
+affect_navigation_mesh = true
 
 [node name="Enemies" type="Node" parent="." unique_id=1990863837]
 script = ExtResource("5_ftfob")

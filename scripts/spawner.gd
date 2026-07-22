@@ -4,7 +4,7 @@ extends Node2D
 
 func spawn():
 	var spawnling = object.instantiate()
-	spawnling.position.x = position.x
-	spawnling.position.y = position.y
+	spawnling.position.x = self.position.x
+	spawnling.position.y = self.position.y
 	
 	return spawnling

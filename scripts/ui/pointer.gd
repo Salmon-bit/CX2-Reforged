@@ -10,7 +10,7 @@ func _process(_delta: float) -> void:
 			position.y -= 69
 			Autoload.pointer_level -= 1
 	if Input.is_action_just_pressed("pointer_down"):
-		if position.y < 377:
+		if position.y < 446:
 			position.y += 69
 			Autoload.pointer_level += 1
 	if Input.is_action_just_pressed("select"):

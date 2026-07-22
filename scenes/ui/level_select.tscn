@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://bk3ika57kp4f7" path="res://sprites/UI/Sprite14_1.png" id="10_0rr43"]
 [ext_resource type="Texture2D" uid="uid://dblko0fd4kjpq" path="res://sprites/UI/Sprite35_0.png" id="10_6iing"]
 [ext_resource type="Texture2D" uid="uid://qj0bwe3cq1yc" path="res://sprites/UI/Sprite35_1.png" id="11_ecnhd"]
+[ext_resource type="Texture2D" uid="uid://dfwycbow4xu4n" path="res://sprites/UI/Sprite40_0.png" id="12_ua01m"]
+[ext_resource type="Texture2D" uid="uid://daub0pk3qodew" path="res://sprites/UI/Sprite40_1.png" id="13_uyspq"]
 [ext_resource type="Texture2D" uid="uid://cq8rp66gew2lk" path="res://sprites/UI/Sprite42_0.png" id="17_xogkw"]
 [ext_resource type="Texture2D" uid="uid://dgg2gqod2ndly" path="res://sprites/UI/Sprite74_0.png" id="18_8rxl4"]
 [ext_resource type="Texture2D" uid="uid://b12ldxvc2rwbx" path="res://sprites/UI/Sprite50_0.png" id="18_d1lmv"]
@@ -95,6 +97,12 @@ layout_mode = 2
 texture_normal = ExtResource("10_6iing")
 texture_pressed = ExtResource("11_ecnhd")
 texture_hover = ExtResource("11_ecnhd")
+
+[node name="Level6" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=459439511]
+layout_mode = 2
+texture_normal = ExtResource("12_ua01m")
+texture_pressed = ExtResource("13_uyspq")
+texture_hover = ExtResource("13_uyspq")
 
 [node name="Sprite210" type="Sprite2D" parent="." unique_id=189461305]
 position = Vector2(49, -38)

@@ -13,11 +13,11 @@
 [ext_resource type="AudioStream" uid="uid://cd6kwtvg8lgrs" path="res://sounds/Ambient.mp3" id="10_excbq"]
 [ext_resource type="PackedScene" uid="uid://dyls7piyfv8fw" path="res://scenes/trophey_manager.tscn" id="10_qxy0u"]
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_oc4kc"]
-vertices = PackedVector2Array(1276.0078, 572, 3.0234375, 572.9922, 5.96875, 9, 1277.9766, 9)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(1, 4, -2, 578, 1281, 577, 1283, 4)])
-agent_radius = 5.0
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_uwlxl"]
+vertices = PackedVector2Array(590, 359, 634, 123, 762, 123, 762, 251, 590, 487, 974, 251, 974, 59, 1210, 59, 1210, 487, 526, 359, 526, 295, 442, 295, 442, 487, 78, 487, 78, 59, 634, 59)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8), PackedInt32Array(5, 8, 4, 3), PackedInt32Array(0, 9, 10, 1), PackedInt32Array(11, 12, 13, 14), PackedInt32Array(11, 14, 15, 1, 10)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(68, 49, 644, 49, 644, 113, 772, 113, 772, 241, 964, 241, 964, 49, 1220, 49, 1220, 497, 580, 497, 580, 369, 516, 369, 516, 305, 452, 305, 452, 497, 68, 497)])
+parsed_geometry_type = 1
 
 [node name="Level1" type="Node2D" unique_id=4907739]
 script = ExtResource("1_s8va5")
@@ -68,7 +68,7 @@ stream = ExtResource("8_iav0o")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1096806688]
 position = Vector2(-4, 15)
-navigation_polygon = SubResource("NavigationPolygon_oc4kc")
+navigation_polygon = SubResource("NavigationPolygon_uwlxl")
 navigation_layers = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1024485727]
