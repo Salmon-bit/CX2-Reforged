@@ -22,3 +22,6 @@ SC_IT,Вид иконок:,Icon type:,Symboltyp:,Type d'icône :,图标类型：
 "   – LS_COLL",Сборище грибов,Collection,Pilzversammlung,Rassemblement de champignons,蘑菇聚集,キノコの集まり
 "   – LS_BOXES",Коробки,Boxes,Kisten,Boîtes,箱子,ボックス
 "   – LS_DEF",Оборона,Defense,Verteidigung,Défense,防御,防衛
+L1_TUT_M,Перемещение,Move,Verschiebung,Déplacement,搬家,引越し
+L1_TUT_S,Стрельба,Shoot,Schießen,Tir,射击运动,撮影
+L1_TUT_A,Способность,Ability,Die Fähigkeit,Capacité,能力,能力

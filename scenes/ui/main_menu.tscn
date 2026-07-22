@@ -43,12 +43,7 @@
 [ext_resource type="Texture2D" uid="uid://bfk5as76sc15i" path="res://sprites/UI/Sprite106_1.png" id="41_3g7do"]
 [ext_resource type="Texture2D" uid="uid://cjo3ci11fhxjn" path="res://sprites/UI/Sprite222_2.png" id="42_cc4y2"]
 [ext_resource type="Texture2D" uid="uid://ddhwhk07hwads" path="res://sprites/UI/Sprite222_3.png" id="43_iglv2"]
-[ext_resource type="Texture2D" uid="uid://c0y3oquidrf04" path="res://sprites/UI/GamePadIcons/Start.png" id="44_xupgs"]
-[ext_resource type="Texture2D" uid="uid://vgmq7lkd2uag" path="res://sprites/UI/GamePadIcons/D_Pad_Up.png" id="45_6gmx2"]
-[ext_resource type="Texture2D" uid="uid://bwdakqbqcqdxe" path="res://sprites/UI/GamePadIcons/D_Pad_Down.png" id="46_3g7do"]
-[ext_resource type="Texture2D" uid="uid://cbx6p8xp8271b" path="res://sprites/UI/GamePadIcons/D_Pad_Right.png" id="47_ojeks"]
-[ext_resource type="Texture2D" uid="uid://c15rsx1x1uiro" path="res://sprites/UI/GamePadIcons/D_Pad_Left.png" id="48_f8svg"]
-[ext_resource type="Texture2D" uid="uid://ctes2wsvndky2" path="res://sprites/UI/GamePadIcons/Share.png" id="49_0jeo2"]
+[ext_resource type="Script" uid="uid://q40cdcs3d7fy" path="res://addons/controller_icons/objects/ControllerIconTexture.gd" id="44_iglv2"]
 
 [sub_resource type="Gradient" id="Gradient_wu84c"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -125,6 +120,54 @@ pressed = true
 
 [sub_resource type="Shortcut" id="Shortcut_svtp6"]
 events = [SubResource("InputEventKey_gw5y6"), SubResource("InputEventJoypadButton_t4suy")]
+
+[sub_resource type="Texture2D" id="Texture2D_hk5nb"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("44_iglv2")
+path = "joypad/start"
+show_mode = 2
+metadata/_custom_type_script = "uid://q40cdcs3d7fy"
+
+[sub_resource type="Texture2D" id="Texture2D_iqd2t"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("44_iglv2")
+path = "joypad/dpad_up"
+show_mode = 2
+metadata/_custom_type_script = "uid://q40cdcs3d7fy"
+
+[sub_resource type="Texture2D" id="Texture2D_qa3ah"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("44_iglv2")
+path = "joypad/dpad_down"
+show_mode = 2
+metadata/_custom_type_script = "uid://q40cdcs3d7fy"
+
+[sub_resource type="Texture2D" id="Texture2D_mukp2"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("44_iglv2")
+path = "joypad/dpad_right"
+show_mode = 2
+metadata/_custom_type_script = "uid://q40cdcs3d7fy"
+
+[sub_resource type="Texture2D" id="Texture2D_aa7d5"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("44_iglv2")
+path = "joypad/dpad_left"
+show_mode = 2
+metadata/_custom_type_script = "uid://q40cdcs3d7fy"
+
+[sub_resource type="Texture2D" id="Texture2D_i2v4u"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("44_iglv2")
+path = "joypad/select"
+show_mode = 2
+metadata/_custom_type_script = "uid://q40cdcs3d7fy"
 
 [node name="MainMenu" type="Control" unique_id=1829867831]
 layout_mode = 3
@@ -397,31 +440,35 @@ texture = ExtResource("43_iglv2")
 
 [node name="Icons" type="Node2D" parent="." unique_id=5589049]
 
-[node name="PS" type="Node2D" parent="Icons" unique_id=1710949360]
-
-[node name="Start" type="Sprite2D" parent="Icons/PS" unique_id=1249686510]
+[node name="Start" type="Sprite2D" parent="Icons" unique_id=1249686510]
 position = Vector2(937, 58)
-texture = ExtResource("44_xupgs")
+scale = Vector2(0.5, 0.5)
+texture = SubResource("Texture2D_hk5nb")
 
-[node name="DPadUp" type="Sprite2D" parent="Icons/PS" unique_id=1822968713]
+[node name="DPadUp" type="Sprite2D" parent="Icons" unique_id=1822968713]
 position = Vector2(936, 152)
-texture = ExtResource("45_6gmx2")
+scale = Vector2(0.5, 0.5)
+texture = SubResource("Texture2D_iqd2t")
 
-[node name="DPadDown" type="Sprite2D" parent="Icons/PS" unique_id=1841028781]
+[node name="DPadDown" type="Sprite2D" parent="Icons" unique_id=1841028781]
 position = Vector2(937.00006, 243)
-texture = ExtResource("46_3g7do")
+scale = Vector2(0.5, 0.5)
+texture = SubResource("Texture2D_qa3ah")
 
-[node name="DPadRight" type="Sprite2D" parent="Icons/PS" unique_id=255093473]
+[node name="DPadRight" type="Sprite2D" parent="Icons" unique_id=255093473]
 position = Vector2(936, 335)
-texture = ExtResource("47_ojeks")
+scale = Vector2(0.5, 0.5)
+texture = SubResource("Texture2D_mukp2")
 
-[node name="DPadLeft" type="Sprite2D" parent="Icons/PS" unique_id=314032422]
+[node name="DPadLeft" type="Sprite2D" parent="Icons" unique_id=314032422]
 position = Vector2(938.00006, 421)
-texture = ExtResource("48_f8svg")
+scale = Vector2(0.5, 0.5)
+texture = SubResource("Texture2D_aa7d5")
 
-[node name="Share" type="Sprite2D" parent="Icons/PS" unique_id=920079746]
+[node name="Share" type="Sprite2D" parent="Icons" unique_id=920079746]
 position = Vector2(941, 505)
-texture = ExtResource("49_0jeo2")
+scale = Vector2(0.5, 0.5)
+texture = SubResource("Texture2D_i2v4u")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer3/AbilitiesButton" to="." method="_on_abilities_button_pressed"]

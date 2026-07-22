@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://bquq4iirgngqu" path="res://sprites/Abilities/Sprite52_3.png" id="21_p74cy"]
 [ext_resource type="Texture2D" uid="uid://l52wbxcx6egm" path="res://sprites/Abilities/Sprite70_1.png" id="25_p74cy"]
 [ext_resource type="Texture2D" uid="uid://dw4gwxeagmxsi" path="res://sprites/Abilities/Sprite70_2.png" id="26_y1cyn"]
-[ext_resource type="Texture2D" uid="uid://ctes2wsvndky2" path="res://sprites/UI/GamePadIcons/Share.png" id="27_y1cyn"]
+[ext_resource type="Script" uid="uid://q40cdcs3d7fy" path="res://addons/controller_icons/objects/ControllerIconTexture.gd" id="27_y1cyn"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_p74cy"]
 device = -1
@@ -38,6 +38,13 @@ pressed = true
 
 [sub_resource type="Shortcut" id="Shortcut_iqd2t"]
 events = [SubResource("InputEventKey_p74cy"), SubResource("InputEventJoypadButton_y1cyn")]
+
+[sub_resource type="Texture2D" id="Texture2D_icjw7"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("27_y1cyn")
+path = "go_back_to_level_select"
+metadata/_custom_type_script = "uid://q40cdcs3d7fy"
 
 [node name="Abilities" type="Control" unique_id=777844008]
 layout_mode = 3
@@ -222,6 +229,7 @@ texture = ExtResource("26_y1cyn")
 
 [node name="Share" type="Sprite2D" parent="Icons" unique_id=1417455843]
 position = Vector2(99, 38)
-texture = ExtResource("27_y1cyn")
+scale = Vector2(0.5, 0.5)
+texture = SubResource("Texture2D_icjw7")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

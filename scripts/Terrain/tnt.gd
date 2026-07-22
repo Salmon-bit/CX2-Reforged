@@ -42,7 +42,7 @@ func attack(_i: int):
 	explode()
 
 func _on_detonate_hitbox_area_entered(area: Area2D) -> void:
-	print("Let me detonate " + area.get_parent().name)
+	print("[TNT]: Trying detonate by " + area.get_parent().name)
 	if "arrow" in area.get_parent().name.to_lower():
 		is_exploding = false
 		explode()

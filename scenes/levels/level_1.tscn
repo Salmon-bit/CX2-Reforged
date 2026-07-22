@@ -8,16 +8,70 @@
 [ext_resource type="PackedScene" uid="uid://mcinvy3iq3td" path="res://scenes/mushrooms/red_mushroom.tscn" id="5_oc4kc"]
 [ext_resource type="Script" uid="uid://chv6jc7h3rp3s" path="res://scripts/game_over_check.gd" id="5_sk5k4"]
 [ext_resource type="AudioStream" uid="uid://bux7xgk0iv4kc" path="res://sounds/Win.wav" id="8_iav0o"]
-[ext_resource type="Texture2D" uid="uid://c2bqiwwyhcp1o" path="res://sprites/UI/Sprite96_0.png" id="8_s8va5"]
-[ext_resource type="Texture2D" uid="uid://co7opvffiqfl1" path="res://sprites/UI/Sprite96_1.png" id="9_dga24"]
 [ext_resource type="AudioStream" uid="uid://cd6kwtvg8lgrs" path="res://sounds/Ambient.mp3" id="10_excbq"]
 [ext_resource type="PackedScene" uid="uid://dyls7piyfv8fw" path="res://scenes/trophey_manager.tscn" id="10_qxy0u"]
+[ext_resource type="Script" uid="uid://q40cdcs3d7fy" path="res://addons/controller_icons/objects/ControllerIconTexture.gd" id="11_iav0o"]
+[ext_resource type="Theme" uid="uid://cari6vcvs5b5u" path="res://themes/main.tres" id="12_dnkej"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_uwlxl"]
 vertices = PackedVector2Array(590, 359, 634, 123, 762, 123, 762, 251, 590, 487, 974, 251, 974, 59, 1210, 59, 1210, 487, 526, 359, 526, 295, 442, 295, 442, 487, 78, 487, 78, 59, 634, 59)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8), PackedInt32Array(5, 8, 4, 3), PackedInt32Array(0, 9, 10, 1), PackedInt32Array(11, 12, 13, 14), PackedInt32Array(11, 14, 15, 1, 10)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(68, 49, 644, 49, 644, 113, 772, 113, 772, 241, 964, 241, 964, 49, 1220, 49, 1220, 497, 580, 497, 580, 369, 516, 369, 516, 305, 452, 305, 452, 497, 68, 497)])
 parsed_geometry_type = 1
+
+[sub_resource type="Texture2D" id="Texture2D_jr3ju"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("11_iav0o")
+path = "joypad/l_stick"
+show_mode = 2
+metadata/_custom_type_script = "uid://q40cdcs3d7fy"
+
+[sub_resource type="Texture2D" id="Texture2D_xg8mk"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("11_iav0o")
+path = "use_ability"
+metadata/_custom_type_script = "uid://q40cdcs3d7fy"
+
+[sub_resource type="Texture2D" id="Texture2D_8c1op"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("11_iav0o")
+path = "shoot"
+metadata/_custom_type_script = "uid://q40cdcs3d7fy"
+
+[sub_resource type="Texture2D" id="Texture2D_vho13"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("11_iav0o")
+path = "go_up"
+show_mode = 1
+metadata/_custom_type_script = "uid://q40cdcs3d7fy"
+
+[sub_resource type="Texture2D" id="Texture2D_crqo5"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("11_iav0o")
+path = "go_down"
+show_mode = 1
+metadata/_custom_type_script = "uid://q40cdcs3d7fy"
+
+[sub_resource type="Texture2D" id="Texture2D_7xcn6"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("11_iav0o")
+path = "go_left"
+show_mode = 1
+metadata/_custom_type_script = "uid://q40cdcs3d7fy"
+
+[sub_resource type="Texture2D" id="Texture2D_7e80t"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("11_iav0o")
+path = "go_right"
+show_mode = 1
+metadata/_custom_type_script = "uid://q40cdcs3d7fy"
 
 [node name="Level1" type="Node2D" unique_id=4907739]
 script = ExtResource("1_s8va5")
@@ -71,14 +125,6 @@ position = Vector2(-4, 15)
 navigation_polygon = SubResource("NavigationPolygon_uwlxl")
 navigation_layers = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1024485727]
-position = Vector2(198, 378)
-texture = ExtResource("8_s8va5")
-
-[node name="Sprite961" type="Sprite2D" parent="." unique_id=1698237363]
-position = Vector2(-189, 437)
-texture = ExtResource("9_dga24")
-
 [node name="Ambient" type="AudioStreamPlayer" parent="." unique_id=1716182562]
 stream = ExtResource("10_excbq")
 autoplay = true
@@ -89,3 +135,62 @@ parameters/looping = true
 [node name="TropheyManager" parent="CanvasLayer" unique_id=1590201275 instance=ExtResource("10_qxy0u")]
 z_index = 200
 position = Vector2(130, 648)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=643645236]
+position = Vector2(144, 350)
+scale = Vector2(0.7, 0.7)
+texture = SubResource("Texture2D_jr3ju")
+
+[node name="Label" type="Label" parent="." unique_id=985625663]
+offset_left = 224.0
+offset_top = 336.0
+offset_right = 348.0
+offset_bottom = 371.0
+theme = ExtResource("12_dnkej")
+text = "L1_TUT_M"
+
+[node name="Label2" type="Label" parent="." unique_id=2006574]
+offset_left = 224.0
+offset_top = 408.0
+offset_right = 348.0
+offset_bottom = 443.0
+theme = ExtResource("12_dnkej")
+text = "L1_TUT_S"
+
+[node name="Label3" type="Label" parent="." unique_id=1676708676]
+offset_left = 224.0
+offset_top = 464.0
+offset_right = 348.0
+offset_bottom = 499.0
+theme = ExtResource("12_dnkej")
+text = "L1_TUT_A"
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=761938862]
+position = Vector2(144, 480)
+scale = Vector2(0.5, 0.5)
+texture = SubResource("Texture2D_xg8mk")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=495616883]
+position = Vector2(144, 424)
+scale = Vector2(0.5, 0.5)
+texture = SubResource("Texture2D_8c1op")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1117224485]
+position = Vector2(144, 328)
+scale = Vector2(0.5, 0.5)
+texture = SubResource("Texture2D_vho13")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=462721819]
+position = Vector2(144, 368)
+scale = Vector2(0.5, 0.5)
+texture = SubResource("Texture2D_crqo5")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=784904931]
+position = Vector2(104, 352)
+scale = Vector2(0.5, 0.5)
+texture = SubResource("Texture2D_7xcn6")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=1845990918]
+position = Vector2(184, 352)
+scale = Vector2(0.5, 0.5)
+texture = SubResource("Texture2D_7e80t")

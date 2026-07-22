@@ -420,16 +420,17 @@ func _stitch_texture():
 # For multi prompts, we need to generate a texture
 var _dirty := true
 var _texture_3d: Texture
-func _get_rid():
-	if _dirty:
-		if not _is_stitching_texture:
-			# FIXME: Function may await, but because this is an internal engine call, we can't do anything about it.
-			# This results in a one-frame white texture being displayed, which is not ideal. Investigate later.
-			_stitch_texture()
-			if _is_stitching_texture:
-				return 0
-		else:
-			return 0
-	return _texture_3d.get_rid() if not _textures.is_empty() else 0
+
+func _process(_delta: float) -> void:
+	if _dirty and not _is_stitching_texture:
+		_is_stitching_texture = true
+		_stitch_texture()  # сделать синхронным, без await
+		_is_stitching_texture = false
+		_dirty = false
+
+# Публичный метод для получения RID — вызывай его там, где нужен RID
+func get_rid() -> RID:
+	return _texture_3d.get_rid() if _texture_3d and not _texture_3d.is_empty() else RID()
+
 
 #endregion

@@ -5,22 +5,45 @@
 [ext_resource type="Texture2D" uid="uid://bqk5nobyr54xw" path="res://sprites/UI/Sprite14_0.png" id="2_xf2sv"]
 [ext_resource type="Script" uid="uid://4ef22nd2josg" path="res://scripts/ui/settings_tab_main.gd" id="3_7njhk"]
 [ext_resource type="Texture2D" uid="uid://bk3ika57kp4f7" path="res://sprites/UI/Sprite14_1.png" id="3_70iit"]
+[ext_resource type="Texture2D" uid="uid://0137i1lmsggx" path="res://sprites/UI/Sprite92_0.png" id="4_n46hj"]
+[ext_resource type="Texture2D" uid="uid://csgna42j7502w" path="res://sprites/UI/Sprite92_1.png" id="5_qx6cm"]
+[ext_resource type="Texture2D" uid="uid://domj7k1ehs8rd" path="res://sprites/UI/Sprite129_0.png" id="6_57bi6"]
+[ext_resource type="Texture2D" uid="uid://bvjtefkw1v4ce" path="res://sprites/UI/Sprite129_1.png" id="7_h2ppu"]
+[ext_resource type="Texture2D" uid="uid://c3r2js284i5iw" path="res://sprites/UI/Sprite93_0.png" id="8_xcp0h"]
+[ext_resource type="Texture2D" uid="uid://brt0x2p4fr5ul" path="res://sprites/UI/Sprite93_1.png" id="9_dxxbo"]
+[ext_resource type="Texture2D" uid="uid://dhjajw3i3rk0c" path="res://sprites/UI/Sprite71_0.png" id="10_0w6p2"]
 [ext_resource type="Texture2D" uid="uid://5bh1m7kwdsah" path="res://demo/icon_respect.tres" id="10_2fqwo"]
-[ext_resource type="Script" uid="uid://q40cdcs3d7fy" path="res://addons/controller_icons/objects/ControllerIconTexture.gd" id="11_8w8pu"]
 [ext_resource type="Texture2D" uid="uid://mmg4sg6xdvm5" path="res://sprites/UI/Sprite145_0.png" id="11_u8mpt"]
+[ext_resource type="Texture2D" uid="uid://dacym0huyllwk" path="res://sprites/UI/GamePadIcons/Cross.png" id="11_xq0ok"]
 [ext_resource type="Texture2D" uid="uid://cn7kpkjqo63w0" path="res://sprites/UI/Sprite122_0.png" id="12_3keoi"]
+[ext_resource type="Texture2D" uid="uid://ctes2wsvndky2" path="res://sprites/UI/GamePadIcons/Share.png" id="12_31krh"]
 [ext_resource type="Script" uid="uid://bv6sr8fxwr3c2" path="res://scripts/ui/game_jolt_settings.gd" id="13_25tad"]
 [ext_resource type="Texture2D" uid="uid://do04ugbudvnws" path="res://sprites/UI/Sprite122_1.png" id="13_ycs42"]
+[ext_resource type="Texture2D" uid="uid://djg2ika41pbxp" path="res://sprites/UI/GamePadIcons/Square.png" id="14_7epoo"]
 [ext_resource type="Texture2D" uid="uid://g5vrqwkwrsxx" path="res://sprites/UI/Sprite90_0.png" id="14_j06xg"]
 [ext_resource type="Script" uid="uid://cwf4qe1kx6ruo" path="res://scripts/ui/settings_tab_language.gd" id="15_06trf"]
+[ext_resource type="Texture2D" uid="uid://3pu3mwfwhhso" path="res://sprites/UI/GamePadIcons/Triangle.png" id="15_icjw7"]
 [ext_resource type="Texture2D" uid="uid://i385sudwcjfk" path="res://sprites/UI/Sprite90_1.png" id="15_x1uin"]
+[ext_resource type="Texture2D" uid="uid://dalwejtdibb7k" path="res://sprites/UI/GamePadIcons/Circle.png" id="16_5dex4"]
 [ext_resource type="Texture2D" uid="uid://c1fx0d21kq70f" path="res://sprites/UI/Sprite91_0.png" id="16_25tad"]
 [ext_resource type="Texture2D" uid="uid://mt4wrgqlv8xl" path="res://sprites/UI/Sprite91_1.png" id="17_7njhk"]
+[ext_resource type="Texture2D" uid="uid://bcfn4yhh885ke" path="res://sprites/UI/Sprite93_2.png" id="18_0w6p2"]
 [ext_resource type="Texture2D" uid="uid://5f8weghuk7af" path="res://sprites/UI/de_lang.png" id="18_8w8pu"]
+[ext_resource type="Texture2D" uid="uid://bwdakqbqcqdxe" path="res://sprites/UI/GamePadIcons/D_Pad_Down.png" id="18_xq0ok"]
 [ext_resource type="Texture2D" uid="uid://c4rtpl0xyspt5" path="res://sprites/UI/fr_lang.png" id="19_2fqwo"]
+[ext_resource type="Texture2D" uid="uid://cq5d7mwnitbda" path="res://sprites/UI/Sprite93_3.png" id="19_u8mpt"]
+[ext_resource type="Texture2D" uid="uid://la4o1louwuk" path="res://sprites/UI/Sprite129_2.png" id="20_3keoi"]
+[ext_resource type="Texture2D" uid="uid://vgmq7lkd2uag" path="res://sprites/UI/GamePadIcons/D_Pad_Up.png" id="21_wudp7"]
 [ext_resource type="Texture2D" uid="uid://6xguu85tawl4" path="res://sprites/UI/Sprite122_2.png" id="21_ycs42"]
 [ext_resource type="Texture2D" uid="uid://uh7wx7mubs6a" path="res://sprites/UI/Sprite122_3.png" id="22_j06xg"]
+[ext_resource type="Texture2D" uid="uid://igusq2ehudai" path="res://sprites/UI/Sprite71_1.png" id="23_x1uin"]
+[ext_resource type="Texture2D" uid="uid://n22akuoh814x" path="res://sprites/UI/Sprite92_2.png" id="24_25tad"]
+[ext_resource type="Texture2D" uid="uid://8qgyg3jdtt33" path="res://sprites/UI/Sprite92_3.png" id="25_7njhk"]
+[ext_resource type="Texture2D" uid="uid://c15rsx1x1uiro" path="res://sprites/UI/GamePadIcons/D_Pad_Left.png" id="25_e7lka"]
+[ext_resource type="Script" uid="uid://dkuq45g7egi02" path="res://scripts/ui/settings_tab_controller.gd" id="25_icjw7"]
 [ext_resource type="Texture2D" uid="uid://b8wfx7l7s3y7r" path="res://sprites/UI/Sprite145_1.png" id="26_3keoi"]
+[ext_resource type="Texture2D" uid="uid://x3xiarcl0mr7" path="res://sprites/UI/Sprite129_3.png" id="26_06trf"]
+[ext_resource type="Texture2D" uid="uid://cbx6p8xp8271b" path="res://sprites/UI/GamePadIcons/D_Pad_Right.png" id="26_xq0ok"]
 [ext_resource type="Texture2D" uid="uid://dsm5hqmxnvtvk" path="res://sprites/UI/Sprite145_2.png" id="27_ycs42"]
 [ext_resource type="Texture2D" uid="uid://b7ynt3e8rr3eg" path="res://sprites/UI/Sprite145_3.png" id="28_j06xg"]
 [ext_resource type="PackedScene" uid="uid://dyls7piyfv8fw" path="res://scenes/trophey_manager.tscn" id="30_j06xg"]
@@ -71,14 +94,6 @@ pressed = true
 [sub_resource type="Shortcut" id="Shortcut_kymv0"]
 events = [SubResource("InputEventJoypadButton_06trf")]
 
-[sub_resource type="Texture2D" id="Texture2D_2k6g3"]
-resource_local_to_scene = false
-resource_name = ""
-script = ExtResource("11_8w8pu")
-path = "joypad/x"
-show_mode = 2
-metadata/_custom_type_script = "uid://q40cdcs3d7fy"
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31krh"]
 bg_color = Color(0, 0, 0, 1)
 border_width_left = 2
@@ -109,14 +124,6 @@ pressed = true
 
 [sub_resource type="Shortcut" id="Shortcut_f3dm5"]
 events = [SubResource("InputEventJoypadButton_2c64j")]
-
-[sub_resource type="Texture2D" id="Texture2D_4mqy4"]
-resource_local_to_scene = false
-resource_name = ""
-script = ExtResource("11_8w8pu")
-path = "joypad/y"
-show_mode = 2
-metadata/_custom_type_script = "uid://q40cdcs3d7fy"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8w8pu"]
 bg_color = Color(0, 0, 0, 1)
@@ -149,28 +156,12 @@ pressed = true
 [sub_resource type="Shortcut" id="Shortcut_7epoo"]
 events = [SubResource("InputEventJoypadButton_dhh0j")]
 
-[sub_resource type="Texture2D" id="Texture2D_vdcj5"]
-resource_local_to_scene = false
-resource_name = ""
-script = ExtResource("11_8w8pu")
-path = "joypad/b"
-show_mode = 2
-metadata/_custom_type_script = "uid://q40cdcs3d7fy"
-
 [sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_f3dm5"]
 button_index = 12
 pressed = true
 
 [sub_resource type="Shortcut" id="Shortcut_x1uin"]
 events = [SubResource("InputEventJoypadButton_f3dm5")]
-
-[sub_resource type="Texture2D" id="Texture2D_c31mr"]
-resource_local_to_scene = false
-resource_name = ""
-script = ExtResource("11_8w8pu")
-path = "joypad/dpad_down"
-show_mode = 2
-metadata/_custom_type_script = "uid://q40cdcs3d7fy"
 
 [sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_xq0ok"]
 button_index = 14
@@ -182,19 +173,8 @@ events = [SubResource("InputEventJoypadButton_xq0ok")]
 [sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_26yvj"]
 pressed = true
 
-[sub_resource type="InputEventKey" id="InputEventKey_7epoo"]
-device = -1
-keycode = 4194309
-
 [sub_resource type="Shortcut" id="Shortcut_8w8pu"]
-events = [SubResource("InputEventJoypadButton_26yvj"), SubResource("InputEventKey_7epoo")]
-
-[sub_resource type="Texture2D" id="Texture2D_2fqwo"]
-resource_local_to_scene = false
-resource_name = ""
-script = ExtResource("11_8w8pu")
-path = "select"
-metadata/_custom_type_script = "uid://q40cdcs3d7fy"
+events = [SubResource("InputEventJoypadButton_26yvj")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_88w50"]
 device = -1
@@ -205,13 +185,6 @@ button_index = 4
 
 [sub_resource type="Shortcut" id="Shortcut_25tad"]
 events = [SubResource("InputEventKey_88w50"), SubResource("InputEventJoypadButton_r5ds8")]
-
-[sub_resource type="Texture2D" id="Texture2D_wudp7"]
-resource_local_to_scene = false
-resource_name = ""
-script = ExtResource("11_8w8pu")
-path = "go_back_to_level_select"
-metadata/_custom_type_script = "uid://q40cdcs3d7fy"
 
 [sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_7epoo"]
 button_index = 13
@@ -239,37 +212,19 @@ button_index = 12
 [sub_resource type="Shortcut" id="Shortcut_c31mr"]
 events = [SubResource("InputEventJoypadButton_vdcj5")]
 
-[sub_resource type="Texture2D" id="Texture2D_26yvj"]
-resource_local_to_scene = false
-resource_name = ""
-script = ExtResource("11_8w8pu")
-path = "joypad/dpad_left"
-show_mode = 2
-metadata/_custom_type_script = "uid://q40cdcs3d7fy"
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_icjw7"]
+button_index = 3
+pressed = true
 
-[sub_resource type="Texture2D" id="Texture2D_8w8pu"]
-resource_local_to_scene = false
-resource_name = ""
-script = ExtResource("11_8w8pu")
-path = "joypad/dpad_right"
-show_mode = 2
-metadata/_custom_type_script = "uid://q40cdcs3d7fy"
+[sub_resource type="Shortcut" id="Shortcut_5dex4"]
+events = [SubResource("InputEventJoypadButton_icjw7")]
 
-[sub_resource type="Texture2D" id="Texture2D_2w8yq"]
-resource_local_to_scene = false
-resource_name = ""
-script = ExtResource("11_8w8pu")
-path = "joypad/dpad_up"
-show_mode = 2
-metadata/_custom_type_script = "uid://q40cdcs3d7fy"
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_e7lka"]
+button_index = 12
+pressed = true
 
-[sub_resource type="Texture2D" id="Texture2D_xsg6l"]
-resource_local_to_scene = false
-resource_name = ""
-script = ExtResource("11_8w8pu")
-path = "joypad/dpad_down"
-show_mode = 2
-metadata/_custom_type_script = "uid://q40cdcs3d7fy"
+[sub_resource type="Shortcut" id="Shortcut_xq0ok"]
+events = [SubResource("InputEventJoypadButton_e7lka")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_5i12r"]
 device = -1
@@ -281,29 +236,6 @@ pressed = true
 
 [sub_resource type="Shortcut" id="Shortcut_vr2vt"]
 events = [SubResource("InputEventKey_5i12r"), SubResource("InputEventJoypadButton_kymv0")]
-
-[sub_resource type="Texture2D" id="Texture2D_8c1op"]
-resource_local_to_scene = false
-resource_name = ""
-script = ExtResource("11_8w8pu")
-path = "joypad/lb"
-show_mode = 2
-metadata/_custom_type_script = "uid://q40cdcs3d7fy"
-
-[sub_resource type="Texture2D" id="Texture2D_xg8mk"]
-resource_local_to_scene = false
-resource_name = ""
-script = ExtResource("11_8w8pu")
-path = "joypad/rb"
-show_mode = 2
-metadata/_custom_type_script = "uid://q40cdcs3d7fy"
-
-[sub_resource type="Texture2D" id="Texture2D_vho13"]
-resource_local_to_scene = false
-resource_name = ""
-script = ExtResource("11_8w8pu")
-path = "go_back_to_level_select"
-metadata/_custom_type_script = "uid://q40cdcs3d7fy"
 
 [node name="SettingsScene" type="Control" unique_id=1446389452]
 layout_mode = 3
@@ -344,12 +276,14 @@ metadata/_edit_lock_ = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 tab_alignment = 1
-current_tab = 0
+current_tab = 1
 tab_0/title = "S_T_M"
 tab_1/title = "S_T_GJ"
 tab_2/title = "S_T_L"
+tab_3/title = "S_T_C"
 
 [node name="Main" type="TabBar" parent="MarginContainer/TabContainer" unique_id=1084216178]
+visible = false
 layout_mode = 2
 script = ExtResource("3_7njhk")
 metadata/_tab_index = 0
@@ -385,14 +319,13 @@ layout_mode = 2
 theme_override_colors/font_pressed_color = Color(0, 0.7137255, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0.7137255, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0.7137255, 0, 1)
-theme_override_constants/icon_max_width = 32
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_wudp7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_e7lka")
 theme_override_styles/hover = SubResource("StyleBoxFlat_xq0ok")
 shortcut = SubResource("Shortcut_kymv0")
 text = "SM_E_D"
-icon = SubResource("Texture2D_2k6g3")
+icon = ExtResource("14_7epoo")
 
 [node name="Normal" type="Button" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1977891224]
 texture_filter = 3
@@ -400,13 +333,12 @@ layout_mode = 2
 theme_override_colors/font_pressed_color = Color(0.96862745, 0.5568628, 0.3372549, 1)
 theme_override_colors/font_hover_color = Color(0.96862745, 0.5568628, 0.3372549, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.96862745, 0.5568628, 0.3372549, 1)
-theme_override_constants/icon_max_width = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_wudp7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_31krh")
 theme_override_styles/hover = SubResource("StyleBoxFlat_26yvj")
 shortcut = SubResource("Shortcut_f3dm5")
 text = "SM_N_D"
-icon = SubResource("Texture2D_4mqy4")
+icon = ExtResource("15_icjw7")
 
 [node name="Hard" type="Button" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer/HBoxContainer" unique_id=814329296]
 texture_filter = 3
@@ -414,13 +346,12 @@ layout_mode = 2
 theme_override_colors/font_pressed_color = Color(0.93333334, 0.10980392, 0.14117648, 1)
 theme_override_colors/font_hover_color = Color(0.93333334, 0.10980392, 0.14117648, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.93333334, 0.10980392, 0.14117648, 1)
-theme_override_constants/icon_max_width = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_wudp7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8w8pu")
 theme_override_styles/hover = SubResource("StyleBoxFlat_2fqwo")
 shortcut = SubResource("Shortcut_7epoo")
 text = "SM_H_D"
-icon = SubResource("Texture2D_vdcj5")
+icon = ExtResource("16_5dex4")
 
 [node name="TextureRect" type="Label" parent="MarginContainer/TabContainer/Main/MarginContainer/VBoxContainer" unique_id=34169771]
 texture_filter = 3
@@ -444,14 +375,12 @@ theme_override_constants/margin_top = 227
 texture_filter = 3
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/icon_max_width = 42
 theme_override_font_sizes/font_size = 25
 shortcut = SubResource("Shortcut_x1uin")
 text = "SM_DF"
-icon = SubResource("Texture2D_c31mr")
+icon = ExtResource("18_xq0ok")
 
 [node name="GameJolt" type="TabBar" parent="MarginContainer/TabContainer" unique_id=1360443219]
-visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 script = ExtResource("13_25tad")
@@ -530,15 +459,13 @@ shortcut = SubResource("Shortcut_31krh")
 text = "SGJ_AUTH"
 icon = ExtResource("10_2fqwo")
 icon_alignment = 2
-expand_icon = true
 
 [node name="Login" type="Button" parent="MarginContainer/TabContainer/GameJolt/MarginContainer/VBoxContainer" unique_id=1026465825]
 layout_mode = 2
-theme_override_constants/icon_max_width = 64
 theme_override_font_sizes/font_size = 20
 shortcut = SubResource("Shortcut_8w8pu")
 text = "SGJ_L"
-icon = SubResource("Texture2D_2fqwo")
+icon = ExtResource("11_xq0ok")
 icon_alignment = 2
 
 [node name="Status" type="Label" parent="MarginContainer/TabContainer/GameJolt/MarginContainer/VBoxContainer" unique_id=321738179]
@@ -558,11 +485,10 @@ theme_override_constants/margin_bottom = 20
 [node name="Back" type="Button" parent="MarginContainer/TabContainer/GameJolt/MarginContainer/VBoxContainer/MarginContainer" unique_id=418951799]
 layout_mode = 2
 size_flags_vertical = 10
-theme_override_constants/icon_max_width = 64
 theme_override_font_sizes/font_size = 20
 shortcut = SubResource("Shortcut_25tad")
 text = "SGJ_B"
-icon = SubResource("Texture2D_wudp7")
+icon = ExtResource("12_31krh")
 icon_alignment = 2
 
 [node name="Language" type="TabBar" parent="MarginContainer/TabContainer" unique_id=151799268]
@@ -625,23 +551,70 @@ texture_hover = ExtResource("19_2fqwo")
 
 [node name="DPadLeft" type="Sprite2D" parent="MarginContainer/TabContainer/Language/Icons" unique_id=2050308705]
 position = Vector2(397, 105)
-scale = Vector2(0.5, 0.5)
-texture = SubResource("Texture2D_26yvj")
+texture = ExtResource("25_e7lka")
 
 [node name="DPadRight" type="Sprite2D" parent="MarginContainer/TabContainer/Language/Icons" unique_id=1200736293]
 position = Vector2(735.00006, 106)
-scale = Vector2(0.5, 0.5)
-texture = SubResource("Texture2D_8w8pu")
+texture = ExtResource("26_xq0ok")
 
 [node name="DPadUp" type="Sprite2D" parent="MarginContainer/TabContainer/Language/Icons" unique_id=526929380]
 position = Vector2(399, 216)
-scale = Vector2(0.5, 0.5)
-texture = SubResource("Texture2D_2w8yq")
+texture = ExtResource("21_wudp7")
 
 [node name="DPadDown" type="Sprite2D" parent="MarginContainer/TabContainer/Language/Icons" unique_id=486580656]
 position = Vector2(737, 210)
-scale = Vector2(0.5, 0.5)
-texture = SubResource("Texture2D_xsg6l")
+texture = ExtResource("18_xq0ok")
+
+[node name="Controller" type="TabBar" parent="MarginContainer/TabContainer" unique_id=160318442]
+visible = false
+layout_mode = 2
+script = ExtResource("25_icjw7")
+metadata/_tab_index = 3
+metadata/_tab_name = "S_T_C"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/Controller" unique_id=1116168424]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/Controller/MarginContainer" unique_id=1082865633]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Hints" type="CheckButton" parent="MarginContainer/TabContainer/Controller/MarginContainer/VBoxContainer" unique_id=1124011002]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+shortcut = SubResource("Shortcut_5dex4")
+text = "SC_SCH"
+icon = ExtResource("15_icjw7")
+icon_alignment = 2
+
+[node name="Label" type="Label" parent="MarginContainer/TabContainer/Controller/MarginContainer/VBoxContainer" unique_id=1865135576]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "SC_IT"
+horizontal_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/TabContainer/Controller/MarginContainer/VBoxContainer" unique_id=1517413168]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+shortcut = SubResource("Shortcut_xq0ok")
+alignment = 1
+selected = 0
+item_count = 3
+popup/item_0/text = "XBox"
+popup/item_0/id = 1
+popup/item_1/text = "PlayStation"
+popup/item_1/id = 0
+popup/item_2/text = "Nintendo"
+popup/item_2/id = 2
 
 [node name="Back" type="TextureButton" parent="." unique_id=160960496]
 z_index = 5
@@ -663,6 +636,22 @@ visible = false
 [node name="Sprites" type="Node2D" parent="." unique_id=508819131]
 visible = false
 
+[node name="Sprite710" type="Sprite2D" parent="Sprites" unique_id=891932238]
+position = Vector2(111, -305)
+texture = ExtResource("10_0w6p2")
+
+[node name="Sprite932" type="Sprite2D" parent="Sprites" unique_id=1218584020]
+position = Vector2(184, -36)
+texture = ExtResource("18_0w6p2")
+
+[node name="Sprite933" type="Sprite2D" parent="Sprites" unique_id=749202330]
+position = Vector2(256, -35)
+texture = ExtResource("19_u8mpt")
+
+[node name="Sprite1292" type="Sprite2D" parent="Sprites" unique_id=405398073]
+position = Vector2(333, -36)
+texture = ExtResource("20_3keoi")
+
 [node name="Sprite1222" type="Sprite2D" parent="Sprites" unique_id=5954811]
 position = Vector2(406, -148)
 texture = ExtResource("21_ycs42")
@@ -670,6 +659,22 @@ texture = ExtResource("21_ycs42")
 [node name="Sprite1223" type="Sprite2D" parent="Sprites" unique_id=1804203143]
 position = Vector2(675, -156)
 texture = ExtResource("22_j06xg")
+
+[node name="Sprite711" type="Sprite2D" parent="Sprites" unique_id=1687068602]
+position = Vector2(886, -160)
+texture = ExtResource("23_x1uin")
+
+[node name="Sprite922" type="Sprite2D" parent="Sprites" unique_id=1165527975]
+position = Vector2(37, -40)
+texture = ExtResource("20_3keoi")
+
+[node name="Sprite923" type="Sprite2D" parent="Sprites" unique_id=638422703]
+position = Vector2(110, -35)
+texture = ExtResource("25_7njhk")
+
+[node name="Sprite1293" type="Sprite2D" parent="Sprites" unique_id=277366722]
+position = Vector2(409, -37)
+texture = ExtResource("26_06trf")
 
 [node name="Sprite1450" type="Sprite2D" parent="Sprites" unique_id=973645934]
 position = Vector2(413, -238)
@@ -679,6 +684,10 @@ texture = ExtResource("11_u8mpt")
 position = Vector2(516, -237)
 texture = ExtResource("26_3keoi")
 
+[node name="Sprite1452" type="Sprite2D" parent="Sprites" unique_id=1451066005]
+position = Vector2(497, -36)
+texture = ExtResource("24_25tad")
+
 [node name="Sprite1453" type="Sprite2D" parent="Sprites" unique_id=1888791046]
 position = Vector2(308, -238)
 texture = ExtResource("28_j06xg")
@@ -687,6 +696,30 @@ texture = ExtResource("28_j06xg")
 position = Vector2(629, -233)
 texture = ExtResource("27_ycs42")
 
+[node name="Sprite1290" type="Sprite2D" parent="Sprites" unique_id=648913425]
+position = Vector2(674, -36)
+texture = ExtResource("6_57bi6")
+
+[node name="Sprite1291" type="Sprite2D" parent="Sprites" unique_id=1758143264]
+position = Vector2(594, -33)
+texture = ExtResource("7_h2ppu")
+
+[node name="Sprite920" type="Sprite2D" parent="Sprites" unique_id=1944559939]
+position = Vector2(773, -44)
+texture = ExtResource("4_n46hj")
+
+[node name="Sprite921" type="Sprite2D" parent="Sprites" unique_id=403393910]
+position = Vector2(1004, -46)
+texture = ExtResource("5_qx6cm")
+
+[node name="Sprite930" type="Sprite2D" parent="Sprites" unique_id=73417993]
+position = Vector2(919, -44)
+texture = ExtResource("8_xcp0h")
+
+[node name="Sprite931" type="Sprite2D" parent="Sprites" unique_id=302066058]
+position = Vector2(849, -45)
+texture = ExtResource("9_dxxbo")
+
 [node name="Sprite1220" type="Sprite2D" parent="Sprites" unique_id=892946072]
 position = Vector2(147, -219)
 texture = ExtResource("12_3keoi")
@@ -694,21 +727,6 @@ texture = ExtResource("12_3keoi")
 [node name="Sprite1221" type="Sprite2D" parent="Sprites" unique_id=668116455]
 position = Vector2(139, -125)
 texture = ExtResource("13_ycs42")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1901544097]
-position = Vector2(155, 38)
-scale = Vector2(0.5, 0.5)
-texture = SubResource("Texture2D_8c1op")
-
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=303970583]
-position = Vector2(1002, 40)
-scale = Vector2(0.5, 0.5)
-texture = SubResource("Texture2D_xg8mk")
-
-[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=603686437]
-position = Vector2(98, 33)
-scale = Vector2(0.5, 0.5)
-texture = SubResource("Texture2D_vho13")
 
 [connection signal="tab_changed" from="MarginContainer/TabContainer" to="." method="_on_tab_container_tab_changed"]
 [connection signal="tab_changed" from="MarginContainer/TabContainer" to="MarginContainer/TabContainer/GameJolt" method="_on_tab_container_tab_changed"]
@@ -725,4 +743,7 @@ texture = SubResource("Texture2D_vho13")
 [connection signal="pressed" from="MarginContainer/TabContainer/Language/MarginContainer2/HBoxContainer/Eng" to="MarginContainer/TabContainer/Language" method="_on_eng_pressed"]
 [connection signal="pressed" from="MarginContainer/TabContainer/Language/MarginContainer2/HBoxContainer/De" to="MarginContainer/TabContainer/Language" method="_on_de_pressed"]
 [connection signal="pressed" from="MarginContainer/TabContainer/Language/MarginContainer2/HBoxContainer/Fr" to="MarginContainer/TabContainer/Language" method="_on_fr_pressed"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Controller/MarginContainer/VBoxContainer/Hints" to="MarginContainer/TabContainer/Controller" method="_on_hints_toggled"]
+[connection signal="item_focused" from="MarginContainer/TabContainer/Controller/MarginContainer/VBoxContainer/OptionButton" to="." method="_on_option_button_item_focused"]
+[connection signal="item_selected" from="MarginContainer/TabContainer/Controller/MarginContainer/VBoxContainer/OptionButton" to="MarginContainer/TabContainer/Controller" method="_on_option_button_item_selected"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

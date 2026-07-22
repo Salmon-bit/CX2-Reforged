@@ -12,8 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://bw7seqn21o6tc" path="res://sounds/DeleteFile.wav" id="9_nw7og"]
 [ext_resource type="Texture2D" uid="uid://dcemmvbupw7ym" path="res://sprites/UI/Sprite125_2.png" id="10_nw7og"]
 [ext_resource type="Texture2D" uid="uid://b1w8vnirfty26" path="res://sprites/UI/Sprite128_1.png" id="11_jq3pa"]
-[ext_resource type="Texture2D" uid="uid://dalwejtdibb7k" path="res://sprites/UI/GamePadIcons/Circle.png" id="13_wbfx3"]
-[ext_resource type="Texture2D" uid="uid://dacym0huyllwk" path="res://sprites/UI/GamePadIcons/Cross.png" id="14_8gksr"]
+[ext_resource type="Script" uid="uid://q40cdcs3d7fy" path="res://addons/controller_icons/objects/ControllerIconTexture.gd" id="13_jq3pa"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_3u7pf"]
 device = -1
@@ -39,6 +38,22 @@ button_index = 1
 
 [sub_resource type="Shortcut" id="Shortcut_4et43"]
 events = [SubResource("InputEventKey_22fvg"), SubResource("InputEventJoypadButton_wbfx3")]
+
+[sub_resource type="Texture2D" id="Texture2D_e7lka"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("13_jq3pa")
+path = "joypad/b"
+show_mode = 2
+metadata/_custom_type_script = "uid://q40cdcs3d7fy"
+
+[sub_resource type="Texture2D" id="Texture2D_5dex4"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("13_jq3pa")
+path = "joypad/a"
+show_mode = 2
+metadata/_custom_type_script = "uid://q40cdcs3d7fy"
 
 [node name="DeleteFileDialog" type="Control" unique_id=520098511]
 layout_mode = 3
@@ -163,11 +178,13 @@ texture = ExtResource("8_8gksr")
 
 [node name="Circle" type="Sprite2D" parent="Icons/PS" unique_id=935854685]
 position = Vector2(897, 453.00003)
-texture = ExtResource("13_wbfx3")
+scale = Vector2(0.5, 0.5)
+texture = SubResource("Texture2D_e7lka")
 
 [node name="Cross" type="Sprite2D" parent="Icons/PS" unique_id=1088469488]
 position = Vector2(259, 454)
-texture = ExtResource("14_8gksr")
+scale = Vector2(0.5, 0.5)
+texture = SubResource("Texture2D_5dex4")
 
 [connection signal="pressed" from="HBoxContainer/MarginContainer/Yes" to="." method="_on_yes_pressed"]
 [connection signal="pressed" from="HBoxContainer/MarginContainer2/DeleteFile" to="." method="_on_delete_file_pressed"]

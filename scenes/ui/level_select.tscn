@@ -19,8 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://cq8rp66gew2lk" path="res://sprites/UI/Sprite42_0.png" id="17_xogkw"]
 [ext_resource type="Texture2D" uid="uid://dgg2gqod2ndly" path="res://sprites/UI/Sprite74_0.png" id="18_8rxl4"]
 [ext_resource type="Texture2D" uid="uid://b12ldxvc2rwbx" path="res://sprites/UI/Sprite50_0.png" id="18_d1lmv"]
-[ext_resource type="Texture2D" uid="uid://ctes2wsvndky2" path="res://sprites/UI/GamePadIcons/Share.png" id="19_d1lmv"]
 [ext_resource type="Texture2D" uid="uid://chyk53hbyyuwn" path="res://sprites/UI/Sprite262_0.png" id="19_jwqqo"]
+[ext_resource type="Script" uid="uid://q40cdcs3d7fy" path="res://addons/controller_icons/objects/ControllerIconTexture.gd" id="19_ua01m"]
 [ext_resource type="Texture2D" uid="uid://q78fh4yeskas" path="res://sprites/UI/pointer.png" id="20_4o8hj"]
 [ext_resource type="Texture2D" uid="uid://74sn0n7dylop" path="res://sprites/UI/shield.png" id="20_s5ke1"]
 [ext_resource type="Theme" uid="uid://cari6vcvs5b5u" path="res://themes/main.tres" id="20_vln0j"]
@@ -37,6 +37,13 @@ pressed = true
 
 [sub_resource type="Shortcut" id="Shortcut_0rr43"]
 events = [SubResource("InputEventKey_wh1jf"), SubResource("InputEventJoypadButton_xogkw")]
+
+[sub_resource type="Texture2D" id="Texture2D_xq0ok"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("19_ua01m")
+path = "go_back_to_level_select"
+metadata/_custom_type_script = "uid://q40cdcs3d7fy"
 
 [node name="LevelSelect" type="Control" unique_id=1199517008]
 layout_mode = 3
@@ -132,7 +139,8 @@ texture = ExtResource("18_d1lmv")
 
 [node name="Share" type="Sprite2D" parent="Icons/PS" unique_id=1989561991]
 position = Vector2(94.00001, 34)
-texture = ExtResource("19_d1lmv")
+scale = Vector2(0.5, 0.5)
+texture = SubResource("Texture2D_xq0ok")
 
 [node name="Pointer" type="Sprite2D" parent="." unique_id=193080233]
 position = Vector2(170, 101)
