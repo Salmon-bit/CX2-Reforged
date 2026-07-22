@@ -11,7 +11,7 @@ size = Vector2(64, 64)
 size = Vector2(62, 62)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jr3ju"]
-radius = 64.0
+radius = 113.004425
 
 [node name="TNT" type="StaticBody2D" unique_id=2043573920]
 script = ExtResource("1_qwopj")
@@ -36,12 +36,14 @@ debug_color = Color(0.99827987, 0, 0.15724844, 0.41960785)
 
 [node name="ExpoldeSprite" type="Sprite2D" parent="." unique_id=546374089]
 visible = false
-position = Vector2(2, -3)
+scale = Vector2(1.4921875, 1.4921875)
 texture = ExtResource("2_qwopj")
 
 [node name="Timer" type="Timer" parent="." unique_id=179786016]
-wait_time = 0.3
+wait_time = 0.15
 one_shot = true
+
+[node name="I_AM_TNT" type="Node" parent="." unique_id=282827403]
 
 [connection signal="area_entered" from="DetonateHitbox" to="." method="_on_detonate_hitbox_area_entered"]
 [connection signal="body_entered" from="ExplodeArea" to="." method="_on_explode_area_body_entered"]
