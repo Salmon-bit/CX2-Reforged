@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://o4cjuggfbaeu" path="res://scripts/Terrain/tnt.gd" id="1_qwopj"]
 [ext_resource type="Texture2D" uid="uid://hty8uqwtrq5b" path="res://sprites/Terrain/Sprite54_0.png" id="1_xuea5"]
 [ext_resource type="Texture2D" uid="uid://j80cyvvio4av" path="res://sprites/Particles/Sprite55_0.png" id="2_qwopj"]
+[ext_resource type="AudioStream" uid="uid://cc0wjoeyqxb4s" path="res://sounds/BombExplode.wav" id="4_86q7n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jr3ju"]
 size = Vector2(64, 64)
@@ -44,6 +45,13 @@ wait_time = 0.15
 one_shot = true
 
 [node name="I_AM_TNT" type="Node" parent="." unique_id=282827403]
+
+[node name="Ambient" type="AudioStreamPlayer2D" parent="." unique_id=1642714774]
+position = Vector2(1, 15)
+stream = ExtResource("4_86q7n")
+volume_db = 1.0
+max_distance = 4096.0
+max_polyphony = 100
 
 [connection signal="area_entered" from="DetonateHitbox" to="." method="_on_detonate_hitbox_area_entered"]
 [connection signal="body_entered" from="ExplodeArea" to="." method="_on_explode_area_body_entered"]

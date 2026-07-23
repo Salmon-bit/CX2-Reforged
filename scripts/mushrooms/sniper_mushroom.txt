@@ -1,0 +1,30 @@
+extends BasicMushroom
+
+var is_sniping = false
+@onready var rc = $RayCast2D
+
+func after_tick():
+	if is_sniping:
+		$SnipeTimer.start()
+		rc.target_position = to_local(player.global_position)
+		rc.force_raycast_update()
+		
+		if rc.is_colliding():
+			var hit_object: Node2D = rc.get_collider()
+			
+			if hit_object.get_node_or_null("I_AM_PLAYER") != null:
+				player.lock()
+			else:
+				player.unlock()
+				$SnipeTimer.stop()
+				is_sniping = false
+		
+		if player.is_locked and $SnipeTimer.time_left == 0.0:
+			shoot()
+
+func ranged_attack():
+	if player.global_position.distance_to(self.global_position) <= 300:
+		is_sniping = true
+
+func shoot():
+	print("[SniperMushroom]: Shooting...")

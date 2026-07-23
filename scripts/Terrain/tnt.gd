@@ -5,6 +5,7 @@ var is_exploding = false
 var tnts = []
 
 func explode():
+	$Ambient.play()
 	if not is_exploding:
 		is_exploding = true
 		$ExpoldeSprite.show()

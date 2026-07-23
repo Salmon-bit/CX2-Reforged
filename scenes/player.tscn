@@ -12,8 +12,11 @@
 [ext_resource type="PackedScene" uid="uid://cajdpua2jyhi5" path="res://scenes/projectiles/arrow.tscn" id="6_tuyoq"]
 [ext_resource type="AudioStream" uid="uid://1jgeo8den3t4" path="res://sounds/Damage.wav" id="8_smehm"]
 [ext_resource type="Script" uid="uid://dnfc44lsn374t" path="res://scripts/spawner.gd" id="12_3v2ag"]
+[ext_resource type="AudioStream" uid="uid://bpptrd2v3ff0e" path="res://sounds/SniperLock.wav" id="12_a8ls1"]
 [ext_resource type="PackedScene" uid="uid://bo2losumakt3j" path="res://scenes/projectiles/golden_arrow.tscn" id="13_jej6c"]
+[ext_resource type="AudioStream" uid="uid://cbupq6ytvqy43" path="res://sounds/SniperUnlock.wav" id="13_qfm1y"]
 [ext_resource type="PackedScene" uid="uid://br1j55s1250xa" path="res://scenes/projectiles/through_arrow.tscn" id="14_f1ej7"]
+[ext_resource type="Texture2D" uid="uid://dccv1e0mkui5m" path="res://sprites/UI/Sprite49_0.png" id="17_qfm1y"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g2els"]
 animations = [{
@@ -110,6 +113,14 @@ stream = ExtResource("8_smehm")
 volume_db = -10.306
 max_polyphony = 5
 
+[node name="SniperLock" type="AudioStreamPlayer2D" parent="Sounds" unique_id=1183547483]
+position = Vector2(2, 0)
+stream = ExtResource("12_a8ls1")
+
+[node name="SniperUnlock" type="AudioStreamPlayer2D" parent="Sounds" unique_id=965520603]
+position = Vector2(1, 4)
+stream = ExtResource("13_qfm1y")
+
 [node name="AbilitySpawners" type="Node2D" parent="." unique_id=231307837]
 
 [node name="Golden" type="Node2D" parent="AbilitySpawners" unique_id=1124942779]
@@ -119,3 +130,9 @@ object = ExtResource("13_jej6c")
 [node name="Through" type="Node2D" parent="AbilitySpawners" unique_id=1478175138]
 script = ExtResource("12_3v2ag")
 object = ExtResource("14_f1ej7")
+
+[node name="I_AM_PLAYER" type="Node" parent="." unique_id=1343481040]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=502341954]
+visible = false
+texture = ExtResource("17_qfm1y")

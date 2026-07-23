@@ -19,17 +19,18 @@ class_name BasicMushroom
 @export var low_hp = 30
 
 # Non configurable vars
-@onready var player: CharacterBody2D
+var player: CharacterBody2D
 var can_damage_player = false
 var can_damage_box = false
 var dead = false
 var damaging_box: StaticBody2D
 var changed_speed = false
-var target: Vector2
 
 func _ready() -> void:
 	animated_sprite.animation = "default"
 	animated_sprite.play()
+	player = get_parent().get_parent().get_node("Player")
+	navigator.target_position = player.global_position
 	hitbox.area_entered.connect(_on_area_2d_area_entered)
 	hitbox.area_exited.connect(_on_area_2d_area_exited)
 	navigator.path_postprocessing = NavigationPathQueryParameters2D.PATH_POSTPROCESSING_EDGECENTERED
@@ -46,17 +47,11 @@ func _physics_process(delta: float) -> void:
 
 func _process(_delta: float) -> void:
 	before_tick()
-	if player == null:
-		target = Vector2(0,0)
-		player = get_parent().get_parent().get_node("Player")
-	else:
-		target = player.global_position
-	
 	if hp == null:
 		hp = 100
 	if path_update_timer.time_left == 0.0 and not dead:
-		if navigator.target_position != target:
-			navigator.target_position = target
+		if navigator.target_position != player.global_position:
+			navigator.target_position = player.global_position
 		path_update_timer.start()
 
 	HP_label.text = "HP: " + str(hp)

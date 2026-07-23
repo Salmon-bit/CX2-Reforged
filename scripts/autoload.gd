@@ -52,6 +52,7 @@ var data = {
 		false,
 		false,
 		false,
+		false,
 		false
 	],
 	"show_controller_hints": false,
@@ -116,6 +117,7 @@ const null_data = {
 	"kills": 0,
 	"deaths": 0,
 	"tropheys": [
+		false,
 		false,
 		false,
 		false,

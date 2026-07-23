@@ -9,9 +9,16 @@ var arrow_speed = 600
 var hp = 100
 var dead = false
 var ability_spawner: Node2D
+var is_locked = false
 @export var ability_reload_time: float = 5
 
 func _ready() -> void:
+	
+	var mushrooms: Array = get_parent().get_node("Enemies").get_children()
+	
+	for m in mushrooms:
+		m.player = self
+	
 	if Autoload.data.difficulty == "easy":
 		hp = 300
 	elif Autoload.data.difficulty == "hard":
@@ -26,6 +33,8 @@ func _ready() -> void:
 			ability_spawner = null
 	
 	ability_delay = ability_reload_time
+	
+	
 	
 	bow = $Bow
 
@@ -139,3 +148,15 @@ func attack(damage_points: int):
 	hp -= damage_points
 	if len(Input.get_connected_joypads()) != 0:
 			Input.start_joy_vibration(0, 0.5, 0.1, 0.2)
+
+func lock():
+	if not is_locked:
+		$Sounds/SniperLock.play()
+	is_locked = true
+	$Sprite2D.show()
+
+func unlock():
+	if is_locked:
+		$Sounds/SniperUnlock.play()
+	is_locked = false
+	$Sprite2D.hide()

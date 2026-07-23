@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://cd6kwtvg8lgrs" path="res://sounds/Ambient.mp3" id="7_uwlxl"]
 [ext_resource type="PackedScene" uid="uid://cydhwdtrcoq08" path="res://scenes/mushrooms/blue_mushroom.tscn" id="8_4wfvb"]
 [ext_resource type="PackedScene" uid="uid://mcinvy3iq3td" path="res://scenes/mushrooms/red_mushroom.tscn" id="9_tqv5a"]
+[ext_resource type="PackedScene" uid="uid://bvupi5half80p" path="res://scenes/mushrooms/sniper_mushroom.tscn" id="12_uwlxl"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_8c1op"]
 vertices = PackedVector2Array(586, 970, 1270, 1014, 73.97656, 1014, 438, 970, 1270, 586, 1206, 586, 1034, 438, 970, 438, 970, 74, 1270, 74, 1270, 438, 1206, 438, 1034, 586, 886.02344, 586, 886, 522, 586, 566, 822, 522, 118, 714, 438, 714, 72.02344, 74, 118, 566, 822, 74)
@@ -41,6 +42,9 @@ metadata/_edit_lock_ = true
 
 [node name="Enemies" type="Node" parent="." unique_id=1592238417]
 script = ExtResource("4_m5qie")
+
+[node name="SniperMushroom" parent="Enemies" unique_id=1471030139 instance=ExtResource("12_uwlxl")]
+position = Vector2(1120, 184)
 
 [node name="BlueMushroom" parent="Enemies" unique_id=2067160369 instance=ExtResource("8_4wfvb")]
 position = Vector2(160, 872)
