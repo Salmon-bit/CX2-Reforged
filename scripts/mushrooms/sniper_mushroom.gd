@@ -8,7 +8,7 @@ var timer_started = false
 func before_tick():
 	if dead:
 		self.speed = Autoload.SPEEDS.STOPPED
-		player.unlock()
+		player.unlock(self)
 
 func after_tick():
 	if is_sniping and not dead:
@@ -27,22 +27,24 @@ func after_tick():
 			
 			# Проверяем, что луч попал именно в игрока, а не в стену/тайлмап
 			if hit_object.get_node_or_null("I_AM_PLAYER") != null:
-				player.lock()
+				player.lock(self)
 				if not timer_started:
 					$SnipeTimer.start()
 					timer_started = true
 			else:
 				# Если луч уперся в стену или что-то другое - разблокируем
-				player.unlock()
+				player.unlock(self)
 				$SnipeTimer.stop()
 				is_sniping = false
+				timer_started = false
 		else:
 			# Если луч ни во что не попал - разблокируем
-			player.unlock()
+			player.unlock(self)
 			$SnipeTimer.stop()
 			is_sniping = false
+			timer_started = false
 
-	if not player.is_locked:
+	if not is_sniping:
 		if hp <= low_hp:
 			self.speed = Autoload.SPEEDS.VERY_SLOW
 		else:
@@ -58,7 +60,7 @@ func ranged_attack():
 func shoot():
 	if not dead:
 		is_sniping = false
-		player.unlock()
+		player.unlock(self)
 		print("[" + self.name + "]: Shooting...")
 		$ShootSound.play()
 		
@@ -77,5 +79,8 @@ func shoot():
 
 func _on_snipe_timer_timeout() -> void:
 	timer_started = false
-	if player.is_locked and not dead:
+	# Решение о выстреле теперь основано на собственном состоянии прицеливания
+	# этого гриба (is_sniping), а не на общем player.is_locked - иначе
+	# второй снайпер мог сбить прицел/отменить выстрел этого своей unlock().
+	if is_sniping and not dead:
 		shoot()

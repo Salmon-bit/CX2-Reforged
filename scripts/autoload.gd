@@ -135,6 +135,10 @@ const null_data = {
 }
 
 const save_file = "user://save.json"
+# Скрытый файл со статистикой/секретными данными - хранится в бинарном
+# формате Godot (store_var), а не в читаемом JSON, специально для того,
+# чтобы его нельзя было легко открыть и отредактировать в текстовом
+# редакторе (используется для пасхалок).
 const save_stats = "user://stats.save"
 
 enum SPEEDS {STOPPED = 0, VERY_SLOW = 2500, SLOW = 5000, FAST = 10000, QUICK = 15000}
@@ -178,6 +182,20 @@ func _ready() -> void:
 	GameJolt.set_game_id(GameId.game_id)
 	GameJolt.set_private_key(GameId.secret_key)
 	
+	var main_exists = FileAccess.file_exists(save_file)
+	var stats_exists = FileAccess.file_exists(save_stats)
+	
+	if not main_exists and not stats_exists:
+		# Совсем свежая установка - создаём оба файла с дефолтными данными
+		data = null_data.duplicate(true)
+		save_data(data)
+	else:
+		load_data()
+		# Если один из двух файлов отсутствовал или был повреждён - тут же
+		# пересоздаём его из уже загруженных/дефолтных значений. Второй файл
+		# при этом не трогаем, поэтому его данные не теряются.
+		save_data(data)
+	
 	if data.auto_auth:
 		GameJolt.set_user_name(data.username)
 		GameJolt.set_user_token(data.usertoken)
@@ -185,29 +203,14 @@ func _ready() -> void:
 	get_tree().scene_changed.connect(scene_changed)
 	GameJolt.scores_fetch_completed.connect(fetched_scores)
 	
-	if FileAccess.open(save_file, FileAccess.READ) == null:
-		FileAccess.open(save_file, FileAccess.WRITE).store_string(JSON.stringify(null_data, "  "))
-	else:
-		load_data()
-	
 	TranslationServer.set_locale(data.lang)
-	
-	
-func save_data(dat = data):
+
+
+func save_data(dat = data) -> void:
 	print("[SAVE]: Started saving data...")
-	var file_stats = FileAccess.open(save_stats, FileAccess.WRITE)
-	var save = FileAccess.open(save_file, FileAccess.WRITE)
 	
-	var stats = {
-			"kills": dat.kills,
-			"deaths": dat.deaths,
-			"level": dat.level,
-			"money": dat.money,
-			"skins": dat.skins,
-			"username": dat.username,
-			"usertoken": dat.usertoken,
-			"tropheys": dat.tropheys
-		}
+	# Открытая часть - её безопасно редактировать руками, ни на что критичное
+	# в прохождении не влияет.
 	var other_data = {
 			"skin": dat.skin,
 			"ability": dat.ability,
@@ -217,52 +220,75 @@ func save_data(dat = data):
 			"difficulty": dat.difficulty,
 			"have_auth": dat.have_auth,
 			"lang": dat.lang,
-			"show_controller_hints": dat.show_controller_hints
+			"show_controller_hints": dat.show_controller_hints,
+		}
+	# Закрытая часть - напрямую влияет на прогресс/статистику, хранится в
+	# бинарном виде (не читается и не правится текстовым редактором).
+	var stats = {
+			"kills": dat.kills,
+			"deaths": dat.deaths,
+			"level": dat.level,
+			"money": dat.money,
+			"skins": dat.skins,
+			"username": dat.username,
+			"usertoken": dat.usertoken,
+			"tropheys": dat.tropheys,
 		}
 	
-	file_stats.store_var(stats)
-	file_stats.close()
+	var save = FileAccess.open(save_file, FileAccess.WRITE)
+	if save != null:
+		save.store_string(JSON.stringify(other_data, "  "))
+		save.close()
+	else:
+		push_error("[SAVE]: Could not open save.json for writing!")
 	
-	save.store_string(JSON.stringify(other_data, "  "))
-	save.close()
+	var file_stats = FileAccess.open(save_stats, FileAccess.WRITE)
+	if file_stats != null:
+		file_stats.store_var(stats)
+		file_stats.close()
+	else:
+		push_error("[SAVE]: Could not open stats.save for writing!")
 	
 	print("[SAVE]: Data saved!")
 
-func load_data():
+
+func load_data() -> void:
 	print("[LOAD]: Started loading data...")
-	var file_main = FileAccess.open(save_file, FileAccess.READ)
-	var file_stats = FileAccess.open(save_stats, FileAccess.READ)
-	var other_data = {}
-	var stats_data = {}
+	# Начинаем с дефолтов, чтобы если один из файлов отсутствует/битый -
+	# в этой части просто останутся дефолтные значения, а не пропадут
+	# ключи целиком и не обнулится то, что успешно загрузилось из второго файла.
+	var merged: Dictionary = null_data.duplicate(true)
 	
-	var json = JSON.new()
-	var error = null
+	var file_main = FileAccess.open(save_file, FileAccess.READ)
 	if file_main != null:
 		var json_string = file_main.get_as_text()
 		file_main.close()
-		error = json.parse(json_string)
-		if error == OK:
-			other_data = json.data
+		var json = JSON.new()
+		var error = json.parse(json_string)
+		if error == OK and typeof(json.data) == TYPE_DICTIONARY:
+			merged.merge(json.data, true)
+		else:
+			push_warning("[LOAD]: save.json is corrupted, using defaults for that part.")
 	else:
-		print("[LOAD]: No main save file!")
-		clear_data()
-		
+		print("[LOAD]: No save.json - using defaults for that part.")
+	
+	var file_stats = FileAccess.open(save_stats, FileAccess.READ)
 	if file_stats != null:
-		stats_data = file_stats.get_var()
+		var stats_data = file_stats.get_var()
+		file_stats.close()
+		if typeof(stats_data) == TYPE_DICTIONARY:
+			merged.merge(stats_data, true)
+		else:
+			push_warning("[LOAD]: stats.save is corrupted, using defaults for that part.")
 	else:
-		print("[LOAD]: No stats save file!")
-		clear_data()
+		print("[LOAD]: No stats.save - using defaults for that part.")
 	
-	var output = {}
-	output.merge(other_data)
-	output.merge(stats_data)
-	
-	data = output
+	data = merged
 	print("[LOAD]: Data loaded!")
 
-func clear_data():
-	save_data(null_data)
-	load_data()
+func clear_data() -> void:
+	data = null_data.duplicate(true)
+	save_data(data)
 
 func click():
 	$ClickSound.play()

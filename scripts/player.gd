@@ -10,6 +10,7 @@ var hp = 100
 var dead = false
 var ability_spawner: Node2D
 var is_locked = false
+var locking_sources: Array = []
 @export var ability_reload_time: float = 5
 
 func _ready() -> void:
@@ -149,14 +150,23 @@ func attack(damage_points: int):
 	if len(Input.get_connected_joypads()) != 0:
 			Input.start_joy_vibration(0, 0.5, 0.1, 0.2)
 
-func lock():
+func lock(source = null):
+	# Несколько снайперов могут держать прицел одновременно - считаем источники,
+	# чтобы одна разблокировка от одного гриба не сбивала прицел другого.
+	if source != null and not locking_sources.has(source):
+		locking_sources.append(source)
 	if not is_locked:
 		$Sounds/SniperLock.play()
 	is_locked = true
 	$Sprite2D.show()
 
-func unlock():
+func unlock(source = null):
+	if source != null:
+		locking_sources.erase(source)
+		if not locking_sources.is_empty():
+			return # другой снайпер всё ещё держит прицел - не сбрасываем
 	if is_locked:
 		$Sounds/SniperUnlock.play()
 	is_locked = false
+	locking_sources.clear()
 	$Sprite2D.hide()
