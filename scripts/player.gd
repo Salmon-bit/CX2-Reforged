@@ -14,12 +14,6 @@ var locking_sources: Array = []
 @export var ability_reload_time: float = 5
 
 func _ready() -> void:
-	
-	var mushrooms: Array = get_parent().get_node("Enemies").get_children()
-	
-	for m in mushrooms:
-		m.player = self
-	
 	if Autoload.data.difficulty == "easy":
 		hp = 300
 	elif Autoload.data.difficulty == "hard":
