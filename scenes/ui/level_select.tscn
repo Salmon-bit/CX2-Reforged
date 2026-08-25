@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://qj0bwe3cq1yc" path="res://sprites/UI/Sprite35_1.png" id="11_ecnhd"]
 [ext_resource type="Texture2D" uid="uid://dfwycbow4xu4n" path="res://sprites/UI/Sprite40_0.png" id="12_ua01m"]
 [ext_resource type="Texture2D" uid="uid://daub0pk3qodew" path="res://sprites/UI/Sprite40_1.png" id="13_uyspq"]
+[ext_resource type="Texture2D" uid="uid://dwir1xmedfvi3" path="res://sprites/UI/Sprite57_0.png" id="14_0ayl1"]
+[ext_resource type="Texture2D" uid="uid://buqprp15amxyv" path="res://sprites/UI/Sprite57_1.png" id="15_l4quc"]
 [ext_resource type="Texture2D" uid="uid://cq8rp66gew2lk" path="res://sprites/UI/Sprite42_0.png" id="17_xogkw"]
 [ext_resource type="Texture2D" uid="uid://dgg2gqod2ndly" path="res://sprites/UI/Sprite74_0.png" id="18_8rxl4"]
 [ext_resource type="Texture2D" uid="uid://b12ldxvc2rwbx" path="res://sprites/UI/Sprite50_0.png" id="18_d1lmv"]
@@ -111,9 +113,11 @@ texture_normal = ExtResource("12_ua01m")
 texture_pressed = ExtResource("13_uyspq")
 texture_hover = ExtResource("13_uyspq")
 
-[node name="Sprite210" type="Sprite2D" parent="." unique_id=189461305]
-position = Vector2(49, -38)
-texture = ExtResource("8_i7y2i")
+[node name="Level7" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=542245295]
+layout_mode = 2
+texture_normal = ExtResource("14_0ayl1")
+texture_pressed = ExtResource("15_l4quc")
+texture_hover = ExtResource("15_l4quc")
 
 [node name="BackBtn" type="TextureButton" parent="." unique_id=1095225944]
 layout_mode = 1
@@ -125,6 +129,10 @@ texture_pressed = ExtResource("10_0rr43")
 texture_hover = ExtResource("10_0rr43")
 flip_h = true
 
+[node name="Sprite210" type="Sprite2D" parent="." unique_id=189461305]
+position = Vector2(49, -38)
+texture = ExtResource("8_i7y2i")
+
 [node name="Sprite420" type="Sprite2D" parent="." unique_id=1100595231]
 position = Vector2(40, 378)
 texture = ExtResource("17_xogkw")
@@ -132,6 +140,10 @@ texture = ExtResource("17_xogkw")
 [node name="Sprite500" type="Sprite2D" parent="." unique_id=864025248]
 position = Vector2(35, 243)
 texture = ExtResource("18_d1lmv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1886785540]
+position = Vector2(37, 516)
+texture = ExtResource("19_jwqqo")
 
 [node name="Icons" type="Node2D" parent="." unique_id=165172418]
 
