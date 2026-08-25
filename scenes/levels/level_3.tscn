@@ -29,6 +29,8 @@ layer_0/tile_data = PackedInt32Array(0, 65569, 0, 65536, 65569, 0, 131072, 65569
 layer_1/name = "InteractableObjects"
 layer_1/tile_data = PackedInt32Array(393221, 36, 196608, 458757, 36, 196608, 524293, 36, 196608, 393220, 36, 196608, 458756, 36, 196608, 655361, 36, 196608, 720897, 36, 196608, 720898, 36, 196608, 131073, 36, 196608, 65537, 36, 196608, 65538, 36, 196608, 720908, 36, 65536, 458766, 36, 65536)
 
+[node name="I_AM_TILEMAP" type="Node" parent="TileMap" unique_id=2023741821]
+
 [node name="Player" parent="." unique_id=1542968218 instance=ExtResource("3_0ljxa")]
 position = Vector2(266, 244)
 

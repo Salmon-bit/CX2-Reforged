@@ -30,6 +30,8 @@ layer_0/tile_data = PackedInt32Array(0, 65569, 0, 65536, 65569, 0, 131072, 65569
 layer_1/name = "Boxes"
 layer_1/tile_data = PackedInt32Array(131078, 36, 196608, 196614, 36, 131072, 262150, 36, 196608, 262151, 36, 196608, 262152, 36, 196608, 196617, 36, 196608, 131081, 36, 196608, 131080, 36, 196608, 131079, 36, 196608, 262153, 36, 196608, 196615, 36, 131072, 196616, 36, 131072)
 
+[node name="I_AM_TILEMAP" type="Node" parent="TileMap" unique_id=494050825]
+
 [node name="Player" parent="." unique_id=1542968218 instance=ExtResource("3_a5rnb")]
 position = Vector2(144, 152)
 
