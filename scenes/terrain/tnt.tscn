@@ -30,6 +30,7 @@ shape = SubResource("RectangleShape2D_8c1op")
 debug_color = Color(0.63051826, 0.52990776, 0, 0.41960785)
 
 [node name="ExplodeArea" type="Area2D" parent="." unique_id=1955138115]
+collision_mask = 31
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExplodeArea" unique_id=1925629768]
 shape = SubResource("CircleShape2D_jr3ju")

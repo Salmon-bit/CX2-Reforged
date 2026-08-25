@@ -19,7 +19,7 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(1, 4, -2, 578, 1281, 577, 1283, 4)])
 agent_radius = 5.0
 
-[node name="Level1" type="Node2D" unique_id=4907739]
+[node name="Level0" type="Node2D" unique_id=4907739]
 script = ExtResource("1_jmx14")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=112310595]

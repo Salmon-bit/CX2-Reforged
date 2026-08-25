@@ -42,6 +42,8 @@ func _on_explode_area_body_exited(body: Node2D) -> void:
 		targets.pop_at(targets.find(body))
 	if body.get_node_or_null("I_AM_MUSHROOM") and body in targets:
 		targets.pop_at(targets.find(body))
+	if body.get_node_or_null("I_AM_BOX") != null and body in targets:
+		targets.pop_at(targets.find(body))
 
 func _on_timer_timeout() -> void:
 	for i in tnts:
