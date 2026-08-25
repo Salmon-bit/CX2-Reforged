@@ -64,6 +64,8 @@ func _process(delta: float) -> void:
 		get_tree().change_scene_to_file("res://scenes/ui/level_select.tscn")
 
 func _physics_process(delta: float) -> void:
+	if dead:
+		return
 	var direction_x := Input.get_axis("go_left", "go_right")
 	var direction_y := Input.get_axis("go_up", "go_down")
 
