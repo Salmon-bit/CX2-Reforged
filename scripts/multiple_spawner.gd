@@ -19,7 +19,7 @@ func spawn() -> void:
 			spawnling = mo[1].instantiate()
 			break
 		else:
-			spawnling = objects[len(objects) - 1].instantiate()
+			spawnling = objects[randi_range(0, 2)].instantiate()
 	
 	spawnling.position.x = get_parent().position.x
 	spawnling.position.y = get_parent().position.y

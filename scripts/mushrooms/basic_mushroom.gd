@@ -51,7 +51,7 @@ func _process(_delta: float) -> void:
 		player = get_parent().get_parent().get_node("Player")
 	else:
 		target = player.global_position
-	
+
 	if hp == null:
 		hp = 100
 	if path_update_timer.time_left == 0.0 and not dead:
@@ -80,6 +80,7 @@ func _process(_delta: float) -> void:
 		dead = true
 		speed = Autoload.SPEEDS.STOPPED
 		HP_label.text = ""
+		return
 
 	elif hp <= low_hp and change_speed_on_low_hp:
 		animated_sprite.animation = "bad"

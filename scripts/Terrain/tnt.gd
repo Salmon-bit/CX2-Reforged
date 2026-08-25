@@ -16,14 +16,14 @@ func explode():
 			else:
 				target.attack(40)
 
-
 func _on_explode_area_body_entered(body: Node2D) -> void:
 	if\
 	(body.get_node_or_null("I_AM_MUSHROOM_ARROW") == null and body.get_node_or_null("I_AM_ARROW") == null)\
 	and\
 	(body is not StaticBody2D or body.get_node_or_null("I_AM_TNT") != null):
-			targets.append(body)
-
+		targets.append(body)
+	if body.get_node_or_null("I_AM_MUSHROOM") and body not in targets:
+		targets.append(body)
 
 func _on_explode_area_body_exited(body: Node2D) -> void:
 	if\
@@ -31,7 +31,8 @@ func _on_explode_area_body_exited(body: Node2D) -> void:
 	and\
 	(body is not StaticBody2D or body.get_node_or_null("I_AM_TNT") != null):
 		targets.pop_at(targets.find(body))
-
+	if body.get_node_or_null("I_AM_MUSHROOM") and body in targets:
+		targets.pop_at(targets.find(body))
 
 func _on_timer_timeout() -> void:
 	for i in tnts:
