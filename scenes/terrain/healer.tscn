@@ -65,7 +65,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("16_ht6k7")
 }],
-"loop": false,
+"loop": 0,
 "name": &"default",
 "speed": 12.0
 }]
@@ -77,6 +77,8 @@ script = ExtResource("1_shvah")
 texture = ExtResource("1_hi5yi")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1177189534]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1788480800]
 shape = SubResource("RectangleShape2D_shvah")

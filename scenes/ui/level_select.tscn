@@ -242,4 +242,5 @@ text = "   – LS_DEF"
 icon = ExtResource("20_s5ke1")
 alignment = 0
 
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="BackBtn" to="." method="_on_back_btn_pressed"]

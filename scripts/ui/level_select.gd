@@ -23,10 +23,14 @@ func update_textures() -> void:
 			lb.texture_pressed = $Sprite210.texture
 			lb.disabled = true
 		
-		if not lb.disabled:
+		if not lb.disabled and lb.name not in ["Level1", "Level5"]:
 			lb.pressed.connect(Callable(self, "go_to_level").bind(lb))
 	
 
 func _on_back_btn_pressed() -> void:
 	Autoload.click()
 	get_tree().change_scene_to_file("res://scenes/ui/main_menu.tscn")
+
+func _on_level_1_pressed() -> void:
+	Autoload.click()
+	get_tree().change_scene_to_file("res://scenes/ui/cutscene_1.tscn")

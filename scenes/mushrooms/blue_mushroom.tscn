@@ -99,7 +99,7 @@ text = "HP: 100"
 horizontal_alignment = 1
 
 [node name="Attack" type="Timer" parent="." unique_id=1127827770]
-wait_time = 0.7
+wait_time = 0.5
 one_shot = true
 
 [node name="ProjectileSpawner" type="Node2D" parent="." unique_id=1275340488]

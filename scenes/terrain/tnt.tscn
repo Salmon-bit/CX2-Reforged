@@ -15,6 +15,7 @@ size = Vector2(62, 62)
 radius = 113.004425
 
 [node name="TNT" type="StaticBody2D" unique_id=2043573920]
+collision_mask = 3
 script = ExtResource("1_qwopj")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1502581511]
@@ -24,6 +25,7 @@ texture = ExtResource("1_xuea5")
 shape = SubResource("RectangleShape2D_jr3ju")
 
 [node name="DetonateHitbox" type="Area2D" parent="." unique_id=321640490]
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetonateHitbox" unique_id=1271197642]
 shape = SubResource("RectangleShape2D_8c1op")

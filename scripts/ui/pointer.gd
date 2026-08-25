@@ -1,6 +1,5 @@
 extends Sprite2D
 
-
 func _ready() -> void:
 	position.y = 101 + 69 * (Autoload.pointer_level - 1)
 
