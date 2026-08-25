@@ -24,6 +24,8 @@ func explode():
 				target.attack(40)
 
 func _on_explode_area_body_entered(body: Node2D) -> void:
+	if body.get_node_or_null("I_AM_TILEMAP") != null:
+		return
 	if\
 	(body.get_node_or_null("I_AM_MUSHROOM_ARROW") == null and body.get_node_or_null("I_AM_ARROW") == null)\
 	and\
