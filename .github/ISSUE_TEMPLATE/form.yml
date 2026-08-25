@@ -1,0 +1,14 @@
+name: Баг-репорт
+description: Сообщить об ошибке в проекте
+body:
+  - type: input
+    attributes:
+      label: Название ошибки
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Описание
+    validations:
+      required: true
+      
