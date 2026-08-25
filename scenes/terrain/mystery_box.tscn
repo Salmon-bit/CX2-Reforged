@@ -35,3 +35,4 @@ shape = SubResource("RectangleShape2D_61mq4")
 [node name="Spawner" type="Node2D" parent="." unique_id=1072817029]
 script = ExtResource("3_v3dk7")
 objects = Array[PackedScene]([ExtResource("5_10e41"), ExtResource("4_7nax0"), ExtResource("6_10e41")])
+objects_chances = Array[float]([5.0, 10.0, 100.0])

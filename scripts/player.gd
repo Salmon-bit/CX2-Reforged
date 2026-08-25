@@ -28,9 +28,7 @@ func _ready() -> void:
 			ability_spawner = null
 	
 	ability_delay = ability_reload_time
-	
-	
-	
+
 	bow = $Bow
 
 func _process(delta: float) -> void:

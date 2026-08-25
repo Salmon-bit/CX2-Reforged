@@ -11,6 +11,8 @@ func before_tick():
 		player.unlock(self)
 
 func after_tick():
+	if dead:
+		velocity = Vector2.ZERO
 	if is_sniping and not dead:
 		self.speed = Autoload.SPEEDS.STOPPED
 		# Визуальный луч для отладки
