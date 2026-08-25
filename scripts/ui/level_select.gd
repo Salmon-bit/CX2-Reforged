@@ -9,7 +9,7 @@ func _ready() -> void:
 func go_to_level(btn: TextureButton) -> void:
 	Autoload.click()
 	var level_num = Autoload.get_level_num(btn.name)
-	get_tree().change_scene_to_file("res://scenes/levels/level_" + level_num + ".tscn")
+	SceneLoader.goto_scene("res://scenes/levels/level_" + level_num + ".tscn")
 
 func update_textures() -> void:
 	var level_buttons = $MarginContainer/VBoxContainer.get_children()
@@ -29,8 +29,8 @@ func update_textures() -> void:
 
 func _on_back_btn_pressed() -> void:
 	Autoload.click()
-	get_tree().change_scene_to_file("res://scenes/ui/main_menu.tscn")
+	SceneLoader.goto_scene("res://scenes/ui/main_menu.tscn")
 
 func _on_level_1_pressed() -> void:
 	Autoload.click()
-	get_tree().change_scene_to_file("res://scenes/ui/cutscene_1.tscn")
+	SceneLoader.goto_scene("res://scenes/ui/cutscene_1.tscn")

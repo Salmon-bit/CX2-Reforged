@@ -1,0 +1,129 @@
+﻿,ru,en,de,fr,zh,ja
+S_T_M,Основое,Main,Hauptmenü,Principal,主菜单,メイン
+S_T_GJ,GameJolt,GameJolt,GameJolt,GameJolt,GameJolt,GameJolt
+S_T_L,Язык,Language,Sprache,Langue,语言,言語
+S_T_C,Контроллер,Controller,Controller,Manette,控制器,コントローラー
+SM_E_D,Легко,Easy,Leicht,Facile,简单,かんたん
+SM_N_D,Нормально,Normal,Normal,Normal,普通,ふつう
+SM_H_D,Сложно,Hard,Schwer,Difficile,困难,むずかしい
+SM_SEL,Выбрано,Select,Auswählen,Sélectionner,选择,選択
+SM_DF,Удалить файл,Delete file,Datei löschen,Supprimer le fichier,删除文件,ファイルを削除
+SGJ_U,Введите свое имя пользователя:,Enter your username:,Benutzernamen eingeben:,Entrez votre nom d'utilisateur :,请输入用户名：,ユーザー名を入力：
+SGJ_T,Введите токен:,Enter your user token:,Token eingeben:,Entrez votre jeton :,请输入令牌：,トークンを入力：
+SGJ_AUTH,Входить при запуске?,Login on start?,Beim Start anmelden?,Se connecter au démarrage ?,启动时登录？,起動時にログイン？
+SGJ_L,Войти,Login,Anmelden,Connexion,登录,ログイン
+SGJ_B,Вернуться в Главное меню,Back to main menu,Zurück zum Hauptmenü,Retour au menu principal,返回主菜单,メインメニューに戻る
+SGJ_LOGIN_ST,Статус входа: Успешно\n,Login status: Logged in\n,Login-Status: Erfolgreich\n,État de connexion : Connecté\n,登录状态：成功\n,ログイン状態：成功\n
+SGJ_LOGER_ST,Статус входа: Ошибка\n,Login status: Error\n,Login-Status: Fehler\n,État de connexion : Erreur\n,登录状态：错误\n,ログイン状態：エラー\n
+SC_SCH,Показывать подсказки для контроллера?,Show controller hints?,Controller-Hinweise anzeigen?,Afficher les conseils du contrôleur ?,显示控制器提示？,コントローラーのヒントを表示？
+SC_IT,Вид иконок:,Icon type:,Symboltyp:,Type d'icône :,图标类型：,アイコンの種類：
+  – LS_NEW_AB,Новая Способность,New Ability,Fähigkeit,Capacité,技能,アビリティ
+  – LS_BOSS,Босс,Boss,Boss,Boss,首领,ボス
+  – LS_COLL,Сборище грибов,Collection,Pilzversammlung,Rassemblement de champignons,蘑菇聚集,キノコの集まり
+  – LS_BOXES,Коробки,Boxes,Kisten,Boîtes,箱子,ボックス
+  – LS_DEF,Оборона,Defense,Verteidigung,Défense,防御,防衛
+L1_TUT_M,Перемещение,Move,Verschiebung,Déplacement,搬家,引越し
+L1_TUT_S,Стрельба,Shoot,Schießen,Tir,射击运动,撮影
+L1_TUT_A,Способность,Ability,Die Fähigkeit,Capacité,能力,能力
+CUTSCENE_1_FRAME_1, , , , , ,
+CUTSCENE_1_FRAME_2, , , , , ,
+CUTSCENE_1_FRAME_3, , , , , ,
+CUTSCENE_1_FRAME_4, , , , , ,
+CUTSCENE_1_FRAME_5, , , , , ,
+CUTSCENE_1_FRAME_6, , , , , ,
+CUTSCENE_1_FRAME_7, , , , , ,
+CUTSCENE_1_FRAME_8, , , , , ,
+CUTSCENE_1_FRAME_9, , , , , ,
+CUTSCENE_1_FRAME_10, , , , , ,
+CUTSCENE_1_FRAME_11,Беззаботный,Carefree,Sorglos,Insouciant,无忧无虑,のんき
+CUTSCENE_1_FRAME_12,Беззаботный хлебушек,Carefree bread,Sorgloses Brötchen,Le pain insouciant,无忧无虑的小面包,のんきなパン
+CUTSCENE_1_FRAME_13,Беззаботный хлебушек радовался,Carefree bread had,Sorgloses Brötchen freute sich,Le pain insouciant était heureux,无忧无虑的小面包高兴,のんきなパンは喜んでいた
+CUTSCENE_1_FRAME_14,Беззаботный хлебушек радовался жизни.,Carefree bread had fun,Sorgloses Brötchen hatte Spaß am Leben,Le pain insouciant s'amusait dans la vie,无忧无虑的小面包享受生活,のんきなパンは人生を楽しんでいた
+CUTSCENE_1_FRAME_15,Беззаботный хлебушек радовался жизни.,Carefree bread had fun and,Sorgloses Brötchen hatte Spaß und,Le pain insouciant s'amusait et,无忧无虑的小面包享受并,のんきなパンは楽しんで
+CUTSCENE_1_FRAME_16,Беззаботный хлебушек радовался жизни.,Carefree bread had fun and enjoyed,Sorgloses Brötchen hatte Spaß und genoss,Le pain insouciant s'amusait et appréciait,无忧无虑的小面包享受并喜爱,のんきなパンは楽しんで味わっていた
+CUTSCENE_1_FRAME_17,Беззаботный хлебушек радовался жизни.,Carefree bread had fun and enjoyed life.,Sorgloses Brötchen hatte Spaß und genoss das Leben.,Le pain insouciant s'amusait et appréciait la vie.,无忧无虑的小面包享受并热爱生活。,のんきなパンは人生を楽しんでいた。
+CUTSCENE_1_FRAME_18,Беззаботный хлебушек радовался жизни.,Carefree bread had fun and enjoyed life.,Sorgloses Brötchen hatte Spaß und genoss das Leben.,Le pain insouciant s'amusait et appréciait la vie.,无忧无虑的小面包享受并热爱生活。,のんきなパンは人生を楽しんでいた。
+CUTSCENE_1_FRAME_19,Беззаботный хлебушек радовался жизни.,Carefree bread had fun and enjoyed life.,Sorgloses Brötchen hatte Spaß und genoss das Leben.,Le pain insouciant s'amusait et appréciait la vie.,无忧无虑的小面包享受并热爱生活。,のんきなパンは人生を楽しんでいた。
+CUTSCENE_1_FRAME_20,Беззаботный хлебушек радовался жизни.,Carefree bread had fun and enjoyed life.,Sorgloses Brötchen hatte Spaß und genoss das Leben.,Le pain insouciant s'amusait et appréciait la vie.,无忧无虑的小面包享受并热爱生活。,のんきなパンは人生を楽しんでいた。
+CUTSCENE_1_FRAME_21,Беззаботный хлебушек радовался жизни.,Carefree bread had fun and enjoyed life.,Sorgloses Brötchen hatte Spaß und genoss das Leben.,Le pain insouciant s'amusait et appréciait la vie.,无忧无虑的小面包享受并热爱生活。,のんきなパンは人生を楽しんでいた。
+CUTSCENE_1_FRAME_22,Беззаботный хлебушек радовался жизни.,Carefree bread had fun and enjoyed life.,Sorgloses Brötchen hatte Spaß und genoss das Leben.,Le pain insouciant s'amusait et appréciait la vie.,无忧无虑的小面包享受并热爱生活。,のんきなパンは人生を楽しんでいた。
+CUTSCENE_1_FRAME_23,Беззаботный хлебушек радовался жизни.,Carefree bread had fun and enjoyed life.,Sorgloses Brötchen hatte Spaß und genoss das Leben.,Le pain insouciant s'amusait et appréciait la vie.,无忧无虑的小面包享受并热爱生活。,のんきなパンは人生を楽しんでいた。
+CUTSCENE_1_FRAME_24, , , , , ,
+CUTSCENE_1_FRAME_25, , , , , ,
+CUTSCENE_1_FRAME_26, , , , , ,
+CUTSCENE_1_FRAME_27, , , , , ,
+CUTSCENE_1_FRAME_28, , , , , ,
+CUTSCENE_1_FRAME_29, , , , , ,
+CUTSCENE_1_FRAME_30, , , , , ,
+CUTSCENE_1_FRAME_31, , , , , ,
+CUTSCENE_1_FRAME_32, , , , , ,
+CUTSCENE_1_FRAME_33,Но ,But,Aber,Mais,但是,しかし
+CUTSCENE_1_FRAME_34,Но все,But everyone,Aber alle,Mais tout le monde,但是所有人,しかしみんな
+CUTSCENE_1_FRAME_35,Но все внезапно,But everyone abruptly,Aber alle plötzlich,Mais tout le monde soudainement,但是所有人突然,しかしみんな突然
+CUTSCENE_1_FRAME_36,Но все внезапно разозлились,But everyone abruptly became,Aber alle wurden plötzlich wütend,Mais tout le monde s'est soudainement fâché,但是所有人突然生气,しかしみんな突然怒った
+CUTSCENE_1_FRAME_37,Но все внезапно разозлились на,But everyone abruptly became angry.,Aber alle wurden plötzlich wütend auf,Mais tout le monde s'est soudainement fâché contre,但是所有人突然生起气来,しかしみんな突然怒り出した
+CUTSCENE_1_FRAME_38,Но все внезапно разозлились на него.,But everyone abruptly became angry.,Aber alle wurden plötzlich wütend auf ihn.,Mais tout le monde s'est soudainement fâché contre lui.,但是所有人都突然生他的气。,しかしみんな突然彼に怒った。
+CUTSCENE_1_FRAME_39,Но все внезапно разозлились на него.,But everyone abruptly became angry.,Aber alle wurden plötzlich wütend auf ihn.,Mais tout le monde s'est soudainement fâché contre lui.,但是所有人都突然生他的气。,しかしみんな突然彼に怒った。
+CUTSCENE_1_FRAME_40,Но все внезапно разозлились на него.,But everyone abruptly became angry.,Aber alle wurden plötzlich wütend auf ihn.,Mais tout le monde s'est soudainement fâché contre lui.,但是所有人都突然生他的气。,しかしみんな突然彼に怒った。
+CUTSCENE_1_FRAME_41,Но все внезапно разозлились на него.,But everyone abruptly became angry.,Aber alle wurden plötzlich wütend auf ihn.,Mais tout le monde s'est soudainement fâché contre lui.,但是所有人都突然生他的气。,しかしみんな突然彼に怒った。
+CUTSCENE_1_FRAME_42,Но все внезапно разозлились на него.,But everyone abruptly became angry.,Aber alle wurden plötzlich wütend auf ihn.,Mais tout le monde s'est soudainement fâché contre lui.,但是所有人都突然生他的气。,しかしみんな突然彼に怒った。
+CUTSCENE_1_FRAME_43,Но все внезапно разозлились на него.,But everyone abruptly became angry.,Aber alle wurden plötzlich wütend auf ihn.,Mais tout le monde s'est soudainement fâché contre lui.,但是所有人都突然生他的气。,しかしみんな突然彼に怒った。
+CUTSCENE_1_FRAME_44,Но все внезапно разозлились на него.,But everyone abruptly became angry.,Aber alle wurden plötzlich wütend auf ihn.,Mais tout le monde s'est soudainement fâché contre lui.,但是所有人都突然生他的气。,しかしみんな突然彼に怒った。
+CUTSCENE_1_FRAME_45,Но все внезапно разозлились на него.,But everyone abruptly became angry.,Aber alle wurden plötzlich wütend auf ihn.,Mais tout le monde s'est soudainement fâché contre lui.,但是所有人都突然生他的气。,しかしみんな突然彼に怒った。
+CUTSCENE_1_FRAME_46,Но все внезапно разозлились на него.,But everyone abruptly became angry.,Aber alle wurden plötzlich wütend auf ihn.,Mais tout le monde s'est soudainement fâché contre lui.,但是所有人都突然生他的气。,しかしみんな突然彼に怒った。
+CUTSCENE_1_FRAME_47, , , , , ,
+CUTSCENE_1_FRAME_48, , , , , ,
+CUTSCENE_1_FRAME_49, , , , , ,
+CUTSCENE_1_FRAME_50, , , , , ,
+CUTSCENE_1_FRAME_51, , , , , ,
+CUTSCENE_1_FRAME_52, , , , , ,
+CUTSCENE_1_FRAME_53, , , , , ,
+CUTSCENE_1_FRAME_54, , , , , ,
+CUTSCENE_1_FRAME_55, , , , , ,
+CUTSCENE_1_FRAME_56, , , , , ,
+CUTSCENE_1_FRAME_57, , , , , ,
+CUTSCENE_1_FRAME_58, , , , , ,
+CUTSCENE_1_FRAME_59, , , , , ,
+CUTSCENE_1_FRAME_60, , , , , ,
+CUTSCENE_1_FRAME_61, , , , , ,
+CUTSCENE_1_FRAME_62, , , , , ,
+CUTSCENE_1_FRAME_63, , , , , ,
+CUTSCENE_1_FRAME_64, , , , , ,
+CUTSCENE_1_FRAME_65, , , , , ,
+CUTSCENE_1_FRAME_66, , , , , ,
+CUTSCENE_1_FRAME_67, , , , , ,
+CUTSCENE_1_FRAME_68, , , , , ,
+CUTSCENE_1_FRAME_69, , , , , ,
+CUTSCENE_1_FRAME_70, , , , , ,
+CUTSCENE_1_FRAME_71, , , , , ,
+CUTSCENE_1_FRAME_72, , , , , ,
+CUTSCENE_1_FRAME_73,И,The,Und,Et,然后,そして
+CUTSCENE_1_FRAME_74,И началсь,The war,Und der Krieg begann,Et la guerre a commencé,战争开始了,そして戦争が始まった
+CUTSCENE_1_FRAME_75,И началсь война,The war has begun,Und der Krieg hat begonnen,Et la guerre a éclaté,战争爆发了,そして戦争が始まった
+CUTSCENE_1_FRAME_76,И началсь война во,The war has begun all over,Und der Krieg hat überall begonnen,Et la guerre a éclaté partout,战争在各地爆发,そして戦争が至る所で始まった
+CUTSCENE_1_FRAME_77,И началсь война во,The war has begun all over,Und der Krieg hat überall begonnen,Et la guerre a éclaté partout,战争在各地爆发,そして戦争が至る所で始まった
+CUTSCENE_1_FRAME_78,И началсь война во всем,The war has begun all over,Und der Krieg hat auf der ganzen Welt begonnen,Et la guerre a éclaté dans le monde entier,战争在全球爆发,そして戦争が世界中で始まった
+CUTSCENE_1_FRAME_79,И началсь война во всем,The war has begun all over the,Und der Krieg hat auf der ganzen Welt begonnen,Et la guerre a éclaté dans le monde entier,战争在全球爆发,そして戦争が世界中で始まった
+CUTSCENE_1_FRAME_80,И началсь война во всем,The war has begun all over the,Und der Krieg hat auf der ganzen Welt begonnen,Et la guerre a éclaté dans le monde entier,战争在全球爆发,そして戦争が世界中で始まった
+CUTSCENE_1_FRAME_81,И началсь война во всем,The war has begun all over the,Und der Krieg hat auf der ganzen Welt begonnen,Et la guerre a éclaté dans le monde entier,战争在全球爆发,そして戦争が世界中で始まった
+CUTSCENE_1_FRAME_82,И началсь война во всем мире…,The war has begun all over the world…,Und der Krieg hat auf der ganzen Welt begonnen…,Et la guerre a éclaté dans le monde entier…,战争在全球爆发了……,そして戦争が世界中で始まった…
+CUTSCENE_1_FRAME_83,И началсь война во всем мире…,The war has begun all over the world…,Und der Krieg hat auf der ganzen Welt begonnen…,Et la guerre a éclaté dans le monde entier…,战争在全球爆发了……,そして戦争が世界中で始まった…
+CUTSCENE_1_FRAME_84,И началсь война во всем мире…,The war has begun all over the world…,Und der Krieg hat auf der ganzen Welt begonnen…,Et la guerre a éclaté dans le monde entier…,战争在全球爆发了……,そして戦争が世界中で始まった…
+CUTSCENE_1_FRAME_85, , , , , ,
+CUTSCENE_1_FRAME_86, , , , , ,
+CUTSCENE_1_FRAME_87, , , , , ,
+CUTSCENE_1_FRAME_88, , , , , ,
+CUTSCENE_1_FRAME_89, , , , , ,
+CUTSCENE_1_FRAME_90, , , , , ,
+CUTSCENE_1_FRAME_91, , , , , ,
+CUTSCENE_1_FRAME_92, , , , , ,
+CUTSCENE_1_FRAME_93, , , , , ,
+CUTSCENE_1_FRAME_94, , , , , ,
+CUTSCENE_1_FRAME_95, , , , , ,
+CUTSCENE_1_FRAME_96, , , , , ,
+CUTSCENE_1_FRAME_97, , , , , ,
+CUTSCENE_1_FRAME_98, , , , , ,
+CUTSCENE_1_FRAME_99, , , , , ,
+CUTSCENE_1_FRAME_100, , , , , ,
+LOADING,Загрузка,Loading,Laden,Chargement,加载中,ロード中
+SKIP,Пропустить,Skip,Überspringen,Passer,跳过,スキップ

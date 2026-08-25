@@ -102,6 +102,7 @@
 [ext_resource type="Texture2D" uid="uid://c4qcun0ui60ip" path="res://sprites/Cutscenes/Cutscene_1_eng/Sprite103_98.png" id="99_kb5nt"]
 [ext_resource type="Texture2D" uid="uid://dsbydbecii7g4" path="res://sprites/Cutscenes/Cutscene_1_eng/Sprite103_99.png" id="100_vjdsi"]
 [ext_resource type="Texture2D" uid="uid://b6wan6eufqcsv" path="res://sprites/Cutscenes/Cutscene_1_eng/Sprite103_100.png" id="101_slrc3"]
+[ext_resource type="Theme" uid="uid://cari6vcvs5b5u" path="res://themes/main.tres" id="103_yrex5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eehox"]
 animations = [{
@@ -427,7 +428,32 @@ color = Color(0, 0, 0, 1)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1426314002]
 position = Vector2(569, 193)
 sprite_frames = SubResource("SpriteFrames_eehox")
-frame = 100
-frame_progress = 1.0
+frame = 1
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=268520688]
+offset_left = 152.0
+offset_top = 386.0
+offset_right = 991.0
+offset_bottom = 757.0
+color = Color(0, 0, 0, 1)
+
+[node name="Button" type="Button" parent="." unique_id=1068663254]
+offset_left = 967.0
+offset_top = 585.0
+offset_right = 1090.0
+offset_bottom = 635.0
+theme = ExtResource("103_yrex5")
+text = "SKIP"
+
+[node name="Label" type="Label" parent="." unique_id=1938528710]
+offset_left = 155.0
+offset_top = 398.0
+offset_right = 988.0
+offset_bottom = 558.0
+theme = ExtResource("103_yrex5")
+theme_override_font_sizes/font_size = 36
+autowrap_mode = 3
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

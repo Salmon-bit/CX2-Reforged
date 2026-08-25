@@ -24,6 +24,7 @@ Autoload="*uid://cxbi40imuuxwp"
 GameJolt="*uid://dwwwfqrm86umu"
 GameId="*uid://puvfuns23qg4"
 ControllerIcons="*uid://deh7fp76dnuyr"
+SceneLoader="*uid://bfcx71gywa1cb"
 
 [display]
 
@@ -174,7 +175,7 @@ pointer_right={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://localization.de.translation", "res://localization.en.translation", "res://localization.fr.translation", "res://localization.ja.translation", "res://localization.ru.translation", "res://localization.zh.translation")
+locale/translations=PackedStringArray("res://localisation.de.translation", "res://localisation.en.translation", "res://localisation.fr.translation", "res://localisation.ja.translation", "res://localisation.ru.translation", "res://localisation.zh.translation")
 
 [physics]
 

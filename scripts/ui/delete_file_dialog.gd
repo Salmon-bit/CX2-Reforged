@@ -22,11 +22,11 @@ func _ready() -> void:
 func _on_yes_pressed() -> void:
 	Autoload.clear_data()
 	Autoload.click()
-	get_tree().change_scene_to_file("res://scenes/ui/settings_scene.tscn")
+	SceneLoader.goto_scene("res://scenes/ui/settings_scene.tscn")
 
 func _on_no_pressed() -> void:
 	Autoload.click()
-	get_tree().change_scene_to_file("res://scenes/ui/settings_scene.tscn")
+	SceneLoader.goto_scene("res://scenes/ui/settings_scene.tscn")
 
 func _on_delete_file_pressed() -> void:
 	$DeleteFile2.play()

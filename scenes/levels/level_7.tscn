@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://bwt7teqax6fhf"]
 
 [ext_resource type="TileSet" uid="uid://bfv0ks1diwumi" path="res://scenes/levels/tileset.tres" id="1_ntash"]
+[ext_resource type="Script" uid="uid://duyq66xenvluf" path="res://scripts/levels/main_script.gd" id="1_wreli"]
 [ext_resource type="Script" uid="uid://chv6jc7h3rp3s" path="res://scripts/game_over_check.gd" id="2_hq5i0"]
 [ext_resource type="PackedScene" uid="uid://mcinvy3iq3td" path="res://scenes/mushrooms/red_mushroom.tscn" id="3_u1w5x"]
 [ext_resource type="PackedScene" uid="uid://cydhwdtrcoq08" path="res://scenes/mushrooms/blue_mushroom.tscn" id="4_posk4"]
 [ext_resource type="PackedScene" uid="uid://dtuuaah1i5ieq" path="res://scenes/terrain/grave.tscn" id="5_posk4"]
 [ext_resource type="PackedScene" uid="uid://bee7vho5h12qs" path="res://scenes/player.tscn" id="5_sjq8i"]
 [ext_resource type="PackedScene" uid="uid://r05o748hjhiw" path="res://scenes/camera_2d.tscn" id="6_q0wsq"]
+[ext_resource type="Script" uid="uid://ci23y5ljg5sfy" path="res://scripts/Terrain/healer.gd" id="6_ymk4h"]
 [ext_resource type="PackedScene" uid="uid://dyls7piyfv8fw" path="res://scenes/trophey_manager.tscn" id="8_sjq8i"]
 [ext_resource type="Texture2D" uid="uid://bqae7q4gv5w3y" path="res://sprites/UI/Sprite20_0.png" id="9_q0wsq"]
 [ext_resource type="AudioStream" uid="uid://bux7xgk0iv4kc" path="res://sounds/Win.wav" id="10_ivh0c"]
@@ -17,6 +19,7 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Arr
 outlines = Array[PackedVector2Array]([PackedVector2Array(64, 64, 1536, 64, 1536, 832, 64, 832)])
 
 [node name="Level7" type="Node2D" unique_id=707823770]
+script = ExtResource("1_wreli")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1450306533]
 tile_set = ExtResource("1_ntash")
@@ -35,9 +38,15 @@ position = Vector2(1213, 215)
 
 [node name="BlueMushroom" parent="Enemies" unique_id=2067160369 instance=ExtResource("4_posk4")]
 position = Vector2(1286, 216)
+collision_layer = 1
+collision_mask = 1
+script = ExtResource("6_ymk4h")
 
 [node name="BlueMushroom2" parent="Enemies" unique_id=2131069169 instance=ExtResource("4_posk4")]
 position = Vector2(1409, 704)
+collision_layer = 1
+collision_mask = 1
+script = ExtResource("6_ymk4h")
 
 [node name="RedMushroom2" parent="Enemies" unique_id=1381545190 instance=ExtResource("3_u1w5x")]
 position = Vector2(1328, 704)

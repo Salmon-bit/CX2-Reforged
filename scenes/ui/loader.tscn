@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://ys0i74yvnhb2"]
+
+[ext_resource type="Theme" uid="uid://cari6vcvs5b5u" path="res://themes/main.tres" id="1_1j68w"]
+[ext_resource type="Script" uid="uid://bx31eto7nxyyp" path="res://scripts/ui/loader.gd" id="1_yjitp"]
+
+[node name="Loader" type="Control" unique_id=1048042323]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yjitp")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1772493163]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1338820080]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1004415954]
+layout_mode = 2
+theme_override_constants/separation = 36
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=364211979]
+layout_mode = 2
+theme = ExtResource("1_1j68w")
+text = "LOADING"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/VBoxContainer" unique_id=727105455]
+layout_mode = 2
+theme = ExtResource("1_1j68w")
+step = 1.0
+rounded = true

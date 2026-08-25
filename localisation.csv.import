@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://drib44tn5ecdg"
+
+[deps]
+
+files=["res://localisation.ru.translation", "res://localisation.en.translation", "res://localisation.de.translation", "res://localisation.fr.translation", "res://localisation.zh.translation", "res://localisation.ja.translation"]
+
+source_file="res://localisation.csv"
+dest_files=["res://localisation.ru.translation", "res://localisation.en.translation", "res://localisation.de.translation", "res://localisation.fr.translation", "res://localisation.zh.translation", "res://localisation.ja.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true
