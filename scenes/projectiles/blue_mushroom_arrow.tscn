@@ -41,4 +41,6 @@ wait_time = 10.0
 
 [node name="I_AM_MUSHROOM_ARROW" type="Node" parent="." unique_id=637255410]
 
+[node name="I_AM_PROJECTILE" type="Node" parent="." unique_id=2082952278]
+
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]

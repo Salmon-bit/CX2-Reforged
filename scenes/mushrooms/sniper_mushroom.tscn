@@ -50,6 +50,8 @@ radius = 28.01785
 radius = 32.06244
 
 [node name="SniperMushroom" type="CharacterBody2D" unique_id=1471030139 node_paths=PackedStringArray("animated_sprite", "navigator", "attack_timer", "path_update_timer", "HP_label", "hitbox", "collision")]
+collision_layer = 2
+collision_mask = 20
 script = ExtResource("1_0sota")
 can_ranged_attack = true
 hp = 110

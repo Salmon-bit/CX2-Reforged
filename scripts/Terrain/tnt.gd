@@ -6,12 +6,19 @@ var tnts = []
 
 func explode():
 	$Ambient.play()
+	print("---")
+	for t in targets:
+		if t.get_node_or_null("I_AM_BOX") != null:
+			print("Box")
+		else:
+			print("Not box")
+	print("---")
 	if not is_exploding:
 		is_exploding = true
 		$ExpoldeSprite.show()
 		$Timer.start()
 		for target: Node2D in targets:
-			if target.get_node_or_null("I_AM_TNT"):
+			if target.get_node_or_null("I_AM_TNT") != null:
 				tnts.append(target) # Delayed explode
 			else:
 				target.attack(40)
@@ -22,7 +29,9 @@ func _on_explode_area_body_entered(body: Node2D) -> void:
 	and\
 	(body is not StaticBody2D or body.get_node_or_null("I_AM_TNT") != null):
 		targets.append(body)
-	if body.get_node_or_null("I_AM_MUSHROOM") and body not in targets:
+	if body.get_node_or_null("I_AM_MUSHROOM") != null and body not in targets:
+		targets.append(body)
+	if body.get_node_or_null("I_AM_BOX") != null and body not in targets:
 		targets.append(body)
 
 func _on_explode_area_body_exited(body: Node2D) -> void:
@@ -45,6 +54,6 @@ func attack(_i: int):
 
 func _on_detonate_hitbox_area_entered(area: Area2D) -> void:
 	print("[TNT]: Trying detonate by " + area.get_parent().name)
-	if "arrow" in area.get_parent().name.to_lower():
+	if area.get_parent().get_node_or_null("I_AM_PROJECTILE") != null:
 		is_exploding = false
 		explode()

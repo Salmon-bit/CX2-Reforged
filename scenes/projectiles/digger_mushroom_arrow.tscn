@@ -17,7 +17,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_tut4c")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -44,3 +44,5 @@ shape = SubResource("CircleShape2D_73swl")
 wait_time = 10.0
 
 [node name="I_AM_MUSHROOM_ARROW" type="Node" parent="." unique_id=701006150]
+
+[node name="I_AM_PROJECTILE" type="Node" parent="." unique_id=787907313]
