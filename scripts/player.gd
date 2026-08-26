@@ -154,12 +154,12 @@ func lock(source = null):
 	is_locked = true
 	$Sprite2D.show()
 
-func unlock(source = null):
+func unlock(source = null, silent=false):
 	if source != null:
 		locking_sources.erase(source)
 		if not locking_sources.is_empty():
 			return # другой снайпер всё ещё держит прицел - не сбрасываем
-	if is_locked:
+	if is_locked and not silent:
 		$Sounds/SniperUnlock.play()
 	is_locked = false
 	locking_sources.clear()

@@ -64,7 +64,7 @@ func ranged_attack():
 func shoot():
 	if not dead:
 		is_sniping = false
-		player.unlock(self)
+		player.unlock(self, true)
 		print("[" + self.name + "]: Shooting...")
 		$ShootSound.play()
 		

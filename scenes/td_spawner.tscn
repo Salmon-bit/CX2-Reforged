@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://xlc2s211wfd" path="res://scripts/td_spawner.gd" id="1_j7t58"]
 [ext_resource type="Texture2D" uid="uid://mcygoo6ee7bx" path="res://sprites/UI/Sprite77_0.png" id="2_jd3mo"]
-[ext_resource type="AudioStream" uid="uid://v5cceoble8qg" path="res://sounds/Heal.wav" id="3_2a87o"]
 
 [node name="TDSpawner" type="Node2D" unique_id=392019535]
 script = ExtResource("1_j7t58")
@@ -11,7 +10,6 @@ script = ExtResource("1_j7t58")
 texture = ExtResource("2_jd3mo")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=947771448]
-stream = ExtResource("3_2a87o")
 
 [node name="Timer" type="Timer" parent="." unique_id=231337892]
 wait_time = 0.5
