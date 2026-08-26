@@ -23,7 +23,7 @@ func update_textures() -> void:
 			lb.texture_pressed = $Sprite210.texture
 			lb.disabled = true
 		
-		if not lb.disabled and lb.name not in ["Level1", "Level5"]:
+		if not lb.disabled and lb.name not in ["Level1"]:
 			lb.pressed.connect(Callable(self, "go_to_level").bind(lb))
 	
 

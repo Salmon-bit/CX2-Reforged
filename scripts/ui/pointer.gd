@@ -14,6 +14,9 @@ func _process(_delta: float) -> void:
 			Autoload.pointer_level += 1
 	if Input.is_action_just_pressed("select"):
 		if Autoload.pointer_level - 1 <= Autoload.data.level:
-			get_tree().change_scene_to_file("res://scenes/levels/level_" + str(Autoload.pointer_level) + ".tscn")
+			if Autoload.pointer_level == 1:
+				SceneLoader.goto_scene("res://scenes/ui/cutscene_1.tscn")
+				return
+			SceneLoader.goto_scene("res://scenes/levels/level_" + str(Autoload.pointer_level) + ".tscn")
 		else:
 			print("[POINTER]: You shall not pass!")
