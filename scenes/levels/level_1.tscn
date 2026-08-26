@@ -14,10 +14,12 @@
 [ext_resource type="Theme" uid="uid://cari6vcvs5b5u" path="res://themes/main.tres" id="12_dnkej"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_uwlxl"]
-vertices = PackedVector2Array(590, 359, 634, 123, 762, 123, 762, 251, 590, 487, 974, 251, 974, 59, 1210, 59, 1210, 487, 526, 359, 526, 295, 442, 295, 442, 487, 78, 487, 78, 59, 634, 59)
+vertices = PackedVector2Array(600, 349, 624, 133, 752, 133, 752, 261, 600, 477, 984, 261, 984, 69, 1200, 69, 1200, 477, 536, 349, 536, 285, 432, 285, 432, 477, 88, 477, 88, 69, 624, 69)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8), PackedInt32Array(5, 8, 4, 3), PackedInt32Array(0, 9, 10, 1), PackedInt32Array(11, 12, 13, 14), PackedInt32Array(11, 14, 15, 1, 10)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(68, 49, 644, 49, 644, 113, 772, 113, 772, 241, 964, 241, 964, 49, 1220, 49, 1220, 497, 580, 497, 580, 369, 516, 369, 516, 305, 452, 305, 452, 497, 68, 497)])
 parsed_geometry_type = 1
+cell_size = 5.0
+agent_radius = 20.0
 
 [sub_resource type="Texture2D" id="Texture2D_jr3ju"]
 resource_local_to_scene = false

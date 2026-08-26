@@ -16,7 +16,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_akyrx")
 }],
-"loop": true,
+"loop": 1,
 "name": &"bad",
 "speed": 5.0
 }, {
@@ -24,7 +24,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_wme1j")
 }],
-"loop": true,
+"loop": 1,
 "name": &"dead",
 "speed": 5.0
 }, {
@@ -35,7 +35,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_s8eu0")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -82,6 +82,8 @@ metadata/_edit_lock_ = true
 path_desired_distance = 3.0
 target_desired_distance = 3.0
 path_postprocessing = 1
+simplify_path = true
+radius = 15.0
 debug_enabled = true
 debug_use_custom = true
 debug_path_custom_color = Color(1, 0, 0, 1)

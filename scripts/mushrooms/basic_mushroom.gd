@@ -33,6 +33,7 @@ func _ready() -> void:
 	hitbox.area_entered.connect(_on_area_2d_area_entered)
 	hitbox.area_exited.connect(_on_area_2d_area_exited)
 	navigator.path_postprocessing = NavigationPathQueryParameters2D.PATH_POSTPROCESSING_EDGECENTERED
+	navigator.simplify_path = true
 	navigator.path_desired_distance = 3.0
 	navigator.target_desired_distance = 3.0
 	navigator.path_max_distance = 100.0

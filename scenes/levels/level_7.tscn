@@ -8,10 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://dtuuaah1i5ieq" path="res://scenes/terrain/grave.tscn" id="5_posk4"]
 [ext_resource type="PackedScene" uid="uid://bee7vho5h12qs" path="res://scenes/player.tscn" id="5_sjq8i"]
 [ext_resource type="PackedScene" uid="uid://r05o748hjhiw" path="res://scenes/camera_2d.tscn" id="6_q0wsq"]
-[ext_resource type="Script" uid="uid://ci23y5ljg5sfy" path="res://scripts/Terrain/healer.gd" id="6_ymk4h"]
 [ext_resource type="PackedScene" uid="uid://dyls7piyfv8fw" path="res://scenes/trophey_manager.tscn" id="8_sjq8i"]
 [ext_resource type="Texture2D" uid="uid://bqae7q4gv5w3y" path="res://sprites/UI/Sprite20_0.png" id="9_q0wsq"]
 [ext_resource type="AudioStream" uid="uid://bux7xgk0iv4kc" path="res://sounds/Win.wav" id="10_ivh0c"]
+[ext_resource type="AudioStream" uid="uid://cd6kwtvg8lgrs" path="res://sounds/Ambient.mp3" id="12_wreli"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_posk4"]
 vertices = PackedVector2Array(906, 650, 1526, 822, 74, 822, 694, 650, 906, 394, 906, 310, 1526, 74, 74, 74, 694, 310, 694, 394, 906, 566, 694, 566)
@@ -36,18 +36,6 @@ script = ExtResource("2_hq5i0")
 [node name="RedMushroom" parent="Enemies" unique_id=1970813847 instance=ExtResource("3_u1w5x")]
 position = Vector2(1213, 215)
 
-[node name="BlueMushroom" parent="Enemies" unique_id=2067160369 instance=ExtResource("4_posk4")]
-position = Vector2(1286, 216)
-collision_layer = 1
-collision_mask = 1
-script = ExtResource("6_ymk4h")
-
-[node name="BlueMushroom2" parent="Enemies" unique_id=2131069169 instance=ExtResource("4_posk4")]
-position = Vector2(1409, 704)
-collision_layer = 1
-collision_mask = 1
-script = ExtResource("6_ymk4h")
-
 [node name="RedMushroom2" parent="Enemies" unique_id=1381545190 instance=ExtResource("3_u1w5x")]
 position = Vector2(1328, 704)
 
@@ -58,6 +46,12 @@ mushrooms = Array[PackedScene]([ExtResource("3_u1w5x"), ExtResource("4_posk4")])
 [node name="Grave2" parent="Enemies" unique_id=757432301 instance=ExtResource("5_posk4")]
 position = Vector2(1495, 788)
 mushrooms = Array[PackedScene]([ExtResource("3_u1w5x"), ExtResource("4_posk4")])
+
+[node name="BlueMushroom" parent="Enemies" unique_id=2067160369 instance=ExtResource("4_posk4")]
+position = Vector2(1288, 216)
+
+[node name="BlueMushroom2" parent="Enemies" unique_id=1774902509 instance=ExtResource("4_posk4")]
+position = Vector2(1416, 712)
 
 [node name="Player" parent="." unique_id=1542968218 instance=ExtResource("5_sjq8i")]
 position = Vector2(147, 147)
@@ -93,3 +87,8 @@ texture = ExtResource("9_q0wsq")
 
 [node name="Win" type="AudioStreamPlayer" parent="WinScreen" unique_id=470097446]
 stream = ExtResource("10_ivh0c")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2111969461]
+stream = ExtResource("12_wreli")
+autoplay = true
+parameters/looping = true
