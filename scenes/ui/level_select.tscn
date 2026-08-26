@@ -186,7 +186,7 @@ theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
 theme_override_styles/pressed = ExtResource("21_jwqqo")
 theme_override_styles/hover = ExtResource("21_jwqqo")
-text = "   – LS_NEW_AB"
+text = "LS_NEW_AB"
 icon = ExtResource("18_d1lmv")
 alignment = 0
 
@@ -199,7 +199,7 @@ theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
 theme_override_styles/pressed = ExtResource("21_jwqqo")
 theme_override_styles/hover = ExtResource("21_jwqqo")
-text = "   – LS_BOSS"
+text = "LS_BOSS"
 icon = ExtResource("17_xogkw")
 alignment = 0
 
@@ -212,7 +212,7 @@ theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
 theme_override_styles/pressed = ExtResource("21_jwqqo")
 theme_override_styles/hover = ExtResource("21_jwqqo")
-text = "   – LS_COLL"
+text = "LS_COLL"
 icon = ExtResource("18_8rxl4")
 alignment = 0
 
@@ -225,7 +225,7 @@ theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
 theme_override_styles/pressed = ExtResource("21_jwqqo")
 theme_override_styles/hover = ExtResource("21_jwqqo")
-text = "   – LS_BOXES"
+text = "LS_BOXES"
 icon = ExtResource("19_jwqqo")
 alignment = 0
 
@@ -238,7 +238,7 @@ theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
 theme_override_styles/pressed = ExtResource("21_jwqqo")
 theme_override_styles/hover = ExtResource("21_jwqqo")
-text = "   – LS_DEF"
+text = "LS_DEF"
 icon = ExtResource("20_s5ke1")
 alignment = 0
 
