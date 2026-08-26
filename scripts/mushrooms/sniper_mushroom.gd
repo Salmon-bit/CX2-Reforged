@@ -11,14 +11,12 @@ func before_tick():
 		player.unlock(self)
 
 func after_tick():
-	if dead:
-		velocity = Vector2.ZERO
 	if is_sniping and not dead:
 		self.speed = Autoload.SPEEDS.STOPPED
 		# Визуальный луч для отладки
-		#$Line2D.clear_points()
-		#$Line2D.add_point(Vector2.ZERO)
-		#$Line2D.add_point(to_local(player.global_position))
+		$Line2D.clear_points()
+		$Line2D.add_point(Vector2.ZERO)
+		$Line2D.add_point(to_local(player.global_position))
 		
 		# ... остальной код ...
 		rc.target_position = to_local(player.global_position)
@@ -39,11 +37,13 @@ func after_tick():
 				$SnipeTimer.stop()
 				is_sniping = false
 				timer_started = false
+				attack_timer.start()
 		else:
 			# Если луч ни во что не попал - разблокируем
 			player.unlock(self)
 			$SnipeTimer.stop()
 			is_sniping = false
+			attack_timer.start()
 			timer_started = false
 
 	if not is_sniping:
@@ -53,11 +53,13 @@ func after_tick():
 			self.speed = Autoload.SPEEDS.SLOW
 
 func ranged_attack():
-	if target.distance_to(self.global_position) <= 300:
+	if target.distance_to(self.global_position) <= 1500:
 		is_sniping = true
 		# Сразу обновляем луч, чтобы проверить видимость
 		rc.target_position = to_local(target)
 		rc.force_raycast_update()
+	else:
+		is_sniping = false
 
 func shoot():
 	if not dead:

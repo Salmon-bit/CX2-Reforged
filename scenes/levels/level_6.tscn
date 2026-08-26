@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dyls7piyfv8fw" path="res://scenes/trophey_manager.tscn" id="6_kydov"]
 [ext_resource type="AudioStream" uid="uid://cd6kwtvg8lgrs" path="res://sounds/Ambient.mp3" id="7_uwlxl"]
 [ext_resource type="PackedScene" uid="uid://cydhwdtrcoq08" path="res://scenes/mushrooms/blue_mushroom.tscn" id="8_4wfvb"]
+[ext_resource type="PackedScene" uid="uid://bvjhdibigittx" path="res://scenes/td_spawner.tscn" id="9_4wfvb"]
 [ext_resource type="PackedScene" uid="uid://mcinvy3iq3td" path="res://scenes/mushrooms/red_mushroom.tscn" id="9_tqv5a"]
 [ext_resource type="PackedScene" uid="uid://bvupi5half80p" path="res://scenes/mushrooms/sniper_mushroom.tscn" id="12_uwlxl"]
 
@@ -62,6 +63,12 @@ position = Vector2(816, 912)
 
 [node name="BlueMushroom3" parent="Enemies" unique_id=1551071068 instance=ExtResource("8_4wfvb")]
 position = Vector2(1064, 120)
+
+[node name="TDSpawner" parent="Enemies" unique_id=392019535 instance=ExtResource("9_4wfvb")]
+position = Vector2(365, 780)
+mushrooms = Array[PackedScene]([ExtResource("8_4wfvb"), ExtResource("8_4wfvb")])
+spawn_delay = 10.0
+hardmode_mushrooms = Array[PackedScene]([ExtResource("12_uwlxl")])
 
 [node name="WinScreen" type="Sprite2D" parent="." unique_id=1056358666]
 visible = false
