@@ -103,6 +103,7 @@
 [ext_resource type="Texture2D" uid="uid://dsbydbecii7g4" path="res://sprites/Cutscenes/Cutscene_1_eng/Sprite103_99.png" id="100_vjdsi"]
 [ext_resource type="Texture2D" uid="uid://b6wan6eufqcsv" path="res://sprites/Cutscenes/Cutscene_1_eng/Sprite103_100.png" id="101_slrc3"]
 [ext_resource type="Theme" uid="uid://cari6vcvs5b5u" path="res://themes/main.tres" id="103_yrex5"]
+[ext_resource type="AudioStream" uid="uid://48wwu0m6l1w0" path="res://sounds/cutscene.mp3" id="104_8hh1n"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eehox"]
 animations = [{
@@ -428,7 +429,8 @@ color = Color(0, 0, 0, 1)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1426314002]
 position = Vector2(569, 193)
 sprite_frames = SubResource("SpriteFrames_eehox")
-frame = 1
+frame = 100
+frame_progress = 1.0
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=268520688]
 offset_left = 152.0
@@ -453,6 +455,10 @@ offset_bottom = 558.0
 theme = ExtResource("103_yrex5")
 theme_override_font_sizes/font_size = 36
 autowrap_mode = 3
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1139933897]
+stream = ExtResource("104_8hh1n")
+autoplay = true
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
