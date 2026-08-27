@@ -127,3 +127,4 @@ CUTSCENE_1_FRAME_99, , , , , ,
 CUTSCENE_1_FRAME_100, , , , , ,
 LOADING,Загрузка,Loading,Laden,Chargement,加载中,ロード中
 SKIP,Пропустить,Skip,Überspringen,Passer,跳过,スキップ
+SCRIPT_1,"Я выкопал для вас ямы, надеюсь они вам помогут.","I dug for you some holes, I hope they will help you.",,,,

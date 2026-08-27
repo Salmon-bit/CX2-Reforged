@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://cfbjha0njbg5p"]
+
+[ext_resource type="Script" uid="uid://c4iwwtfjg586q" path="res://scripts/script.gd" id="1_ljeaf"]
+[ext_resource type="Texture2D" uid="uid://i5x62k4arn0j" path="res://sprites/Scripts/Sprite142_0.png" id="2_trks3"]
+[ext_resource type="Texture2D" uid="uid://poe4mkmttrd0" path="res://sprites/Scripts/Sprite141_2.png" id="3_trks3"]
+[ext_resource type="Theme" uid="uid://cari6vcvs5b5u" path="res://themes/main.tres" id="4_86d0s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eehox"]
+radius = 26.305893
+
+[node name="Script_1" type="StaticBody2D" unique_id=421085613]
+script = ExtResource("1_ljeaf")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1872420557]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=248421028]
+position = Vector2(0, 7)
+shape = SubResource("CircleShape2D_eehox")
+
+[node name="MainSprite" type="Sprite2D" parent="." unique_id=802662471]
+texture = ExtResource("2_trks3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=273328411]
+
+[node name="UI" type="Node2D" parent="CanvasLayer" unique_id=1579659660]
+position = Vector2(571, 314)
+
+[node name="OpenedSprite" type="Sprite2D" parent="CanvasLayer/UI" unique_id=1188010546]
+texture = ExtResource("3_trks3")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/UI" unique_id=815841707]
+offset_left = -82.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = 101.0
+color = Color(0.99215686, 0.7764706, 0.5372549, 1)
+metadata/_edit_lock_ = true
+
+[node name="ColorRect7" type="ColorRect" parent="CanvasLayer/UI" unique_id=1310769995]
+offset_left = -101.0
+offset_top = 20.0
+offset_right = -81.0
+offset_bottom = 35.0
+color = Color(0.99215686, 0.7764706, 0.5372549, 1)
+metadata/_edit_lock_ = true
+
+[node name="ColorRect6" type="ColorRect" parent="CanvasLayer/UI" unique_id=133875212]
+offset_left = -93.0
+offset_top = 7.0
+offset_right = -52.0
+offset_bottom = 43.0
+color = Color(0.99215686, 0.7764706, 0.5372549, 1)
+metadata/_edit_lock_ = true
+
+[node name="ColorRect10" type="ColorRect" parent="CanvasLayer/UI" unique_id=1543552832]
+offset_left = 31.0
+offset_top = -29.0
+offset_right = 51.0
+offset_bottom = -14.0
+color = Color(0.99215686, 0.7764706, 0.5372549, 1)
+metadata/_edit_lock_ = true
+
+[node name="ColorRect11" type="ColorRect" parent="CanvasLayer/UI" unique_id=1950802453]
+offset_left = 26.0
+offset_top = -96.0
+offset_right = 46.0
+offset_bottom = -81.0
+color = Color(0.99215686, 0.7764706, 0.5372549, 1)
+metadata/_edit_lock_ = true
+
+[node name="ColorRect9" type="ColorRect" parent="CanvasLayer/UI" unique_id=475733804]
+offset_left = 39.0
+offset_top = -42.0
+offset_right = 80.0
+offset_bottom = -6.0
+color = Color(0.99215686, 0.7764706, 0.5372549, 1)
+metadata/_edit_lock_ = true
+
+[node name="ColorRect8" type="ColorRect" parent="CanvasLayer/UI" unique_id=1898660844]
+offset_left = 34.0
+offset_top = -109.0
+offset_right = 81.0
+offset_bottom = -56.0
+color = Color(0.99215686, 0.7764706, 0.5372549, 1)
+metadata/_edit_lock_ = true
+
+[node name="ColorRect5" type="ColorRect" parent="CanvasLayer/UI" unique_id=383416087]
+offset_left = -95.0
+offset_top = 57.0
+offset_right = -54.0
+offset_bottom = 93.0
+color = Color(0.99215686, 0.7764706, 0.5372549, 1)
+metadata/_edit_lock_ = true
+
+[node name="ColorRect4" type="ColorRect" parent="CanvasLayer/UI" unique_id=1108902619]
+offset_left = 65.0
+offset_top = -73.0
+offset_right = 85.0
+offset_bottom = -58.0
+color = Color(0.99215686, 0.7764706, 0.5372549, 1)
+metadata/_edit_lock_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/UI" unique_id=952263174]
+offset_left = 40.0
+offset_top = -18.0
+offset_right = 81.0
+offset_bottom = 18.0
+color = Color(0.99215686, 0.7764706, 0.5372549, 1)
+metadata/_edit_lock_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="CanvasLayer/UI" unique_id=1445184339]
+offset_left = -28.0
+offset_top = 76.0
+offset_right = 13.0
+offset_bottom = 112.0
+color = Color(0.99215686, 0.7764706, 0.5372549, 1)
+metadata/_edit_lock_ = true
+
+[node name="Button" type="Button" parent="CanvasLayer/UI" unique_id=390736257]
+offset_left = 54.0
+offset_top = -99.0
+offset_right = 73.0
+offset_bottom = -80.0
+theme = ExtResource("4_86d0s")
+theme_override_font_sizes/font_size = 16
+text = "X"
+alignment = 2
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/UI" unique_id=1361170040]
+offset_left = -80.0
+offset_top = -97.0
+offset_right = 61.0
+offset_bottom = 92.0
+theme = ExtResource("4_86d0s")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "SCRIPT_1"
+autowrap_mode = 2
+metadata/_edit_lock_ = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="CanvasLayer/UI/Button" to="." method="_on_button_pressed"]

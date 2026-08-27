@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bqae7q4gv5w3y" path="res://sprites/UI/Sprite20_0.png" id="9_q0wsq"]
 [ext_resource type="AudioStream" uid="uid://bux7xgk0iv4kc" path="res://sounds/Win.wav" id="10_ivh0c"]
 [ext_resource type="AudioStream" uid="uid://cd6kwtvg8lgrs" path="res://sounds/Ambient.mp3" id="12_wreli"]
+[ext_resource type="PackedScene" uid="uid://cfbjha0njbg5p" path="res://scenes/script.tscn" id="13_ymk4h"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_posk4"]
 vertices = PackedVector2Array(906, 650, 1526, 822, 74, 822, 694, 650, 906, 394, 906, 310, 1526, 74, 74, 74, 694, 310, 694, 394, 906, 566, 694, 566)
@@ -92,3 +93,6 @@ stream = ExtResource("10_ivh0c")
 stream = ExtResource("12_wreli")
 autoplay = true
 parameters/looping = true
+
+[node name="Script" parent="." unique_id=421085613 instance=ExtResource("13_ymk4h")]
+position = Vector2(1216, 120)
