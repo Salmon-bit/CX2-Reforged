@@ -13,10 +13,10 @@ func before_tick():
 func after_tick():
 	if is_sniping and not dead:
 		self.speed = Autoload.SPEEDS.STOPPED
-		# Визуальный луч для отладки
-		$Line2D.clear_points()
-		$Line2D.add_point(Vector2.ZERO)
-		$Line2D.add_point(to_local(player.global_position))
+		## Визуальный луч для отладки
+		#$Line2D.clear_points()
+		#$Line2D.add_point(Vector2.ZERO)
+		#$Line2D.add_point(to_local(player.global_position))
 		
 		# ... остальной код ...
 		rc.target_position = to_local(player.global_position)
